@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 公告查询 -->
+
+<root>
+
+	<field key="fieldTrancode" value="999000001"  />
+	<field key="field11" value="__TRACEAUDITNUM"  />
+	<field key="field41" value="__TERID"  />
+	<field key="field42" value="__VENDOR"  />
+	<field key="termMobile" value="__PHONENUM" />
+	<field key="ReaderID" value="__TERSERIALNO" />
+	<field key="PSAMID" value="__PSAMNO" />
+	<field key="fieldChannel" value="06" />
+	<field key="id_notice" value="__noticeVersion" />
+</root>

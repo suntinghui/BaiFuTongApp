@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 手机充值冲正请求报文 -->
+
+<root>
+	<field key="fieldTrancode" value="700000002" macField="true" />
+	<field key="field2" value="__field2" macField="true" />
+	<field key="field3" value="__field3" macField="true" />
+	<field key="field4" value="__field4" macField="true" />
+	<field key="field11" value="__field11" macField="true" />
+	<field key="field14" value="__field14"/>
+	<field key="field22" value="__field22" /><!-- 多种取值，参见规范 11.3.10.3 -->
+	<field key="field23" value="__field23" />
+	<field key="field25" value="__field25" macField="true" />
+	<field key="field38" value="__field38" macField="true" />
+	<field key="field39" value="__field39" macField="true"/>
+	<field key="field41" value="__field41" macField="true" />
+	<field key="field42" value="__field42" macField="true" />
+	<field key="field49" value="__field49" />
+	<field key="field55" value="__field55" /> <!-- IC卡55数据域 -->
+	<field key="field60" value="__field60" />
+	<field key="field90" value="0210#__field11" macField="true" />
+	<field key="termMobile" value="__termMobile" macField="true" /> 
+	<field key="ReaderID" value="__ReaderID" macField="true"/> 
+	<field key="PSAMID" value="__PSAMID" macField="true"/>  
+	<field key="Mobile" value="__Mobile"  macField="true" /> <!--  充值号码 -->
+	<field key="fieldChannel" value="06" />
+	
+	<!--  xxm 文档中有程序中没有 f62  -->
+</root>

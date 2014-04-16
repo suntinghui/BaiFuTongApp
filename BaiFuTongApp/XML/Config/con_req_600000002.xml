@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 交易明细查询 -->
+
+<root>
+	<field key="fieldTrancode" value="600000002" />
+	<field key="field11" value="__TRACEAUDITNUM" /> 
+	<field key="field41" value="__TERID"  />
+	<field key="field42" value="__VENDOR"  />
+	<field key="termMobile" value="__PHONENUM" />
+	<field key="ReaderID" value="__TERSERIALNO" />
+	<field key="PSAMID" value="__PSAMNO" />
+	<field key="BeginDate" value="__BeginDate" />
+	<field key="EndDate" value="__EndDate" />
+	<field key="tranCode" value="__tranCode" />
+	<field key="pageNo" value="__pageNo" />
+	<field key="pageSize" value="__pageSize" />
+	<field key="fieldChannel" value="06" />
+	
+	<!-- 下面字段是为取值方面为设定的，文档中并没有规定此字段 -->
+	<field key="totalCount" value="__totalCount" />
+	
+</root>

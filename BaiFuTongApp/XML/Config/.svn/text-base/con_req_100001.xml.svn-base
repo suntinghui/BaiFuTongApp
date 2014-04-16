@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 商户注册 -->
+
+<root>
+	<field key="fieldTrancode" value="100001" />
+	<field key="field11" value="__TRACEAUDITNUM" />
+	<field key="field41" value="__TERID"  />
+	<field key="field42" value="__VENDOR"  />
+	<field key="termMobile" value="__termMobile" />
+	<field key="ReaderID" value="__TERSERIALNO" />
+	<field key="PSAMID" value="__PSAMNO" />
+	<field key="CorpRepr" value="__CorpRepr" />
+	<field key="CertificatesId" value="__CertificatesId" />
+	<field key="field103" value="__field103" />
+	<field key="fieldChannel" value="06" />
+	
+</root>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+	<item code="100001" name="商户注册" />
+	<item code="100002" name="设置密码" />
+	<item code="100003" name="重置密码" />
+	<item code="100004" name="修改密码" />
+	<item code="100005" name="登陆" />
+	<item code="800003" name="签到" />
+	<item code="820002" name="签退" />
+	<item code="500201" name="批结算" />
+	<item code="320201" name="批上送" />
+	<item code="200310001" name="余额查询" />
+	<item code="200000022" name="收款" />
+	<item code="400000022" name="收款冲正" />
+	<item code="200200023" name="收款撤销" />
+	<item code="400200023" name="收款撤销冲正" />
+	<item code="200001111" name="付款" />
+	<item code="700000001" name="手机充值" />
+	<item code="700000002" name="手机充值冲正" />
+	<item code="500000001" name="签购单上传" />
+	<item code="600000001" name="交易汇总查询" />
+    <item code="600000002" name="交易明细查询" />
+</root>

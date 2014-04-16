@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 签购单上传 -->
+
+<root>
+	<field key="fieldTrancode" value="500000001" />
+	<field key="field7" value="__field7" />
+	<field key="field11" value="__field11" /> <!--原交易终端流水号 来自数据库中的Content HashMap-->
+	<field key="field41" value="__field41"  />
+	<field key="field42" value="__field42"  />
+	<field key="termMobile" value="__termMobile" />
+	<field key="ReaderID" value="__ReaderID" />
+	<field key="PSAMID" value="__PSAMID" />
+	<field key="field60" value="22#__batchNum#00020" /> <!-- 来自数据库中的batchNum -->
+	<field key="fieldMobile" value="__fieldMobile" />
+	<field key="filedIMEI" value="__filedIMEI" />
+	<field key="fieldImage" value="__fieldImage" /> <!-- Base64 -->
+	<field key="fieldChannel" value="06" />
+	
+</root>

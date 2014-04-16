@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 批结算请求报文-->
+
+<root>
+	<field key="fieldTrancode" value="500201"  />
+	<field key="field7" value="__yyyyMMdd" />
+	<field key="field11" value="__TRACEAUDITNUM"  />
+	<field key="field13" value="__MMdd" macField="true" />
+	<field key="field41" value="__TERID"  />
+	<field key="field42" value="__VENDOR"  />
+	<field key="field48" value=""  />
+	<field key="termMobile" value="__PHONENUM" macField="true" />
+	<field key="ReaderID" value="__TERSERIALNO" macField="true" />
+	<field key="PSAMID" value="__PSAMNO" macField="true" />
+	<field key="field49" value="156" />
+	<field key="field60" value="00#__BATCHNUM#201" />
+	<field key="field63" value=""  />
+	<field key="fieldMerchPWD" value="__fieldMerchPWD" />
+	<field key="fieldChannel" value="06" />
+	
+</root>

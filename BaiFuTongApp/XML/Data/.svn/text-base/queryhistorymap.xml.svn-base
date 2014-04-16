@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+	<item key="0" value="全部" />
+	<item key="1" value="收款" />
+	<item key="2" value="收款撤销" />
+	<item key="3" value="付款" />
+</root>

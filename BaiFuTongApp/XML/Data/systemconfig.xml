@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 系统配置信息，在登陆并更新文件成功后读取此数据内容 -->
+<!-- 值必须为int，不能为float -->
+
+<root>
+	<item key="sendSMS" value="true" /><!-- 是否使用商户的短信给付款方发送短信信息 -->
+	<item key="pageSize" value="10" /><!-- 查询交易明细中每页显示多少条数据 -->
+	<item key="historyInterval" value="30"/><!-- 查询交易明细中起止日期间隔天数,动态界面是在xml中配置 -->
+	<item key="maxReversalCount" value="3"/> <!-- 最大冲正次数 -->
+    <item key="maxUploadSignImageCount" value="3"/> <!-- 上传签名图片重试次数 -->
+	<item key="maxTransferTimeout" value="60"/> <!-- 交易时的超时时间 -->
+	<item key="maxLockTimeout" value="20" /> <!-- 超时锁屏时间，以分钟为单位 -->
+</root>

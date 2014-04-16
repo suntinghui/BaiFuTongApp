@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 消费撤消请求报文 -->
+
+<root>
+	<field key="fieldTrancode" value="200200023" macField="true" />
+	<field key="field2" value="" macField="true" />
+	<field key="field3" value="200000" macField="true" /><!-- 多种取值，参见规范 11.3.3.3 -->
+	<field key="field4" value="__field4" macField="true" /><!-- 多种取值，参见规范 11.3.3.3 -->
+	<field key="field7" value="__yyyyMMdd" />
+	<field key="field11" value="__TRACEAUDITNUM" macField="true" />
+	<field key="field14" value=""/>
+	<field key="field22" value="__FIELD22" /><!-- 多种取值，参见规范 11.3.10.3 -->
+	<field key="field23" value="000" />
+	<field key="field25" value="00" macField="true" />
+	<field key="field26" value="06" /><!-- 密码长度，有无此数据项受22域决定 -->
+	<field key="field35" value="__PSAMTRACK" />
+	<field key="field36" value="" /><!-- 第三磁道，有无此数据项受22域决定 -->
+	<field key="field37" value="__field37" macField="true" />
+	<field key="field41" value="__TERID" macField="true" />
+	<field key="field42" value="__VENDOR" macField="true" />
+	<field key="field49" value="156" />
+	<field key="field52" value="__PSAMPIN" /><!-- 个人PIN，受约束项 -->
+	<field key="field53" value="2610000000000000" macField="true" />
+	<field key="field55" value="" /> <!-- IC卡55数据域 -->
+	<field key="field60" value="23#__BATCHNUM#00020" />
+	<field key="field90" value="0210#__field11#__field13#__field12" macField="true" />
+	<field key="fieldMerchPWD" value="__fieldMerchPWD" /> 
+	<field key="termMobile" value="__PHONENUM" macField="true" /> 
+	<field key="ReaderID" value="__TERSERIALNO" macField="true"/>
+	<field key="PSAMID" value="__PSAMNO" macField="true"/>  
+	<field key="fieldAddress" value="__ADDRESS" />
+	<field key="fieldChannel" value="06" />
+	
+</root>

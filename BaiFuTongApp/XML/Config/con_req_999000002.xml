@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 检查更新 -->
+
+<root>
+	<field key="fieldTrancode" value="999000002" />
+	<field key="fieldChannel" value="06" />
+	<field key="clientType" value="01" />
+</root>
+
+<!-- 
+	clientType --- 终端类型
+	
+	01 - android商户版
+	02 - aPad个人版
+	03 - iPhone商户版
+	04 - iPad商户版
+	
+	11 - android个人版
+	12 - aPad个人版
+	13 - iPhone个人版
+	14 - iPad个人版
+-->

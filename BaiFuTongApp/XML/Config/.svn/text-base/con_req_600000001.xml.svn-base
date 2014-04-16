@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 交易汇总查询 -->
+
+<root>
+
+	<field key="fieldTrancode" value="600000001" />
+	<field key="field11" value="__TRACEAUDITNUM" /> 
+	<field key="field41" value="__TERID"  />
+	<field key="field42" value="__VENDOR"  />
+	<field key="termMobile" value="__PHONENUM" />
+	<field key="ReaderID" value="__TERSERIALNO" />
+	<field key="PSAMID" value="__PSAMNO" />
+	<field key="fieldMerchPWD" value="__fieldMerchPWD" />
+	<field key="BeginDate" value="__BeginDate" />
+	<field key="EndDate" value="__EndDate" />
+	<field key="queryFlag" value="001" /> <!-- 手机终端-001 -->
+	<field key="fieldChannel" value="06" />
+	
+</root>

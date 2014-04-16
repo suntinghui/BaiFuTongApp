@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 校验商户密码 登陆 -->
+
+<root>
+	<field key="fieldTrancode" value="100005" />
+	<field key="field11" value="__TRACEAUDITNUM" />
+	<field key="field41" value="__TERID"  />
+	<field key="field42" value="__VENDOR"  />
+	<field key="termMobile" value="__PHONENUM" />
+	<field key="ReaderID" value="__TERSERIALNO" />
+	<field key="PSAMID" value="__PSAMNO" />
+	<field key="fieldMerchPWD" value="__fieldMerchPWD" />
+	<field key="fieldKeyVersion" value="__fieldKeyVersion" />
+	<field key="fieldChannel" value="06" />
+	
+	<!-- 只与手机接入平台交互 -->
+	<field key="fieldVersion" value="__CURRENTVERSION" />
+    <field key="fieldAPKInfo" value="00000000000000000000000000000000" />
+	<field key="condition" value="__UUID" />
+	<field key="captcha" value="__captcha" />
+</root>

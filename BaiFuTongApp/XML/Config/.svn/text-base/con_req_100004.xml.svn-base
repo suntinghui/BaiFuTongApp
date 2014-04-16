@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 修改密码 -->
+
+<root>
+	<field key="fieldTrancode" value="100004" />
+	<field key="field11" value="__TRACEAUDITNUM" />
+	<field key="field41" value="__TERID"  />
+	<field key="field42" value="__VENDOR"  />
+	<field key="termMobile" value="__PHONENUM" />
+	<field key="ReaderID" value="__TERSERIALNO" />
+	<field key="PSAMID" value="__PSAMNO" />
+	<field key="CorpRepr" value="__CorpRepr" />
+	<field key="CertificatesId" value="__CertificatesId" />
+	<field key="fieldMerchPWD" value="__fieldMerchPWD" />
+	<field key="fieldNewPWD" value="__fieldNewPWD" />
+	<field key="fieldChannel" value="06" />
+</root>

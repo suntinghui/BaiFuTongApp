@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 验证码 -->
+
+<root>
+	<field key="fieldTrancode" value="999000003" />
+	<field key="fieldChannel" value="06" />
+	<field key="clientType" value="01" />
+	<field key="condition" value="__UUID" />
+</root>

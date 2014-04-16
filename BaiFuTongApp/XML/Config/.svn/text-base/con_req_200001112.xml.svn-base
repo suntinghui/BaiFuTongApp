@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!---商户付款请求报文 已对照完0926-->
+
+<root>
+
+	<field key="fieldTrancode" value="200001112" macField="true" />
+	<field key="field3" value="004000" macField="true" /><!-- 多种取值，参见规范 11.3.3.3 -->
+	<field key="field4" value="000000000005" macField="true" /><!-- 多种取值，参见规范 11.3.3.3 -->
+	<field key="field7" value="__YYYYMMDD" />
+	<field key="field11" value="__TRACEAUDITNUM" macField="true" />
+	<field key="field12" value="__hhmmss" /> <!-- 受卡方所在地时间 3位 -->
+	<field key="field13" value="__MMdd" /> <!-- 受卡方所在地日期 -->
+	<field key="field14" value=""/><!-- 卡有效期 2位 -->
+	<field key="field22" value="021" /><!-- 多种取值，参见规范 11.3.10.3 -->
+	<field key="field25" value="00" macField="true" />
+	<field key="field26" value="06" /><!-- 密码长度，有无此数据项受22域决定 -->
+	<field key="field32" value="" macField="true"/>
+	<field key="field33" value="" macField="true"/><!-- -->
+	<field key="field41" value="__TERID" macField="true" />
+	<field key="field42" value="__VENDOR" macField="true" />
+	<field key="field43" value="" />
+	<field key="field46" value=""/>
+	<field key="field47" value=""/>
+	<field key="field49" value="156" />
+	<field key="field52" value="__PSAMPIN" /><!-- 个人PIN，受约束项 -->
+	<field key="field60" value="01000014000500" />
+	<field key="field62" value="1" />
+	<field key="field102" value="111111" macField="true"/>
+	<field key="field103" value="111111" macField="true"/>
+	<field key="termMobile" value="__PHONENUM" macField="true" />   <!-- 签购单接收手机号码 -->
+	<field key="fieldChannel" value="06" />
+
+<!-- xxm  文档中有 程序中没有     termMobile(文档15条),ReaderID,PSAMID,fieldAddress,fieldMAB,fieldMAC, -->
+
+</root>
