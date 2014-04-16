@@ -39,7 +39,7 @@
     [scrollView addSubview:self.MerchantPwdTF];
     
     UIButton *confirmButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [confirmButton setFrame:CGRectMake(10, 150, 297, 42)];
+    [confirmButton setFrame:CGRectMake(10, 120, 297, 42)];
     [confirmButton setTitle:@"签  退" forState:UIControlStateNormal];
     [confirmButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     confirmButton.titleLabel.font = [UIFont boldSystemFontOfSize:18];
@@ -51,7 +51,7 @@
     
     UIImage *image = [UIImage imageNamed:@"BFTExplain.png"];
     UIImageView *explainIV = [[UIImageView alloc] initWithImage:[self stretchImage:image]];
-    [explainIV setFrame:CGRectMake(10, 200, 294, 150)];
+    [explainIV setFrame:CGRectMake(10, 170, 294, 150)];
     [scrollView addSubview:explainIV];
     
     UILabel *explainLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 45, 280, 70)];
