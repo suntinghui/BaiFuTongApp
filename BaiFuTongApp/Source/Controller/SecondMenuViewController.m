@@ -145,19 +145,19 @@
     
     CatalogModel *catalogModel = (CatalogModel *)[self.currentCatalogArray objectAtIndex:indexPath.section];
     
-    if ( [[[NSUserDefaults standardUserDefaults] objectForKey:@"LOGIN"] isEqualToString:@"NO"])
-    {
-        //记录登录过后跳转到哪个界面　
-        [[NSUserDefaults standardUserDefaults] setObject:catalogModel.title forKey:@"ACTIONNAME"];
-        [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%d",catalogModel.catalogId] forKey:@"CATALOGID"];
-        
-        LoginViewController *login = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
-        [self.navigationController pushViewController:login animated:YES];
-    }
-    else
-    {
+//    if ( [[[NSUserDefaults standardUserDefaults] objectForKey:@"LOGIN"] isEqualToString:@"NO"])
+//    {
+//        //记录登录过后跳转到哪个界面　
+//        [[NSUserDefaults standardUserDefaults] setObject:catalogModel.title forKey:@"ACTIONNAME"];
+//        [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%d",catalogModel.catalogId] forKey:@"CATALOGID"];
+//        
+//        LoginViewController *login = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+//        [self.navigationController pushViewController:login animated:YES];
+//    }
+//    else
+//    {
         [self doAction:catalogModel];
-    }
+    //}
     
 }
 

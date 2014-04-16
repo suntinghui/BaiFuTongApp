@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3EC100EB-8FF0-44ED-B836-5CF1F03C947E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BaiFuTongApp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E1B4E5F2-9995-4CA0-B02B-DCC9693A663B</key>
+		<string>https://github.com/suntinghui/BaiFuTongApp.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BaiFuTongApp.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E1B4E5F2-9995-4CA0-B02B-DCC9693A663B</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/suntinghui/BaiFuTongApp.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E1B4E5F2-9995-4CA0-B02B-DCC9693A663B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E1B4E5F2-9995-4CA0-B02B-DCC9693A663B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BaiFuTongApp</string>
+		</dict>
+	</array>
+</dict>
+</plist>

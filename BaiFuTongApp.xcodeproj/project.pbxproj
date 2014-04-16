@@ -437,6 +437,10 @@
 		05F21CF1180D2DCE002A48EC /* ReadBooks.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F21CD3180D2DCE002A48EC /* ReadBooks.m */; };
 		05F21CF6180D3932002A48EC /* LeftTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F21CF5180D3932002A48EC /* LeftTextField.m */; };
 		05F21CF9180D39C6002A48EC /* PasswordTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F21CF8180D39C6002A48EC /* PasswordTextField.m */; };
+		FC0AE2A918FE5FE500C1FD50 /* PasswordResetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0AE2A718FE5FE500C1FD50 /* PasswordResetViewController.m */; };
+		FC0AE2AA18FE5FE500C1FD50 /* PasswordResetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC0AE2A818FE5FE500C1FD50 /* PasswordResetViewController.xib */; };
+		FC0AE2AE18FE702700C1FD50 /* RealnameLegalizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0AE2AC18FE702700C1FD50 /* RealnameLegalizeViewController.m */; };
+		FC0AE2AF18FE702700C1FD50 /* RealnameLegalizeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC0AE2AD18FE702700C1FD50 /* RealnameLegalizeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1022,6 +1026,12 @@
 		05F21CF5180D3932002A48EC /* LeftTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftTextField.m; sourceTree = "<group>"; };
 		05F21CF7180D39C6002A48EC /* PasswordTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordTextField.h; sourceTree = "<group>"; };
 		05F21CF8180D39C6002A48EC /* PasswordTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordTextField.m; sourceTree = "<group>"; };
+		FC0AE2A618FE5FE500C1FD50 /* PasswordResetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordResetViewController.h; sourceTree = "<group>"; };
+		FC0AE2A718FE5FE500C1FD50 /* PasswordResetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordResetViewController.m; sourceTree = "<group>"; };
+		FC0AE2A818FE5FE500C1FD50 /* PasswordResetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordResetViewController.xib; sourceTree = "<group>"; };
+		FC0AE2AB18FE702700C1FD50 /* RealnameLegalizeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealnameLegalizeViewController.h; sourceTree = "<group>"; };
+		FC0AE2AC18FE702700C1FD50 /* RealnameLegalizeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealnameLegalizeViewController.m; sourceTree = "<group>"; };
+		FC0AE2AD18FE702700C1FD50 /* RealnameLegalizeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RealnameLegalizeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1076,6 +1086,12 @@
 				050724B017F52F34003F2F57 /* ModifMerchantViewController.h */,
 				050724B117F52F34003F2F57 /* ModifMerchantViewController.m */,
 				050724B217F52F34003F2F57 /* ModifMerchantViewController.xib */,
+				FC0AE2A618FE5FE500C1FD50 /* PasswordResetViewController.h */,
+				FC0AE2A718FE5FE500C1FD50 /* PasswordResetViewController.m */,
+				FC0AE2A818FE5FE500C1FD50 /* PasswordResetViewController.xib */,
+				FC0AE2AB18FE702700C1FD50 /* RealnameLegalizeViewController.h */,
+				FC0AE2AC18FE702700C1FD50 /* RealnameLegalizeViewController.m */,
+				FC0AE2AD18FE702700C1FD50 /* RealnameLegalizeViewController.xib */,
 			);
 			name = Management;
 			sourceTree = "<group>";
@@ -2130,6 +2146,7 @@
 				050724B417F52F34003F2F57 /* ModifMerchantViewController.xib in Resources */,
 				050724B917F52F5E003F2F57 /* QueryBalanceViewController.xib in Resources */,
 				050724BE17F53082003F2F57 /* PointsQueryViewController.xib in Resources */,
+				FC0AE2AA18FE5FE500C1FD50 /* PasswordResetViewController.xib in Resources */,
 				050724C317F53098003F2F57 /* TradeDetailViewController.xib in Resources */,
 				050724C817F530AF003F2F57 /* SalesSlipViewController.xib in Resources */,
 				050724CD17F530C2003F2F57 /* AnnouncementListViewController.xib in Resources */,
@@ -2164,6 +2181,7 @@
 				050725AB17F565CB003F2F57 /* BFTSuccess.png in Resources */,
 				050725AD17F56D10003F2F57 /* swipcard.png in Resources */,
 				050725B517F5701C003F2F57 /* textInput.png in Resources */,
+				FC0AE2AF18FE702700C1FD50 /* RealnameLegalizeViewController.xib in Resources */,
 				050725B717F5702A003F2F57 /* textInput@2x.png in Resources */,
 				050725BC17F570BF003F2F57 /* TradeDetailGatherTableViewController.xib in Resources */,
 				050725C417F57199003F2F57 /* TradeDetailTableViewController.xib in Resources */,
@@ -2348,11 +2366,13 @@
 				0507257017F558B9003F2F57 /* RegexKitLite.m in Sources */,
 				0507257117F558B9003F2F57 /* Base64Transcoder.m in Sources */,
 				0507257217F558B9003F2F57 /* HSK_CFUtilities.m in Sources */,
+				FC0AE2AE18FE702700C1FD50 /* RealnameLegalizeViewController.m in Sources */,
 				0507257317F558B9003F2F57 /* NSData+Base64Additions.m in Sources */,
 				0507257417F558B9003F2F57 /* NSStream+SKPSMTPExtensions.m in Sources */,
 				0507257517F558B9003F2F57 /* SKPSMTPMessage.m in Sources */,
 				050725A617F55FEE003F2F57 /* SettleAccountResultViewController.m in Sources */,
 				050725B017F56E4D003F2F57 /* DateTextField.m in Sources */,
+				FC0AE2A918FE5FE500C1FD50 /* PasswordResetViewController.m in Sources */,
 				050725B317F56ED8003F2F57 /* SystemConfig.m in Sources */,
 				050725BB17F570BF003F2F57 /* TradeDetailGatherTableViewController.m in Sources */,
 				050725BF17F57139003F2F57 /* TradeGatherCell.m in Sources */,

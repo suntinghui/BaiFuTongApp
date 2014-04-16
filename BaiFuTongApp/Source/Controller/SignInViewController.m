@@ -40,7 +40,7 @@
     [self.view addSubview:scrollView];
     
     UIButton *confirmButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [confirmButton setFrame:CGRectMake(13, 150, 294, 40)];
+    [confirmButton setFrame:CGRectMake(13, 120, 294, 40)];
     
     [confirmButton setTitle:@"签   到" forState:UIControlStateNormal];
     [confirmButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -53,7 +53,7 @@
     
     UIImage *image = [UIImage imageNamed:@"BFTExplain.png"];
     UIImageView *explainIV = [[UIImageView alloc] initWithImage:[self stretchImage:image]];
-    [explainIV setFrame:CGRectMake(10, 200, 294, 218)];
+    [explainIV setFrame:CGRectMake(10, 170, 294, 218)];
     explainIV.autoresizingMask = UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleWidth;
     [scrollView addSubview:explainIV];
     

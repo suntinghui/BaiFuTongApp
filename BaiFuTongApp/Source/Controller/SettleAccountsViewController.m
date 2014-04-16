@@ -38,7 +38,7 @@
     scrollView.showsVerticalScrollIndicator = false;
     [self.view addSubview:scrollView];
     
-    self.MerchantPwdTF = [[PwdLeftTextField alloc] initWithFrame:CGRectMake(10, 10, 300, 44) left:@"商户密码" prompt:@"请输入6位商户密码"];
+    self.MerchantPwdTF = [[PwdLeftTextField alloc] initWithFrame:CGRectMake(10, 50, 300, 44) left:@"商户密码" prompt:@"请输入6位商户密码"];
     [scrollView addSubview:self.MerchantPwdTF];
     
     UIButton *confirmButton = [UIButton buttonWithType:UIButtonTypeCustom];
