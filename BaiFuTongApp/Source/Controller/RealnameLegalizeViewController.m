@@ -8,7 +8,11 @@
 
 #import "RealnameLegalizeViewController.h"
 
-@interface RealnameLegalizeViewController ()
+@interface RealnameLegalizeViewController ()<UIImagePickerControllerDelegate>
+- (IBAction)openCamera:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UIButton *IDcardFront;
+@property (weak, nonatomic) IBOutlet UIButton *IDcardBack;
+
 
 @end
 
@@ -26,22 +30,6 @@
     if (self) {
     }
     return self;
-}
-
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:YES];
-    self.navigationItem.hidesBackButton = YES;
-    UIImage *buttonNormalImage = [UIImage imageNamed:@"BFTNavBackButton_normal.png"];
-    UIImage *buttonSelectedImage = [UIImage imageNamed:@"backbutton_selected.png"];
-    UIButton *aButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [aButton setImage:buttonNormalImage forState:UIControlStateNormal];
-    [aButton setImage:buttonSelectedImage forState:UIControlStateSelected];
-    aButton.frame = CGRectMake(0.0,0.0,buttonNormalImage.size.width,buttonNormalImage.size.height);
-    [aButton addTarget:self action:@selector(backButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithCustomView:aButton];
-    self.navigationItem.leftBarButtonItem = backButton;
-    
 }
 
 - (void)viewDidLoad
@@ -63,9 +51,47 @@
     // Dispose of any resources that can be recreated.
 }
 
--(IBAction)backButtonAction:(id)sender
-{
-    [self.navigationController popViewControllerAnimated:YES];
+
+- (IBAction)openCamera:(UIButton *)sender {
+//    BOOL isCamera = [UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceRear];
+//    if (!isCamera) {
+//        NSLog(@"没有摄像头");
+//        return ;
+//    }
+//    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+//    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+//    imagePicker.delegate = self;
+//    // 编辑模式
+//    imagePicker.allowsEditing = YES;
+//    
+//    [self  presentViewController:imagePicker animated:YES completion:^{
+//    }];
+    NSLog(@"123");
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    
+    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        NSArray *temp_MediaTypes = [UIImagePickerController availableMediaTypesForSourceType:picker.sourceType];
+        picker.mediaTypes = temp_MediaTypes;
+        picker.delegate = self;
+        picker.allowsEditing = YES;
+    }
+
+    [self presentViewController:picker animated:YES completion:^{
+        
+    }];
+
 }
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    NSLog(@"%@", info);
+    UIImageView  *imageView = (UIImageView *)[self.view viewWithTag:101];
+    // UIImagePickerControllerOriginalImage 原始图片
+    // UIImagePickerControllerEditedImage 编辑后图片
+    UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
+    imageView.image = image;
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+}
+
 
 @end

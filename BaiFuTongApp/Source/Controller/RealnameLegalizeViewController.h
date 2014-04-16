@@ -6,9 +6,9 @@
 //  Copyright (c) 2014年 xushuang. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "AbstractViewController.h"
 
-@interface RealnameLegalizeViewController : UIViewController
+@interface RealnameLegalizeViewController : AbstractViewController
 
 - (id) init;
 @end
