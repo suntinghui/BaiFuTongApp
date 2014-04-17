@@ -38,7 +38,7 @@
     self.freshPwdTF = [[PwdLeftTextField alloc] initWithFrame:CGRectMake(10, 30, 298, 44) left:@"新  密  码" prompt:@"请输入6位商户密码"];
     [scrollView addSubview:self.freshPwdTF];
     
-    self.pIdNoTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 84, 298, 44) left:@"身份证号" prompt:@"请输入您的身份证号" keyBoardType:UIKeyboardTypePhonePad];
+    self.pIdNoTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 84, 298, 44) left:@"身份证号" prompt:@"请输入您的身份证号" keyBoardType:UIKeyboardTypeDefault];
     [self.pIdNoTF.contentTF hideKeyBoard:self.view:3 hasNavBar:YES];
     [scrollView addSubview:self.pIdNoTF];
     

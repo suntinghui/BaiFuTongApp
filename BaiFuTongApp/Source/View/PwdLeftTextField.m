@@ -44,7 +44,7 @@
         [leftlabel setText:leftStr];
         [self addSubview:leftlabel];
         
-        self.pwdTF = [[UITextField alloc] initWithFrame:CGRectMake(80, 11, frame.size.width-40, frame.size.height)];
+        self.pwdTF = [[UITextField alloc] initWithFrame:CGRectMake(80, 5, frame.size.width-40, frame.size.height)];
         self.backgroundColor = [UIColor clearColor];
         self.pwdTF.delegate = self;
         [self.pwdTF setPlaceholder:prompt];

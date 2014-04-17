@@ -7,6 +7,7 @@
 //
 
 #import "SignInViewController.h"
+#import "SignInResultViewController.h"
 
 @interface SignInViewController ()
 
@@ -40,7 +41,7 @@
     [self.view addSubview:scrollView];
     
     UIButton *confirmButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [confirmButton setFrame:CGRectMake(13, 120, 294, 40)];
+    [confirmButton setFrame:CGRectMake(13, 60, 294, 40)];
     
     [confirmButton setTitle:@"签   到" forState:UIControlStateNormal];
     [confirmButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -53,7 +54,7 @@
     
     UIImage *image = [UIImage imageNamed:@"BFTExplain.png"];
     UIImageView *explainIV = [[UIImageView alloc] initWithImage:[self stretchImage:image]];
-    [explainIV setFrame:CGRectMake(10, 170, 294, 218)];
+    [explainIV setFrame:CGRectMake(10, 110, 294, 218)];
     explainIV.autoresizingMask = UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleWidth;
     [scrollView addSubview:explainIV];
     
@@ -69,7 +70,10 @@
 //签到
 -(IBAction)confirmButtonAction:(id)sender
 {
-    [[Transfer sharedTransfer] startTransfer:@"800003" fskCmd:@"Request_GetExtKsn#Request_VT" paramDic:nil];
+    //[[Transfer sharedTransfer] startTransfer:@"800003" fskCmd:@"Request_GetExtKsn#Request_VT" paramDic:nil];
+    SignInResultViewController *signInResultViewController = [[SignInResultViewController alloc] initWithNibName:@"SignInResultViewController" bundle:nil];
+    [self.navigationController pushViewController:signInResultViewController animated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning

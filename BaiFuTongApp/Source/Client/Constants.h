@@ -28,10 +28,17 @@
 //所以不能这么设定适配的屏幕高度　4和5没区别
 //#define VIEWHEIGHT                          self.view.bounds.size.height - 105
 //改成这样就OK了 其中105包括　20的状态条　44的导航 41的手机号码显示条
-#define VIEWHEIGHT                          [UIScreen mainScreen].bounds.size.height - 64
+#define VIEWHEIGHT                          [UIScreen mainScreen].bounds.size.height - 105
+
+#define ios7_y                              (DeviceVersion>=7 ? 50:0)
+#define ios7_h                              (DeviceVersion>=7 ? -50:0)
+#define iPhone5_height                         (iPhone5 ? 88:0)
 
 //判断设备是否是iPhone5
 #define iPhone5                             ([UIScreen instancesRespondToSelector:@selector (currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136),[[UIScreen mainScreen] currentMode].size) : NO)
+
+//判断设备是否是IOS7 systemVersion
+#define DeviceVersion    [[[UIDevice currentDevice] systemVersion] floatValue]
 
 // DataBase
 #define kDataBaseName                       @"POS2iPhone.db"

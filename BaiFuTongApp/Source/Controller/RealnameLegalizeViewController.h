@@ -7,8 +7,45 @@
 //
 
 #import "AbstractViewController.h"
+#import "InputTextField.h"
+#import "LeftTextField.h"
 
-@interface RealnameLegalizeViewController : AbstractViewController
+@interface RealnameLegalizeViewController : AbstractViewController<UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate, UIToolbarDelegate, UIActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+{
+    NSInteger           areaFlag;
+    NSInteger           bankFlag;
+    NSInteger           cityFlag;
+        
+    NSDictionary        *_receiveDic;
+}
 
-- (id) init;
+@property (nonatomic, strong) UIScrollView  *scrollView;
+@property (nonatomic, strong) UIImageView  *IdCardFront;
+@property (nonatomic, strong) UIImageView  *IdCardBack;
+@property (nonatomic, strong) UIImageView  *bankPic;
+
+@property (nonatomic, strong) UIButton      *selectBankButton;
+@property (nonatomic, strong) UIButton      *selectAreaButton;
+@property (nonatomic, strong) UIButton      *selectCityButton;
+@property (nonatomic, strong) UIButton      *banksBranchButton;
+
+@property (nonatomic, strong) NSArray           *bankArray;
+@property (nonatomic, strong) NSArray           *areaArray;
+@property (nonatomic, strong) NSArray           *cityArray;
+@property (nonatomic, strong) NSMutableArray           *selectCityArray;
+
+@property (nonatomic, strong) UIActionSheet *actionSheet;
+@property (nonatomic, strong) UIPickerView  *picker;
+
+@property (nonatomic, strong) NSString  *respBankCode;
+@property (nonatomic, strong) NSString  *respBankName;
+
+@property (nonatomic, strong) NSDictionary      *receiveDic;
+@property (nonatomic, strong) InputTextField *bkCardNoTF;
+@property(nonatomic, strong)InputTextField *merchantTF;
+@property(nonatomic, strong) LeftTextField    *securityCodeTF;
+@property(nonatomic, strong) UIButton        *securityCodeButton;
+
+- (void)selectButton:(id)sender;
+
 @end

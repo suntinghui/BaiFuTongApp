@@ -34,6 +34,10 @@
 #pragma mark UIViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
+                                [UIColor whiteColor],
+                                NSForegroundColorAttributeName,[UIFont boldSystemFontOfSize:20],NSFontAttributeName, [UIColor colorWithWhite:0.0 alpha:0.0], NSBackgroundColorAttributeName, nil];
+    [self.navigationController.navigationBar setTitleTextAttributes:attributes];
 	self.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
     self.navigationItem.title = @"主菜单";
     self.navigationItem.hidesBackButton = YES;
@@ -52,9 +56,9 @@
         
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         if (i > 2) {
-            [button setFrame:CGRectMake(20 + (i-3)*103, 165, 72, 72)];
+            [button setFrame:CGRectMake(20 + (i-3)*103, 165+ios7_y, 72, 72)];
         }else {
-            [button setFrame:CGRectMake(20 + i*103, 30, 72, 72)];
+            [button setFrame:CGRectMake(20 + i*103, 30+ios7_y, 72, 72)];
         }
         
         [button setBackgroundImage:[UIImage imageNamed:[NSString stringWithFormat:@"BFTMainIcon_normal_0%d.png",catalog.iconId]] forState:UIControlStateNormal];
@@ -65,10 +69,10 @@
         
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
         if (i>2) {
-            [label setFrame:CGRectMake(25+ (i-3)*103,240, 70, 20)];
+            [label setFrame:CGRectMake(25+ (i-3)*103,240+ios7_y, 70, 20)];
         }
         else {
-            [label setFrame:CGRectMake(25+ i*103, 107, 70, 20)];
+            [label setFrame:CGRectMake(25+ i*103, 107+ios7_y, 70, 20)];
         }
         label.text = catalog.title;
         label.backgroundColor = [UIColor clearColor];

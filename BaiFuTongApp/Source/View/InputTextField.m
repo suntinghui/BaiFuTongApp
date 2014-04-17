@@ -30,7 +30,7 @@
         [self.leftLabel setFont:[UIFont boldSystemFontOfSize:14]];
         [self addSubview:self.leftLabel];
         
-        self.contentTF = [[UITextField alloc] initWithFrame:CGRectMake(80, 14, frame.size.width*2/3, frame.size.height*4/5)];
+        self.contentTF = [[UITextField alloc] initWithFrame:CGRectMake(80, 5, frame.size.width*2/3, frame.size.height*4/5)];
         [self.contentTF setTextColor:[UIColor blackColor]];
         [self.contentTF setBackgroundColor:[UIColor clearColor]];
         [self.contentTF setKeyboardType:keyBoardType];

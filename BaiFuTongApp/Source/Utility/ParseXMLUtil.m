@@ -14,6 +14,8 @@
 #import "RechargeModel.h"
 #import "FileOperatorUtil.h"
 #import "FieldModel.h"
+#import "AreaModel.h"
+#import "CityModel.h"
 
 @implementation ParseXMLUtil
 
@@ -106,10 +108,10 @@
         while (bankElement) {
             NSString *name = [TBXML valueOfAttributeNamed:@"name" forElement:bankElement];
             NSString *code = [TBXML valueOfAttributeNamed:@"code" forElement:bankElement];
-//            BankModel *bank = [[BankModel alloc] init];
-//            [bank setName:name];
-//            [bank setCode:code];
-//            [array addObject:bank];
+            BankModel *bank = [[BankModel alloc] init];
+            [bank setName:name];
+            [bank setCode:code];
+            [array addObject:bank];
             
             bankElement = [TBXML nextSiblingNamed:@"bank" searchFromElement:bankElement];
         }
@@ -119,6 +121,70 @@
     
     return nil;
 }
+
+//省份
++ (NSArray *) parseAreaXML
+{
+    NSError *error = nil;
+    TBXML *tbXML = [[TBXML alloc] initWithXMLData:[FileOperatorUtil getDataFromXML:@"province.xml"] error:&error];
+    if (error) {
+        NSLog(@"%@->parseProvinceXML:%@", [self class] ,[error localizedDescription]);
+        return nil;
+    }
+    
+    TBXMLElement *rootElement = [tbXML rootXMLElement];
+    if (rootElement) {
+        NSMutableArray *array = [NSMutableArray array];
+        TBXMLElement *bankElement = [TBXML childElementNamed:@"province" parentElement:rootElement];
+        while (bankElement) {
+            NSString *name = [TBXML valueOfAttributeNamed:@"name" forElement:bankElement];
+            NSString *code = [TBXML valueOfAttributeNamed:@"code" forElement:bankElement];
+            AreaModel *area = [[AreaModel alloc] init];
+            [area setName:name];
+            [area setCode:code];
+            [array addObject:area];
+            
+            bankElement = [TBXML nextSiblingNamed:@"province" searchFromElement:bankElement];
+        }
+        
+        return array;
+    }
+    
+    return nil;
+}
+//城市
++ (NSArray *) parseCityXML
+{
+    NSError *error = nil;
+    TBXML *tbXML = [[TBXML alloc] initWithXMLData:[FileOperatorUtil getDataFromXML:@"city.xml"] error:&error];
+    if (error) {
+        NSLog(@"%@->parseCityXML:%@", [self class] ,[error localizedDescription]);
+        return nil;
+    }
+    
+    TBXMLElement *rootElement = [tbXML rootXMLElement];
+    if (rootElement) {
+        NSMutableArray *array = [NSMutableArray array];
+        TBXMLElement *bankElement = [TBXML childElementNamed:@"city" parentElement:rootElement];
+        while (bankElement) {
+            NSString *parentCode = [TBXML valueOfAttributeNamed:@"parentCode" forElement:bankElement];
+            NSString *name = [TBXML valueOfAttributeNamed:@"name" forElement:bankElement];
+            NSString *code = [TBXML valueOfAttributeNamed:@"code" forElement:bankElement];
+            CityModel *city = [[CityModel alloc] init];
+            [city setParentCode:parentCode];
+            [city setName:name];
+            [city setCode:code];
+            [array addObject:city];
+            
+            bankElement = [TBXML nextSiblingNamed:@"city" searchFromElement:bankElement];
+        }
+        
+        return array;
+    }
+    
+    return nil;
+}
+
 
 + (NSArray *) parsePhoneRechargeXML
 {

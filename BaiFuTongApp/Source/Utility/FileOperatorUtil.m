@@ -27,10 +27,18 @@
     return xmlDirectory;
 }
 
++ (NSString *) getDocumentsDir
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    
+    return documentsDirectory;
+}
+
 + (NSData *) getDataFromXML:(NSString *) xmlFileName
 {
-    
-    NSString *filePath = [NSString stringWithFormat:@"%@/%@.xml", [self getXMLDirectory], [xmlFileName stringByDeletingPathExtension]];
+    //NSString *filePath = [NSString stringWithFormat:@"%@/%@.xml", [self getXMLDirectory], [xmlFileName stringByDeletingPathExtension]];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:[xmlFileName stringByDeletingPathExtension] ofType:@"xml"];
     
     NSError *error = nil;
     NSData *data = [NSData dataWithContentsOfFile:filePath options:NSDataReadingMappedIfSafe error: &error];
@@ -110,7 +118,7 @@
                         NSString *downloadPath = [NSString stringWithFormat:@"%@%@", FILEURL, fileName];
                         
                         MKNetworkOperation *downloadOperation=[FileOperatorUtil downloadFatAssFileFrom:downloadPath
-                                                                                           toFile:path];
+                                                                                                toFile:path];
                         
                         [downloadOperation addCompletionHandler:^(MKNetworkOperation* completedRequest) {
                             // 一个文件更新成功，则更新UserDefault
@@ -172,7 +180,6 @@
     [engine enqueueOperation:op];
     return op;
 }
-
 
 
 /****

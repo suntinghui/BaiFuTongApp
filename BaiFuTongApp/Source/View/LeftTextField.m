@@ -26,7 +26,7 @@
         [bgIV setImage:[UIImage imageNamed:@"loginInputbg_long.png"]];
         [self addSubview:bgIV];
         
-        self.contentTF = [[UITextField alloc] initWithFrame:CGRectMake(10, 7, frame.size.width, frame.size.height)];
+        self.contentTF = [[UITextField alloc] initWithFrame:CGRectMake(10, 5, frame.size.width, frame.size.height)];
         [self.contentTF setBackgroundColor:[UIColor clearColor]];
         [self addSubview:self.contentTF];
     }

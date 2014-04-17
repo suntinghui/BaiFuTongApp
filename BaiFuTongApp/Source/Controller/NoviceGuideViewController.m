@@ -93,11 +93,6 @@
     [self.navigationController setNavigationBarHidden:YES animated:NO];
 }
 
-- (void)viewDidDisappear:(BOOL)animated
-{
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
-}
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
@@ -133,6 +128,11 @@
 - (BOOL)shouldAutorotate
 {
     return NO;
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [[UIApplication sharedApplication]setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
+    self.navigationController.navigationBarHidden = NO;
 }
 
 - (NSUInteger)supportedInterfaceOrientations

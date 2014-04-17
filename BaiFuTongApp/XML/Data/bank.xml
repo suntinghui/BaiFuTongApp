@@ -1,18 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-
+<!--银行列表-->
 <root>
-	<bank name="中国工商银行" code="102" />
-	<bank name="中国农业银行" code="103" />
-	<bank name="中国银行" code="104" />
-	<bank name="中国建设银行" code="105" />
-	<bank name="交通银行" code="301" />
-	<bank name="中信银行" code="302" />
-	<bank name="中国光大银行" code="303" />
-	<bank name="华夏银行" code="304" />
-	<bank name="中国民生银行" code="305" />
-	<bank name="广发银行" code="306" />
-	<bank name="深圳发展银行" code="307" />
-	<bank name="招商银行" code="308" />
-	<bank name="兴业银行" code="309" />
+	<bank name="中国工商银行股份有限公司" code="102" />
+	<bank name="中国农业银行股份有限公司" code="103" />
+	<bank name="中国银行股份有限公司" code="104" />
+	<bank name="中国建设银行股份有限公司" code="105" />
+	<bank name="交通银行股份有限公司" code="301" />
+	<bank name="中信银行股份有限公司" code="302" />
+	<bank name="中国光大银行股份有限公司" code="303" />
+	<bank name="华夏银行股份有限公司" code="304" />
+	<bank name="中国民生银行股份有限公司" code="305" />
+	<bank name="广东发展银行股份有限公司" code="306" />
+	<bank name="平安银行股份有限公司" code="307" />
+	<bank name="招商银行股份有限公司" code="308" />
+	<bank name="兴业银行股份有限公司" code="309" />
 	<bank name="上海浦东发展银行" code="310" />
+    <bank name="城市商业银行" code="313" />
+    <bank name="农村商业银行、农村合作银行" code="314" />
+    <bank name="上海农村商业银行" code="322" />
+    <bank name="中国邮政储蓄银行" code="403" />
+    <bank name="汇丰银行（中国）有限公司" code="501" />
+    <bank name="东亚银行（中国）有限公司" code="502" />
+    <bank name="花旗银行（中国）有限公司" code="531" />
+    <bank name="渣打银行（中国）有限公司" code="671" />
 </root>

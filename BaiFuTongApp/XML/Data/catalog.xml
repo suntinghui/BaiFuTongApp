@@ -85,6 +85,15 @@
 	</catalog>
     <catalog>
 		<catalogId>15</catalogId>
+		<title>修改银行卡</title>
+		<parentId>1</parentId>
+		<actionId>ModifyBankViewController</actionId>
+        <action>ModifyBankViewController</action>
+        <actionType>viewcontroller</actionType>
+		<iconId>14</iconId>
+	</catalog>
+    <catalog>
+		<catalogId>16</catalogId>
 		<title>修改商户密码</title>
 		<parentId>1</parentId>
 		<actionId>ModifMerchantViewController</actionId>
@@ -94,7 +103,7 @@
 	</catalog>
     
     <catalog>
-		<catalogId>16</catalogId>
+		<catalogId>17</catalogId>
 		<title>支付密码重置</title>
 		<parentId>1</parentId>
 		<actionId>PasswordResetViewController</actionId>

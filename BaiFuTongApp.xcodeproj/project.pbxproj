@@ -213,7 +213,6 @@
 		051F2C34180E37EA00AB174E /* con_req_999000001.xml in Resources */ = {isa = PBXBuildFile; fileRef = 051F2C12180E37EA00AB174E /* con_req_999000001.xml */; };
 		051F2C35180E37EA00AB174E /* con_req_999000002.xml in Resources */ = {isa = PBXBuildFile; fileRef = 051F2C13180E37EA00AB174E /* con_req_999000002.xml */; };
 		051F2C36180E37EA00AB174E /* con_req_999000003.xml in Resources */ = {isa = PBXBuildFile; fileRef = 051F2C14180E37EA00AB174E /* con_req_999000003.xml */; };
-		051F2C37180E37EA00AB174E /* bank.xml in Resources */ = {isa = PBXBuildFile; fileRef = 051F2C16180E37EA00AB174E /* bank.xml */; };
 		051F2C38180E37EA00AB174E /* catalog.xml in Resources */ = {isa = PBXBuildFile; fileRef = 051F2C17180E37EA00AB174E /* catalog.xml */; };
 		051F2C39180E37EA00AB174E /* mac.plist in Resources */ = {isa = PBXBuildFile; fileRef = 051F2C18180E37EA00AB174E /* mac.plist */; };
 		051F2C3A180E37EA00AB174E /* phonerecharge.xml in Resources */ = {isa = PBXBuildFile; fileRef = 051F2C19180E37EA00AB174E /* phonerecharge.xml */; };
@@ -441,6 +440,28 @@
 		FC0AE2AA18FE5FE500C1FD50 /* PasswordResetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC0AE2A818FE5FE500C1FD50 /* PasswordResetViewController.xib */; };
 		FC0AE2AE18FE702700C1FD50 /* RealnameLegalizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0AE2AC18FE702700C1FD50 /* RealnameLegalizeViewController.m */; };
 		FC0AE2AF18FE702700C1FD50 /* RealnameLegalizeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC0AE2AD18FE702700C1FD50 /* RealnameLegalizeViewController.xib */; };
+		FC884CD518FF68120009F617 /* MyPickController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC884CD418FF68120009F617 /* MyPickController.m */; };
+		FC884CDA18FF6E960009F617 /* AreaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC884CD718FF6E960009F617 /* AreaModel.m */; };
+		FC884CDB18FF6E960009F617 /* CityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC884CD918FF6E960009F617 /* CityModel.m */; };
+		FC884CE318FF75670009F617 /* bank.xml in Resources */ = {isa = PBXBuildFile; fileRef = FC884CE018FF75670009F617 /* bank.xml */; };
+		FC884CE418FF75670009F617 /* city.xml in Resources */ = {isa = PBXBuildFile; fileRef = FC884CE118FF75670009F617 /* city.xml */; };
+		FC884CE518FF75670009F617 /* province.xml in Resources */ = {isa = PBXBuildFile; fileRef = FC884CE218FF75670009F617 /* province.xml */; };
+		FC884CEA18FF77320009F617 /* selectBank_highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = FC884CE618FF77320009F617 /* selectBank_highlight.png */; };
+		FC884CEB18FF77320009F617 /* selectBank_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = FC884CE718FF77320009F617 /* selectBank_normal.png */; };
+		FC884CEC18FF77320009F617 /* selectField_highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = FC884CE818FF77320009F617 /* selectField_highlight.png */; };
+		FC884CED18FF77320009F617 /* selectField_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = FC884CE918FF77320009F617 /* selectField_normal.png */; };
+		FC884CF218FF77460009F617 /* selectBank_highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC884CEE18FF77460009F617 /* selectBank_highlight@2x.png */; };
+		FC884CF318FF77460009F617 /* selectBank_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC884CEF18FF77460009F617 /* selectBank_normal@2x.png */; };
+		FC884CF418FF77460009F617 /* selectField_highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC884CF018FF77460009F617 /* selectField_highlight@2x.png */; };
+		FC884CF518FF77460009F617 /* selectField_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC884CF118FF77460009F617 /* selectField_normal@2x.png */; };
+		FC884CFC18FF94D10009F617 /* SetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC884CFA18FF94D10009F617 /* SetPasswordViewController.m */; };
+		FC884CFD18FF94D10009F617 /* SetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC884CFB18FF94D10009F617 /* SetPasswordViewController.xib */; };
+		FC884D0118FFA8B10009F617 /* SignInResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC884CFF18FFA8B10009F617 /* SignInResultViewController.m */; };
+		FC884D0218FFA8B10009F617 /* SignInResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC884D0018FFA8B10009F617 /* SignInResultViewController.xib */; };
+		FC884D0418FFB1010009F617 /* BFTFailed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC884D0318FFB1010009F617 /* BFTFailed@2x.png */; };
+		FC884D0618FFBFAE0009F617 /* img_card_head_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = FC884D0518FFBFAE0009F617 /* img_card_head_portrait.png */; };
+		FC884D0A18FFCCDF0009F617 /* ModifyBankViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC884D0818FFCCDF0009F617 /* ModifyBankViewController.m */; };
+		FC884D0B18FFCCDF0009F617 /* ModifyBankViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC884D0918FFCCDF0009F617 /* ModifyBankViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -735,7 +756,6 @@
 		051F2C12180E37EA00AB174E /* con_req_999000001.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_999000001.xml; sourceTree = "<group>"; };
 		051F2C13180E37EA00AB174E /* con_req_999000002.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_999000002.xml; sourceTree = "<group>"; };
 		051F2C14180E37EA00AB174E /* con_req_999000003.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = con_req_999000003.xml; sourceTree = "<group>"; };
-		051F2C16180E37EA00AB174E /* bank.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = bank.xml; sourceTree = "<group>"; };
 		051F2C17180E37EA00AB174E /* catalog.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = catalog.xml; sourceTree = "<group>"; };
 		051F2C18180E37EA00AB174E /* mac.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mac.plist; sourceTree = "<group>"; };
 		051F2C19180E37EA00AB174E /* phonerecharge.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = phonerecharge.xml; sourceTree = "<group>"; };
@@ -1032,6 +1052,34 @@
 		FC0AE2AB18FE702700C1FD50 /* RealnameLegalizeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealnameLegalizeViewController.h; sourceTree = "<group>"; };
 		FC0AE2AC18FE702700C1FD50 /* RealnameLegalizeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealnameLegalizeViewController.m; sourceTree = "<group>"; };
 		FC0AE2AD18FE702700C1FD50 /* RealnameLegalizeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RealnameLegalizeViewController.xib; sourceTree = "<group>"; };
+		FC884CD318FF68120009F617 /* MyPickController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPickController.h; sourceTree = "<group>"; };
+		FC884CD418FF68120009F617 /* MyPickController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPickController.m; sourceTree = "<group>"; };
+		FC884CD618FF6E960009F617 /* AreaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AreaModel.h; sourceTree = "<group>"; };
+		FC884CD718FF6E960009F617 /* AreaModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AreaModel.m; sourceTree = "<group>"; };
+		FC884CD818FF6E960009F617 /* CityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityModel.h; sourceTree = "<group>"; };
+		FC884CD918FF6E960009F617 /* CityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityModel.m; sourceTree = "<group>"; };
+		FC884CE018FF75670009F617 /* bank.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = bank.xml; sourceTree = "<group>"; };
+		FC884CE118FF75670009F617 /* city.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = city.xml; sourceTree = "<group>"; };
+		FC884CE218FF75670009F617 /* province.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = province.xml; sourceTree = "<group>"; };
+		FC884CE618FF77320009F617 /* selectBank_highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selectBank_highlight.png; sourceTree = "<group>"; };
+		FC884CE718FF77320009F617 /* selectBank_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selectBank_normal.png; sourceTree = "<group>"; };
+		FC884CE818FF77320009F617 /* selectField_highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selectField_highlight.png; sourceTree = "<group>"; };
+		FC884CE918FF77320009F617 /* selectField_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selectField_normal.png; sourceTree = "<group>"; };
+		FC884CEE18FF77460009F617 /* selectBank_highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selectBank_highlight@2x.png"; sourceTree = "<group>"; };
+		FC884CEF18FF77460009F617 /* selectBank_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selectBank_normal@2x.png"; sourceTree = "<group>"; };
+		FC884CF018FF77460009F617 /* selectField_highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selectField_highlight@2x.png"; sourceTree = "<group>"; };
+		FC884CF118FF77460009F617 /* selectField_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selectField_normal@2x.png"; sourceTree = "<group>"; };
+		FC884CF918FF94D00009F617 /* SetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetPasswordViewController.h; sourceTree = "<group>"; };
+		FC884CFA18FF94D10009F617 /* SetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetPasswordViewController.m; sourceTree = "<group>"; };
+		FC884CFB18FF94D10009F617 /* SetPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetPasswordViewController.xib; sourceTree = "<group>"; };
+		FC884CFE18FFA8B10009F617 /* SignInResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInResultViewController.h; sourceTree = "<group>"; };
+		FC884CFF18FFA8B10009F617 /* SignInResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInResultViewController.m; sourceTree = "<group>"; };
+		FC884D0018FFA8B10009F617 /* SignInResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignInResultViewController.xib; sourceTree = "<group>"; };
+		FC884D0318FFB1010009F617 /* BFTFailed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BFTFailed@2x.png"; sourceTree = "<group>"; };
+		FC884D0518FFBFAE0009F617 /* img_card_head_portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_card_head_portrait.png; sourceTree = "<group>"; };
+		FC884D0718FFCCDF0009F617 /* ModifyBankViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModifyBankViewController.h; sourceTree = "<group>"; };
+		FC884D0818FFCCDF0009F617 /* ModifyBankViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModifyBankViewController.m; sourceTree = "<group>"; };
+		FC884D0918FFCCDF0009F617 /* ModifyBankViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModifyBankViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1074,6 +1122,9 @@
 				050724A117F52EC5003F2F57 /* SignInViewController.h */,
 				050724A217F52EC5003F2F57 /* SignInViewController.m */,
 				050724A317F52EC5003F2F57 /* SignInViewController.xib */,
+				FC884CFE18FFA8B10009F617 /* SignInResultViewController.h */,
+				FC884CFF18FFA8B10009F617 /* SignInResultViewController.m */,
+				FC884D0018FFA8B10009F617 /* SignInResultViewController.xib */,
 				050724A617F52F0E003F2F57 /* SettleAccountsViewController.h */,
 				050724A717F52F0E003F2F57 /* SettleAccountsViewController.m */,
 				050724A817F52F0E003F2F57 /* SettleAccountsViewController.xib */,
@@ -1092,6 +1143,14 @@
 				FC0AE2AB18FE702700C1FD50 /* RealnameLegalizeViewController.h */,
 				FC0AE2AC18FE702700C1FD50 /* RealnameLegalizeViewController.m */,
 				FC0AE2AD18FE702700C1FD50 /* RealnameLegalizeViewController.xib */,
+				FC884CD318FF68120009F617 /* MyPickController.h */,
+				FC884CD418FF68120009F617 /* MyPickController.m */,
+				FC884CF918FF94D00009F617 /* SetPasswordViewController.h */,
+				FC884CFA18FF94D10009F617 /* SetPasswordViewController.m */,
+				FC884CFB18FF94D10009F617 /* SetPasswordViewController.xib */,
+				FC884D0718FFCCDF0009F617 /* ModifyBankViewController.h */,
+				FC884D0818FFCCDF0009F617 /* ModifyBankViewController.m */,
+				FC884D0918FFCCDF0009F617 /* ModifyBankViewController.xib */,
 			);
 			name = Management;
 			sourceTree = "<group>";
@@ -1386,7 +1445,9 @@
 		051F2C15180E37EA00AB174E /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				051F2C16180E37EA00AB174E /* bank.xml */,
+				FC884CE018FF75670009F617 /* bank.xml */,
+				FC884CE118FF75670009F617 /* city.xml */,
+				FC884CE218FF75670009F617 /* province.xml */,
 				051F2C17180E37EA00AB174E /* catalog.xml */,
 				051F2C18180E37EA00AB174E /* mac.plist */,
 				051F2C19180E37EA00AB174E /* phonerecharge.xml */,
@@ -1639,6 +1700,10 @@
 				0507261217F579AB003F2F57 /* AnnouncementModel.m */,
 				0507260E17F57991003F2F57 /* ReversalTransferModel.h */,
 				0507260F17F57991003F2F57 /* ReversalTransferModel.m */,
+				FC884CD618FF6E960009F617 /* AreaModel.h */,
+				FC884CD718FF6E960009F617 /* AreaModel.m */,
+				FC884CD818FF6E960009F617 /* CityModel.h */,
+				FC884CD918FF6E960009F617 /* CityModel.m */,
 				050725DF17F57511003F2F57 /* BankModel.h */,
 				050725E017F57511003F2F57 /* BankModel.m */,
 				050725E117F57511003F2F57 /* FieldModel.h */,
@@ -1722,6 +1787,7 @@
 			isa = PBXGroup;
 			children = (
 				053B661F17F7EF2000EA9F11 /* salesslip.png */,
+				FC884D0518FFBFAE0009F617 /* img_card_head_portrait.png */,
 				050725A117F55F71003F2F57 /* bg.png */,
 				0507259517F55EC1003F2F57 /* button_nomal.png */,
 				0507259617F55EC2003F2F57 /* button_select.png */,
@@ -1782,6 +1848,10 @@
 				0507265C17F584A5003F2F57 /* guide_4-568h.png */,
 				0507265D17F584A6003F2F57 /* guide_3-568h.png */,
 				0507265E17F584A7003F2F57 /* guide_2-568h.png */,
+				FC884CE618FF77320009F617 /* selectBank_highlight.png */,
+				FC884CE718FF77320009F617 /* selectBank_normal.png */,
+				FC884CE818FF77320009F617 /* selectField_highlight.png */,
+				FC884CE918FF77320009F617 /* selectField_normal.png */,
 				053B662917F7F4AE00EA9F11 /* BFTSignBg.png */,
 				053B662F17F7F60B00EA9F11 /* BFTSign_ok_btn.png */,
 				053B663017F7F60B00EA9F11 /* BFTSign_clear_btn.png */,
@@ -1804,12 +1874,17 @@
 				0507264C17F58492003F2F57 /* guide_2-568h@2x.png */,
 				0507264D17F58493003F2F57 /* guide_3-568h@2x.png */,
 				0507264E17F58493003F2F57 /* guide_4-568h@2x.png */,
+				FC884CEE18FF77460009F617 /* selectBank_highlight@2x.png */,
+				FC884CEF18FF77460009F617 /* selectBank_normal@2x.png */,
+				FC884CF018FF77460009F617 /* selectField_highlight@2x.png */,
+				FC884CF118FF77460009F617 /* selectField_normal@2x.png */,
 				0507262C17F57EF2003F2F57 /* flowbg@2x.png */,
 				0507262D17F57EF2003F2F57 /* gicon@2x.png */,
 				0507262E17F57EF3003F2F57 /* littlegou@2x.png */,
 				0507262A17F57EC4003F2F57 /* wifiicon@2x.png */,
 				050725B617F57029003F2F57 /* textInput@2x.png */,
 				050725A817F565C6003F2F57 /* BFTSuccess@2x.png */,
+				FC884D0318FFB1010009F617 /* BFTFailed@2x.png */,
 				0507259117F55CBA003F2F57 /* BFTPwdinput@2x.png */,
 				0507250317F54EB2003F2F57 /* BFTExplain@2x.png */,
 				050724FB17F54CAC003F2F57 /* BFTConfirmButton_highlight@2x.png */,
@@ -2039,6 +2114,7 @@
 				05EE2E6217F41EB600C2A8E2 /* Default-568h@2x.png in Resources */,
 				05EE2E9717F4263A00C2A8E2 /* searchBarBG.png in Resources */,
 				05EE2E9817F4263A00C2A8E2 /* searchBarIcon.png in Resources */,
+				FC884D0418FFB1010009F617 /* BFTFailed@2x.png in Resources */,
 				05EE2E9917F4263A00C2A8E2 /* searchBarIcon@2x.png in Resources */,
 				05EE2E9A17F4263A00C2A8E2 /* searchTextBG.png in Resources */,
 				05EE2E9B17F4263A00C2A8E2 /* user.png in Resources */,
@@ -2048,12 +2124,14 @@
 				05EE2F0D17F427A100C2A8E2 /* BFTLeftMenuIcon_highlight_02.png in Resources */,
 				05EE2F0E17F427A100C2A8E2 /* BFTLeftMenuIcon_highlight_03.png in Resources */,
 				05EE2F0F17F427A100C2A8E2 /* BFTLeftMenuIcon_highlight_04.png in Resources */,
+				FC884CE318FF75670009F617 /* bank.xml in Resources */,
 				05EE2F1017F427A100C2A8E2 /* BFTLeftMenuIcon_highlight_05.png in Resources */,
 				05EE2F1117F427A100C2A8E2 /* BFTLeftMenuIcon_normal_01.png in Resources */,
 				05EE2F1217F427A100C2A8E2 /* BFTLeftMenuIcon_normal_02.png in Resources */,
 				05EE2F1317F427A100C2A8E2 /* BFTLeftMenuIcon_normal_03.png in Resources */,
 				05EE2F1417F427A100C2A8E2 /* BFTLeftMenuIcon_normal_04.png in Resources */,
 				05EE2F1517F427A100C2A8E2 /* BFTLeftMenuIcon_normal_05.png in Resources */,
+				FC884CED18FF77320009F617 /* selectField_normal.png in Resources */,
 				05EE2F1617F427A100C2A8E2 /* BFTMainIcon_normal_01.png in Resources */,
 				05EE2F1717F427A100C2A8E2 /* BFTMainIcon_normal_02.png in Resources */,
 				05EE2F1817F427A100C2A8E2 /* BFTMainIcon_normal_03.png in Resources */,
@@ -2072,6 +2150,7 @@
 				05EE2F2717F427A100C2A8E2 /* RegisterButton_highlight.png in Resources */,
 				05EE2F2817F427A100C2A8E2 /* RegisterButton_normal.png in Resources */,
 				05EE2F2A17F427A100C2A8E2 /* BFTLeftMenuBgBig@2x.png in Resources */,
+				FC884CF218FF77460009F617 /* selectBank_highlight@2x.png in Resources */,
 				05EE2F2B17F427A100C2A8E2 /* BFTLeftMenuCellBg_hightlight@2x.png in Resources */,
 				05EE2F2C17F427A100C2A8E2 /* BFTLeftMenuIcon_highlight_01@2x.png in Resources */,
 				05EE2F2D17F427A100C2A8E2 /* BFTLeftMenuIcon_highlight_02@2x.png in Resources */,
@@ -2082,6 +2161,7 @@
 				05EE2F3217F427A100C2A8E2 /* BFTLeftMenuIcon_normal_02@2x.png in Resources */,
 				05EE2F3317F427A100C2A8E2 /* BFTLeftMenuIcon_normal_03@2x.png in Resources */,
 				05EE2F3417F427A100C2A8E2 /* BFTLeftMenuIcon_normal_04@2x.png in Resources */,
+				FC884CFD18FF94D10009F617 /* SetPasswordViewController.xib in Resources */,
 				05EE2F3517F427A100C2A8E2 /* BFTLeftMenuIcon_normal_05@2x.png in Resources */,
 				05EE2F3617F427A100C2A8E2 /* BFTMainIcon_normal_01@2x.png in Resources */,
 				05EE2F3717F427A100C2A8E2 /* BFTMainIcon_normal_02@2x.png in Resources */,
@@ -2090,6 +2170,7 @@
 				05EE2F3A17F427A100C2A8E2 /* BFTMainIcon_normal_05@2x.png in Resources */,
 				05EE2F3B17F427A100C2A8E2 /* BFTNavBackButton_normal@2x.png in Resources */,
 				05EE2F3C17F427A100C2A8E2 /* BFTNavbar@2x.png in Resources */,
+				FC884CF418FF77460009F617 /* selectField_highlight@2x.png in Resources */,
 				05EE2F3E17F427A100C2A8E2 /* BFTSecondMenuCellBg_highlight@2x.png in Resources */,
 				05EE2F3F17F427A100C2A8E2 /* BFTSecondMenuCellBg_normal@2x.png in Resources */,
 				05EE2F4017F427A100C2A8E2 /* btn_comment_sametime_select@2x.png in Resources */,
@@ -2123,6 +2204,7 @@
 				05EE2F5C17F427A100C2A8E2 /* BFTSecondMenuIcon_31@2x.png in Resources */,
 				05EE2F5D17F427A100C2A8E2 /* BFTSecondMenuIcon_32.png in Resources */,
 				05EE2F5E17F427A100C2A8E2 /* BFTSecondMenuIcon_32@2x.png in Resources */,
+				FC884D0618FFBFAE0009F617 /* img_card_head_portrait.png in Resources */,
 				05EE2F5F17F427A100C2A8E2 /* BFTSecondMenuIcon_51.png in Resources */,
 				05EE2F6017F427A100C2A8E2 /* BFTSecondMenuIcon_51@2x.png in Resources */,
 				05EE2F6117F427A100C2A8E2 /* BFTSecondMenuIcon_52.png in Resources */,
@@ -2144,13 +2226,17 @@
 				050724AA17F52F0E003F2F57 /* SettleAccountsViewController.xib in Resources */,
 				050724AF17F52F21003F2F57 /* SignOutViewController.xib in Resources */,
 				050724B417F52F34003F2F57 /* ModifMerchantViewController.xib in Resources */,
+				FC884CE518FF75670009F617 /* province.xml in Resources */,
 				050724B917F52F5E003F2F57 /* QueryBalanceViewController.xib in Resources */,
 				050724BE17F53082003F2F57 /* PointsQueryViewController.xib in Resources */,
 				FC0AE2AA18FE5FE500C1FD50 /* PasswordResetViewController.xib in Resources */,
+				FC884D0218FFA8B10009F617 /* SignInResultViewController.xib in Resources */,
 				050724C317F53098003F2F57 /* TradeDetailViewController.xib in Resources */,
+				FC884CF318FF77460009F617 /* selectBank_normal@2x.png in Resources */,
 				050724C817F530AF003F2F57 /* SalesSlipViewController.xib in Resources */,
 				050724CD17F530C2003F2F57 /* AnnouncementListViewController.xib in Resources */,
 				050724D217F530D0003F2F57 /* FlowCountViewController.xib in Resources */,
+				FC884CEB18FF77320009F617 /* selectBank_normal.png in Resources */,
 				050724D717F530EB003F2F57 /* GatherViewController.xib in Resources */,
 				050724DC17F5310D003F2F57 /* GatherCancelTableViewController.xib in Resources */,
 				050724E117F53136003F2F57 /* NoviceGuideViewController.xib in Resources */,
@@ -2164,6 +2250,7 @@
 				0507250117F54CB2003F2F57 /* BFTConfirmButton_nomal.png in Resources */,
 				0507250217F54CB2003F2F57 /* BFTConfirmButton_highlight.png in Resources */,
 				0507250417F54EB3003F2F57 /* BFTExplain@2x.png in Resources */,
+				FC884D0B18FFCCDF0009F617 /* ModifyBankViewController.xib in Resources */,
 				0507250617F54EB7003F2F57 /* BFTExplain.png in Resources */,
 				0507252317F5574C003F2F57 /* MBProgressHUD.bundle in Resources */,
 				0507252917F557CD003F2F57 /* ResultViewController.xib in Resources */,
@@ -2229,11 +2316,13 @@
 				053B65E517F7CB1000EA9F11 /* inputmoney_button_5.png in Resources */,
 				053B65E617F7CB1000EA9F11 /* inputmoney_button_5@2x.png in Resources */,
 				053B65E717F7CB1000EA9F11 /* inputmoney_button_6.png in Resources */,
+				FC884CEC18FF77320009F617 /* selectField_highlight.png in Resources */,
 				053B65E817F7CB1000EA9F11 /* inputmoney_button_6@2x.png in Resources */,
 				053B65E917F7CB1000EA9F11 /* inputmoney_button_7.png in Resources */,
 				053B65EA17F7CB1000EA9F11 /* inputmoney_button_7@2x.png in Resources */,
 				053B65EB17F7CB1000EA9F11 /* inputmoney_button_8.png in Resources */,
 				053B65EC17F7CB1000EA9F11 /* inputmoney_button_8@2x.png in Resources */,
+				FC884CF518FF77460009F617 /* selectField_normal@2x.png in Resources */,
 				053B65ED17F7CB1000EA9F11 /* inputmoney_button_9.png in Resources */,
 				053B65EE17F7CB1000EA9F11 /* inputmoney_button_9@2x.png in Resources */,
 				053B65EF17F7CB1000EA9F11 /* inputmoney_button_clear.png in Resources */,
@@ -2241,6 +2330,7 @@
 				053B65F117F7CB1000EA9F11 /* inputmoney_button_dot.png in Resources */,
 				053B65F217F7CB1000EA9F11 /* inputmoney_button_dot@2x.png in Resources */,
 				053B65F317F7CB1000EA9F11 /* inputmoney_button_submit_highlight.png in Resources */,
+				FC884CEA18FF77320009F617 /* selectBank_highlight.png in Resources */,
 				053B65F417F7CB1000EA9F11 /* inputmoney_button_submit_highlight@2x.png in Resources */,
 				053B65F517F7CB1000EA9F11 /* inputmoney_button_submit_normal.png in Resources */,
 				053B65F617F7CB1000EA9F11 /* inputmoney_button_submit_normal@2x.png in Resources */,
@@ -2260,6 +2350,7 @@
 				053B663217F7F60B00EA9F11 /* BFTSign_clear_btn.png in Resources */,
 				053B663717F8009700EA9F11 /* OrderDetailViewController.xib in Resources */,
 				05F21C81180CDF90002A48EC /* BFTSecondMenuIcon_41.png in Resources */,
+				FC884CE418FF75670009F617 /* city.xml in Resources */,
 				05F21C82180CDF90002A48EC /* BFTSecondMenuIcon_33@2x.png in Resources */,
 				05F21C83180CDF90002A48EC /* BFTSecondMenuIcon_33.png in Resources */,
 				05F21C84180CDF90002A48EC /* BFTSecondMenuIcon_34@2x.png in Resources */,
@@ -2292,7 +2383,6 @@
 				051F2C34180E37EA00AB174E /* con_req_999000001.xml in Resources */,
 				051F2C35180E37EA00AB174E /* con_req_999000002.xml in Resources */,
 				051F2C36180E37EA00AB174E /* con_req_999000003.xml in Resources */,
-				051F2C37180E37EA00AB174E /* bank.xml in Resources */,
 				051F2C38180E37EA00AB174E /* catalog.xml in Resources */,
 				051F2C39180E37EA00AB174E /* mac.plist in Resources */,
 				051F2C3A180E37EA00AB174E /* phonerecharge.xml in Resources */,
@@ -2312,6 +2402,7 @@
 			files = (
 				05EE2E5817F41EB600C2A8E2 /* main.m in Sources */,
 				05EE2E5C17F41EB600C2A8E2 /* AppDelegate.m in Sources */,
+				FC884CDA18FF6E960009F617 /* AreaModel.m in Sources */,
 				05EE2E9E17F426A000C2A8E2 /* BFTMenuCell.m in Sources */,
 				05EE2EA517F426C400C2A8E2 /* BFTRootViewController.m in Sources */,
 				05EE2EA617F426C400C2A8E2 /* BFTRevealViewController.m in Sources */,
@@ -2321,6 +2412,8 @@
 				05EE2F7317F429B500C2A8E2 /* LoginViewController.m in Sources */,
 				05EE2F7417F429B500C2A8E2 /* RegisterViewController.m in Sources */,
 				05EE2F7717F429EC00C2A8E2 /* CatalogModel.m in Sources */,
+				FC884D0118FFA8B10009F617 /* SignInResultViewController.m in Sources */,
+				FC884CFC18FF94D10009F617 /* SetPasswordViewController.m in Sources */,
 				05EE2F8217F42A3000C2A8E2 /* TBXML+Compression.m in Sources */,
 				05EE2F8317F42A3000C2A8E2 /* TBXML+HTTP.m in Sources */,
 				05EE2F8417F42A3000C2A8E2 /* TBXML.m in Sources */,
@@ -2362,6 +2455,7 @@
 				0507256C17F558B9003F2F57 /* UIImageView+MKNetworkKitAdditions.m in Sources */,
 				0507256D17F558B9003F2F57 /* MKNetworkEngine.m in Sources */,
 				0507256E17F558B9003F2F57 /* MKNetworkOperation.m in Sources */,
+				FC884CD518FF68120009F617 /* MyPickController.m in Sources */,
 				0507256F17F558B9003F2F57 /* Reachability.m in Sources */,
 				0507257017F558B9003F2F57 /* RegexKitLite.m in Sources */,
 				0507257117F558B9003F2F57 /* Base64Transcoder.m in Sources */,
@@ -2404,6 +2498,7 @@
 				0507261617F579CB003F2F57 /* SuccessTransferModel.m in Sources */,
 				0507261917F579FE003F2F57 /* PayeeAccountModel.m in Sources */,
 				0507261C17F57BF7003F2F57 /* AnnouncementCell.m in Sources */,
+				FC884D0A18FFCCDF0009F617 /* ModifyBankViewController.m in Sources */,
 				0507262017F57C57003F2F57 /* AnnouncementDetailViewController.m in Sources */,
 				0507263517F57F92003F2F57 /* InputMoneyViewController.m in Sources */,
 				0507263917F5802A003F2F57 /* DemoClient.m in Sources */,
@@ -2417,6 +2512,7 @@
 				053B661217F7EBE000EA9F11 /* Transfer.m in Sources */,
 				053B661517F7EBEA00EA9F11 /* Transfer+Action.m in Sources */,
 				053B661817F7EC1300EA9F11 /* HttpManager.m in Sources */,
+				FC884CDB18FF6E960009F617 /* CityModel.m in Sources */,
 				053B661E17F7ED0300EA9F11 /* NSObject+MutPerformSel.m in Sources */,
 				053B663617F8009700EA9F11 /* OrderDetailViewController.m in Sources */,
 				05F21C91180D2CB0002A48EC /* Transfer+FSK.mm in Sources */,
