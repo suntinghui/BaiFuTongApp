@@ -19,7 +19,7 @@
 #import "StringUtil.h"
 #import "EncryptionUtil.h"
 //#import "ForgetPasswordViewController.h"
-#import "TradeDetailGatherTableViewController.h"
+//#import "TradeDetailGatherTableViewController.h"
 //#import "SettingPasswordViewController.h"
 #import "ConfirmCancelResultViewController.h"
 #import "TradeDetailTableViewController.h"
@@ -72,15 +72,18 @@
         [self downloadSecuImage];
     } else if([self.transferCode isEqualToString:@"999000001"]) {
         [self downloadAnnouncements];
-    } else if ([self.transferCode isEqualToString:@"600000001"]) {
-        [self tradeGatherDone];
-    } else if ([self.transferCode isEqualToString:@"200000022"]) {
+    } //else if ([self.transferCode isEqualToString:@"600000001"]) {
+        //[self tradeGatherDone];
+    //}
+    else if ([self.transferCode isEqualToString:@"200000022"]) {
         [self inputMoneyDone];
-    } else if ([self.transferCode isEqualToString:@"200200023"]) {
+    }else if ([self.transferCode isEqualToString:@"200200023"]) {
         [self ConfirmCancelDone];
-    } else if([self.transferCode isEqualToString:@"600000002"]){
-        [self tradeDetailDone];
-    } else if ([self.transferCode isEqualToString:@"200310001"]) {
+    }
+//    else if([self.transferCode isEqualToString:@"600000002"]){
+//        [self tradeDetailDone];
+//    }
+    else if ([self.transferCode isEqualToString:@"200310001"]) {
         [self queryBalanceDone];
     } else if ([self.transferCode isEqualToString:@"200001111"]) {
         [self payMoneyDone];
@@ -174,30 +177,30 @@
     }
 }
 
--(void)tradeDetailDone
-{
-    if (self.receDic) {
-        NSString *detail = [self.receDic objectForKey:@"detail"];
-        NSArray *array = (NSArray*)[detail componentsSeparatedByString:@"|"];
-        ((TradeDetailTableViewController*)[ApplicationDelegate topViewController]).array = array;
-        [(TradeDetailTableViewController*)[ApplicationDelegate topViewController] refreshTabelView];
-    }
-}
-
--(void)tradeGatherDone
-{
-    if (self.receDic) {
-        TradeDetailGatherTableViewController *vc = [[TradeDetailGatherTableViewController alloc] initWithNibName:@"TradeDetailGatherTableViewController" bundle:nil];
-        NSString *tmpBeginDate = [self.sendDic objectForKey:@"BeginDate"];
-        NSString *tmpEndDate = [self.sendDic objectForKey:@"EndDate"];
-        NSString *tmpStr = [self.receDic objectForKey:@"detail"];
-        NSArray *array = [tmpStr componentsSeparatedByString:@"|"];
-        vc.dataArray = array;
-        vc.beginString = tmpBeginDate;
-        vc.endString = tmpEndDate;
-        [[ApplicationDelegate topViewController].navigationController pushViewController:vc animated:YES];
-    }
-}
+//-(void)tradeDetailDone
+//{
+//    if (self.receDic) {
+//        NSString *detail = [self.receDic objectForKey:@"detail"];
+//        NSArray *array = (NSArray*)[detail componentsSeparatedByString:@"|"];
+//        ((TradeDetailTableViewController*)[ApplicationDelegate topViewController]).array = array;
+//        [(TradeDetailTableViewController*)[ApplicationDelegate topViewController] refreshTabelView];
+//    }
+//}
+//
+//-(void)tradeGatherDone
+//{
+//    if (self.receDic) {
+//        TradeDetailGatherTableViewController *vc = [[TradeDetailGatherTableViewController alloc] initWithNibName:@"TradeDetailGatherTableViewController" bundle:nil];
+//        NSString *tmpBeginDate = [self.sendDic objectForKey:@"BeginDate"];
+//        NSString *tmpEndDate = [self.sendDic objectForKey:@"EndDate"];
+//        NSString *tmpStr = [self.receDic objectForKey:@"detail"];
+//        NSArray *array = [tmpStr componentsSeparatedByString:@"|"];
+//        vc.dataArray = array;
+//        vc.beginString = tmpBeginDate;
+//        vc.endString = tmpEndDate;
+//        [[ApplicationDelegate topViewController].navigationController pushViewController:vc animated:YES];
+//    }
+//}
 
 - (void) transferSuccessDone
 {

@@ -14,7 +14,7 @@
 #import "ModifMerchantViewController.h"
 #import "QueryBalanceViewController.h"
 #import "PointsQueryViewController.h"
-#import "TradeDetailViewController.h"
+//#import "TradeDetailViewController.h"
 #import "SalesSlipViewController.h"
 #import "AnnouncementListViewController.h"
 #import "FlowCountViewController.h"

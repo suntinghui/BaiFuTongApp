@@ -39,4 +39,6 @@
 - (void) showErrorPrompt:(NSString *) msg;
 - (void) showErrorPrompt:(NSString *) msg ViewController:(UIViewController *) vc;
 
+- (NSString *)getDateStrWithDate:(NSDate*)someDate withCutStr:(NSString*)cutStr hasTime:(BOOL)hasTime;
+
 @end

@@ -132,10 +132,10 @@
 	</catalog>
 	<catalog>
 		<catalogId>23</catalogId>
-		<title>交易查询</title>
+		<title>账户交易查询</title>
 		<parentId>2</parentId>
-		<actionId>TradeDetailViewController</actionId>
-        <action>TradeDetailViewController</action>
+		<actionId>TransListViewController</actionId>
+        <action>TransListViewController</action>
         <actionType>viewcontroller</actionType>
 		<iconId>23</iconId>
 	</catalog>

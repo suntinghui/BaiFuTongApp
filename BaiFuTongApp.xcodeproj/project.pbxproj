@@ -26,8 +26,6 @@
 		050724B917F52F5E003F2F57 /* QueryBalanceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050724B717F52F5E003F2F57 /* QueryBalanceViewController.xib */; };
 		050724BD17F53082003F2F57 /* PointsQueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050724BB17F53082003F2F57 /* PointsQueryViewController.m */; };
 		050724BE17F53082003F2F57 /* PointsQueryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050724BC17F53082003F2F57 /* PointsQueryViewController.xib */; };
-		050724C217F53098003F2F57 /* TradeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050724C017F53098003F2F57 /* TradeDetailViewController.m */; };
-		050724C317F53098003F2F57 /* TradeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050724C117F53098003F2F57 /* TradeDetailViewController.xib */; };
 		050724C717F530AF003F2F57 /* SalesSlipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050724C517F530AF003F2F57 /* SalesSlipViewController.m */; };
 		050724C817F530AF003F2F57 /* SalesSlipViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050724C617F530AF003F2F57 /* SalesSlipViewController.xib */; };
 		050724CC17F530C2003F2F57 /* AnnouncementListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050724CA17F530C2003F2F57 /* AnnouncementListViewController.m */; };
@@ -121,18 +119,12 @@
 		050725B317F56ED8003F2F57 /* SystemConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 050725B217F56ED8003F2F57 /* SystemConfig.m */; };
 		050725B517F5701C003F2F57 /* textInput.png in Resources */ = {isa = PBXBuildFile; fileRef = 050725B417F5701C003F2F57 /* textInput.png */; };
 		050725B717F5702A003F2F57 /* textInput@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 050725B617F57029003F2F57 /* textInput@2x.png */; };
-		050725BB17F570BF003F2F57 /* TradeDetailGatherTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050725B917F570B6003F2F57 /* TradeDetailGatherTableViewController.m */; };
-		050725BC17F570BF003F2F57 /* TradeDetailGatherTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050725BA17F570BA003F2F57 /* TradeDetailGatherTableViewController.xib */; };
 		050725BF17F57139003F2F57 /* TradeGatherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 050725BE17F57138003F2F57 /* TradeGatherCell.m */; };
-		050725C317F57199003F2F57 /* TradeDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050725C117F57193003F2F57 /* TradeDetailTableViewController.m */; };
-		050725C417F57199003F2F57 /* TradeDetailTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050725C217F57196003F2F57 /* TradeDetailTableViewController.xib */; };
 		050725C717F571E8003F2F57 /* StringUtil.mm in Sources */ = {isa = PBXBuildFile; fileRef = 050725C617F571E8003F2F57 /* StringUtil.mm */; };
 		050725CA17F57209003F2F57 /* AppDataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 050725C917F57209003F2F57 /* AppDataCenter.m */; };
 		050725CD17F57232003F2F57 /* DateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 050725CC17F57232003F2F57 /* DateUtil.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		050725D017F572F3003F2F57 /* PageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 050725CF17F572F2003F2F57 /* PageView.m */; };
 		050725D317F5732E003F2F57 /* TradeDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 050725D217F5732D003F2F57 /* TradeDetailCell.m */; };
-		050725D717F5736A003F2F57 /* TradeMoreDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 050725D517F57362003F2F57 /* TradeMoreDetailViewController.m */; };
-		050725D817F5736A003F2F57 /* TradeMoreDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 050725D617F57366003F2F57 /* TradeMoreDetailViewController.xib */; };
 		050725DB17F5739C003F2F57 /* TradeDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 050725DA17F5739C003F2F57 /* TradeDetail.m */; };
 		050725DE17F57439003F2F57 /* ParseXMLUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 050725DD17F57438003F2F57 /* ParseXMLUtil.m */; };
 		050725E517F57511003F2F57 /* BankModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 050725E017F57511003F2F57 /* BankModel.m */; };
@@ -440,6 +432,11 @@
 		FC0AE2AA18FE5FE500C1FD50 /* PasswordResetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC0AE2A818FE5FE500C1FD50 /* PasswordResetViewController.xib */; };
 		FC0AE2AE18FE702700C1FD50 /* RealnameLegalizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0AE2AC18FE702700C1FD50 /* RealnameLegalizeViewController.m */; };
 		FC0AE2AF18FE702700C1FD50 /* RealnameLegalizeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC0AE2AD18FE702700C1FD50 /* RealnameLegalizeViewController.xib */; };
+		FC5A40271900FE190000B0FB /* TradeDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5A40201900FE190000B0FB /* TradeDetailTableViewController.m */; };
+		FC5A40281900FE190000B0FB /* TransferHistoryQueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5A40221900FE190000B0FB /* TransferHistoryQueryViewController.m */; };
+		FC5A40291900FE190000B0FB /* TransListDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5A40241900FE190000B0FB /* TransListDetailViewController.m */; };
+		FC5A402A1900FE190000B0FB /* TransListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5A40261900FE190000B0FB /* TransListViewController.m */; };
+		FC5A402D1900FEBA0000B0FB /* TransferDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5A402C1900FEBA0000B0FB /* TransferDetailModel.m */; };
 		FC884CD518FF68120009F617 /* MyPickController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC884CD418FF68120009F617 /* MyPickController.m */; };
 		FC884CDA18FF6E960009F617 /* AreaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC884CD718FF6E960009F617 /* AreaModel.m */; };
 		FC884CDB18FF6E960009F617 /* CityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC884CD918FF6E960009F617 /* CityModel.m */; };
@@ -490,9 +487,6 @@
 		050724BA17F53082003F2F57 /* PointsQueryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointsQueryViewController.h; sourceTree = "<group>"; };
 		050724BB17F53082003F2F57 /* PointsQueryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointsQueryViewController.m; sourceTree = "<group>"; };
 		050724BC17F53082003F2F57 /* PointsQueryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PointsQueryViewController.xib; sourceTree = "<group>"; };
-		050724BF17F53097003F2F57 /* TradeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TradeDetailViewController.h; sourceTree = "<group>"; };
-		050724C017F53098003F2F57 /* TradeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradeDetailViewController.m; sourceTree = "<group>"; };
-		050724C117F53098003F2F57 /* TradeDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TradeDetailViewController.xib; sourceTree = "<group>"; };
 		050724C417F530AF003F2F57 /* SalesSlipViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SalesSlipViewController.h; sourceTree = "<group>"; };
 		050724C517F530AF003F2F57 /* SalesSlipViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SalesSlipViewController.m; sourceTree = "<group>"; };
 		050724C617F530AF003F2F57 /* SalesSlipViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SalesSlipViewController.xib; sourceTree = "<group>"; };
@@ -628,14 +622,8 @@
 		050725B217F56ED8003F2F57 /* SystemConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemConfig.m; sourceTree = "<group>"; };
 		050725B417F5701C003F2F57 /* textInput.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textInput.png; sourceTree = "<group>"; };
 		050725B617F57029003F2F57 /* textInput@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "textInput@2x.png"; sourceTree = "<group>"; };
-		050725B817F570B1003F2F57 /* TradeDetailGatherTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TradeDetailGatherTableViewController.h; sourceTree = "<group>"; };
-		050725B917F570B6003F2F57 /* TradeDetailGatherTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradeDetailGatherTableViewController.m; sourceTree = "<group>"; };
-		050725BA17F570BA003F2F57 /* TradeDetailGatherTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TradeDetailGatherTableViewController.xib; sourceTree = "<group>"; };
 		050725BD17F57138003F2F57 /* TradeGatherCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TradeGatherCell.h; sourceTree = "<group>"; };
 		050725BE17F57138003F2F57 /* TradeGatherCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradeGatherCell.m; sourceTree = "<group>"; };
-		050725C017F57190003F2F57 /* TradeDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TradeDetailTableViewController.h; sourceTree = "<group>"; };
-		050725C117F57193003F2F57 /* TradeDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradeDetailTableViewController.m; sourceTree = "<group>"; };
-		050725C217F57196003F2F57 /* TradeDetailTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TradeDetailTableViewController.xib; sourceTree = "<group>"; };
 		050725C517F571E8003F2F57 /* StringUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringUtil.h; sourceTree = "<group>"; };
 		050725C617F571E8003F2F57 /* StringUtil.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = StringUtil.mm; sourceTree = "<group>"; };
 		050725C817F57209003F2F57 /* AppDataCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDataCenter.h; sourceTree = "<group>"; };
@@ -646,9 +634,6 @@
 		050725CF17F572F2003F2F57 /* PageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageView.m; sourceTree = "<group>"; };
 		050725D117F5732C003F2F57 /* TradeDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TradeDetailCell.h; sourceTree = "<group>"; };
 		050725D217F5732D003F2F57 /* TradeDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradeDetailCell.m; sourceTree = "<group>"; };
-		050725D417F5735F003F2F57 /* TradeMoreDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TradeMoreDetailViewController.h; sourceTree = "<group>"; };
-		050725D517F57362003F2F57 /* TradeMoreDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradeMoreDetailViewController.m; sourceTree = "<group>"; };
-		050725D617F57366003F2F57 /* TradeMoreDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TradeMoreDetailViewController.xib; sourceTree = "<group>"; };
 		050725D917F5739C003F2F57 /* TradeDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TradeDetail.h; sourceTree = "<group>"; };
 		050725DA17F5739C003F2F57 /* TradeDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradeDetail.m; sourceTree = "<group>"; };
 		050725DC17F57437003F2F57 /* ParseXMLUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseXMLUtil.h; sourceTree = "<group>"; };
@@ -1052,6 +1037,16 @@
 		FC0AE2AB18FE702700C1FD50 /* RealnameLegalizeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealnameLegalizeViewController.h; sourceTree = "<group>"; };
 		FC0AE2AC18FE702700C1FD50 /* RealnameLegalizeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealnameLegalizeViewController.m; sourceTree = "<group>"; };
 		FC0AE2AD18FE702700C1FD50 /* RealnameLegalizeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RealnameLegalizeViewController.xib; sourceTree = "<group>"; };
+		FC5A401F1900FE190000B0FB /* TradeDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TradeDetailTableViewController.h; sourceTree = "<group>"; };
+		FC5A40201900FE190000B0FB /* TradeDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradeDetailTableViewController.m; sourceTree = "<group>"; };
+		FC5A40211900FE190000B0FB /* TransferHistoryQueryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferHistoryQueryViewController.h; sourceTree = "<group>"; };
+		FC5A40221900FE190000B0FB /* TransferHistoryQueryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferHistoryQueryViewController.m; sourceTree = "<group>"; };
+		FC5A40231900FE190000B0FB /* TransListDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransListDetailViewController.h; sourceTree = "<group>"; };
+		FC5A40241900FE190000B0FB /* TransListDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransListDetailViewController.m; sourceTree = "<group>"; };
+		FC5A40251900FE190000B0FB /* TransListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransListViewController.h; sourceTree = "<group>"; };
+		FC5A40261900FE190000B0FB /* TransListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransListViewController.m; sourceTree = "<group>"; };
+		FC5A402B1900FEBA0000B0FB /* TransferDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferDetailModel.h; sourceTree = "<group>"; };
+		FC5A402C1900FEBA0000B0FB /* TransferDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferDetailModel.m; sourceTree = "<group>"; };
 		FC884CD318FF68120009F617 /* MyPickController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPickController.h; sourceTree = "<group>"; };
 		FC884CD418FF68120009F617 /* MyPickController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPickController.m; sourceTree = "<group>"; };
 		FC884CD618FF6E960009F617 /* AreaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AreaModel.h; sourceTree = "<group>"; };
@@ -1164,18 +1159,14 @@
 				050724BA17F53082003F2F57 /* PointsQueryViewController.h */,
 				050724BB17F53082003F2F57 /* PointsQueryViewController.m */,
 				050724BC17F53082003F2F57 /* PointsQueryViewController.xib */,
-				050724BF17F53097003F2F57 /* TradeDetailViewController.h */,
-				050724C017F53098003F2F57 /* TradeDetailViewController.m */,
-				050724C117F53098003F2F57 /* TradeDetailViewController.xib */,
-				050725B817F570B1003F2F57 /* TradeDetailGatherTableViewController.h */,
-				050725B917F570B6003F2F57 /* TradeDetailGatherTableViewController.m */,
-				050725BA17F570BA003F2F57 /* TradeDetailGatherTableViewController.xib */,
-				050725C017F57190003F2F57 /* TradeDetailTableViewController.h */,
-				050725C117F57193003F2F57 /* TradeDetailTableViewController.m */,
-				050725C217F57196003F2F57 /* TradeDetailTableViewController.xib */,
-				050725D417F5735F003F2F57 /* TradeMoreDetailViewController.h */,
-				050725D517F57362003F2F57 /* TradeMoreDetailViewController.m */,
-				050725D617F57366003F2F57 /* TradeMoreDetailViewController.xib */,
+				FC5A401F1900FE190000B0FB /* TradeDetailTableViewController.h */,
+				FC5A40201900FE190000B0FB /* TradeDetailTableViewController.m */,
+				FC5A40211900FE190000B0FB /* TransferHistoryQueryViewController.h */,
+				FC5A40221900FE190000B0FB /* TransferHistoryQueryViewController.m */,
+				FC5A40231900FE190000B0FB /* TransListDetailViewController.h */,
+				FC5A40241900FE190000B0FB /* TransListDetailViewController.m */,
+				FC5A40251900FE190000B0FB /* TransListViewController.h */,
+				FC5A40261900FE190000B0FB /* TransListViewController.m */,
 				050724C417F530AF003F2F57 /* SalesSlipViewController.h */,
 				050724C517F530AF003F2F57 /* SalesSlipViewController.m */,
 				050724C617F530AF003F2F57 /* SalesSlipViewController.xib */,
@@ -1712,6 +1703,8 @@
 				050725E417F57511003F2F57 /* RechargeModel.m */,
 				050725D917F5739C003F2F57 /* TradeDetail.h */,
 				050725DA17F5739C003F2F57 /* TradeDetail.m */,
+				FC5A402B1900FEBA0000B0FB /* TransferDetailModel.h */,
+				FC5A402C1900FEBA0000B0FB /* TransferDetailModel.m */,
 				05EE2F7517F429EC00C2A8E2 /* CatalogModel.h */,
 				05EE2F7617F429EC00C2A8E2 /* CatalogModel.m */,
 			);
@@ -2231,7 +2224,6 @@
 				050724BE17F53082003F2F57 /* PointsQueryViewController.xib in Resources */,
 				FC0AE2AA18FE5FE500C1FD50 /* PasswordResetViewController.xib in Resources */,
 				FC884D0218FFA8B10009F617 /* SignInResultViewController.xib in Resources */,
-				050724C317F53098003F2F57 /* TradeDetailViewController.xib in Resources */,
 				FC884CF318FF77460009F617 /* selectBank_normal@2x.png in Resources */,
 				050724C817F530AF003F2F57 /* SalesSlipViewController.xib in Resources */,
 				050724CD17F530C2003F2F57 /* AnnouncementListViewController.xib in Resources */,
@@ -2270,9 +2262,6 @@
 				050725B517F5701C003F2F57 /* textInput.png in Resources */,
 				FC0AE2AF18FE702700C1FD50 /* RealnameLegalizeViewController.xib in Resources */,
 				050725B717F5702A003F2F57 /* textInput@2x.png in Resources */,
-				050725BC17F570BF003F2F57 /* TradeDetailGatherTableViewController.xib in Resources */,
-				050725C417F57199003F2F57 /* TradeDetailTableViewController.xib in Resources */,
-				050725D817F5736A003F2F57 /* TradeMoreDetailViewController.xib in Resources */,
 				0507260817F578B5003F2F57 /* SalesSlipListViewController.xib in Resources */,
 				0507260D17F5792C003F2F57 /* QueryReceiptDetailViewController.xib in Resources */,
 				0507262117F57C57003F2F57 /* AnnouncementDetailViewController.xib in Resources */,
@@ -2423,7 +2412,6 @@
 				050724B317F52F34003F2F57 /* ModifMerchantViewController.m in Sources */,
 				050724B817F52F5E003F2F57 /* QueryBalanceViewController.m in Sources */,
 				050724BD17F53082003F2F57 /* PointsQueryViewController.m in Sources */,
-				050724C217F53098003F2F57 /* TradeDetailViewController.m in Sources */,
 				050724C717F530AF003F2F57 /* SalesSlipViewController.m in Sources */,
 				050724CC17F530C2003F2F57 /* AnnouncementListViewController.m in Sources */,
 				050724D117F530D0003F2F57 /* FlowCountViewController.m in Sources */,
@@ -2440,7 +2428,9 @@
 				0507251317F553AB003F2F57 /* EncryptionUtil.m in Sources */,
 				0507252417F5574C003F2F57 /* MBProgressHUD.m in Sources */,
 				0507252817F557CD003F2F57 /* ResultViewController.m in Sources */,
+				FC5A40271900FE190000B0FB /* TradeDetailTableViewController.m in Sources */,
 				0507256017F558B9003F2F57 /* FMDatabase.m in Sources */,
+				FC5A402D1900FEBA0000B0FB /* TransferDetailModel.m in Sources */,
 				0507256117F558B9003F2F57 /* FMDatabaseAdditions.m in Sources */,
 				0507256217F558B9003F2F57 /* FMDatabasePool.m in Sources */,
 				0507256317F558B9003F2F57 /* FMDatabaseQueue.m in Sources */,
@@ -2465,18 +2455,16 @@
 				0507257417F558B9003F2F57 /* NSStream+SKPSMTPExtensions.m in Sources */,
 				0507257517F558B9003F2F57 /* SKPSMTPMessage.m in Sources */,
 				050725A617F55FEE003F2F57 /* SettleAccountResultViewController.m in Sources */,
+				FC5A40291900FE190000B0FB /* TransListDetailViewController.m in Sources */,
 				050725B017F56E4D003F2F57 /* DateTextField.m in Sources */,
 				FC0AE2A918FE5FE500C1FD50 /* PasswordResetViewController.m in Sources */,
 				050725B317F56ED8003F2F57 /* SystemConfig.m in Sources */,
-				050725BB17F570BF003F2F57 /* TradeDetailGatherTableViewController.m in Sources */,
 				050725BF17F57139003F2F57 /* TradeGatherCell.m in Sources */,
-				050725C317F57199003F2F57 /* TradeDetailTableViewController.m in Sources */,
 				050725C717F571E8003F2F57 /* StringUtil.mm in Sources */,
 				050725CA17F57209003F2F57 /* AppDataCenter.m in Sources */,
 				050725CD17F57232003F2F57 /* DateUtil.m in Sources */,
 				050725D017F572F3003F2F57 /* PageView.m in Sources */,
 				050725D317F5732E003F2F57 /* TradeDetailCell.m in Sources */,
-				050725D717F5736A003F2F57 /* TradeMoreDetailViewController.m in Sources */,
 				050725DB17F5739C003F2F57 /* TradeDetail.m in Sources */,
 				050725DE17F57439003F2F57 /* ParseXMLUtil.m in Sources */,
 				050725E517F57511003F2F57 /* BankModel.m in Sources */,
@@ -2525,6 +2513,7 @@
 				05F21CDA180D2DCE002A48EC /* L4FileAppender.m in Sources */,
 				05F21CDB180D2DCE002A48EC /* L4Filter.m in Sources */,
 				05F21CDC180D2DCE002A48EC /* L4JSONLayout.m in Sources */,
+				FC5A402A1900FE190000B0FB /* TransListViewController.m in Sources */,
 				05F21CDD180D2DCE002A48EC /* L4Layout.m in Sources */,
 				05F21CDE180D2DCE002A48EC /* L4Level.m in Sources */,
 				05F21CDF180D2DCE002A48EC /* L4LevelMatchFilter.m in Sources */,
@@ -2534,6 +2523,7 @@
 				05F21CE3180D2DCE002A48EC /* L4LoggerNameMatchFilter.m in Sources */,
 				05F21CE4180D2DCE002A48EC /* L4LoggerStore.m in Sources */,
 				05F21CE5180D2DCE002A48EC /* L4Logging.m in Sources */,
+				FC5A40281900FE190000B0FB /* TransferHistoryQueryViewController.m in Sources */,
 				05F21CE6180D2DCE002A48EC /* L4LogLog.m in Sources */,
 				05F21CE7180D2DCE002A48EC /* L4PatternLayout.m in Sources */,
 				05F21CE8180D2DCE002A48EC /* L4Properties.m in Sources */,

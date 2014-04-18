@@ -213,19 +213,71 @@
     //短信验证码按键处理
 }
 
-- (void)openCamera:(UIImageView *)sender {
+-(void)openMenu:(UIImageView *)sender
+{
+    //在这里呼出下方菜单按钮项
+    myActionSheet = [[UIActionSheet alloc]
+                     initWithTitle:nil
+                     delegate:self
+                     cancelButtonTitle:@"取消"
+                     destructiveButtonTitle:nil
+                     otherButtonTitles: @"打开照相机", @"从手机相册获取",nil];
+    myActionSheet.tag = sender.tag;
+    [myActionSheet showInView:self.view];
+    
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    
+    //呼出的菜单按钮点击后的响应
+    if (buttonIndex == myActionSheet.cancelButtonIndex)
+    {
+        NSLog(@"取消");
+    }
+    else
+    {
+    [self openCameraOrLocalPhoto:actionSheet.tag andtype:buttonIndex];
+    }
+}
+
+
+- (void)openCameraOrLocalPhoto:(NSInteger)tag andtype:(NSInteger)type
+{
 
     UIImagePickerController *picker = [[MyPickController alloc] init];
     
-    picker.navigationBar.tag = sender.tag;
+    picker.navigationBar.tag = tag;
     picker.delegate = self;
     //设置拍照后的图片可被编辑
     picker.allowsEditing = YES;
-    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    if (type == 0) {
+        //打开照相机
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    }
+    else if(type == 1){
+        //打开本地相册
+        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    }
+    
     [self presentViewController:picker animated:YES completion:nil];
     
     
 }
+
+////打开本地相册
+//-(void)LocalPhoto:(NSInteger)tag
+//{
+//    UIImagePickerController *picker = [[MyPickController alloc] init];
+//    
+//    
+//    picker.navigationBar.tag = tag;
+//    picker.delegate = self;
+//    //设置选择后的图片可被编辑
+//    picker.allowsEditing = YES;
+//    [self presentViewController:picker animated:YES completion:nil];
+//}
+
 
 - (BOOL)shouldAutorotate
 {
@@ -234,23 +286,23 @@
 
 -(void)onClickImageFront{
     // here, do whatever you wantto do
-    [self openCamera:_IdCardFront];
+    [self openMenu:_IdCardFront];
 }
 
 -(void)onClickImageBack{
     // here, do whatever you wantto do
-    [self openCamera:_IdCardBack];
+    [self openMenu:_IdCardBack];
 }
 
 -(void)onClickImageBank{
     // here, do whatever you wantto do
-    [self openCamera:_bankPic];
+    [self openMenu:_bankPic];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
-    NSLog(@"%@", info);
+    //NSLog(@"%@", info);
     // UIImagePickerControllerOriginalImage 原始图片
-    // UIImagePickerControllerEditedImage 编辑后图片
+    //UIImagePickerControllerEditedImage 编辑后图片
     UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
     if (picker.navigationBar.tag == _IdCardFront.tag) {
         _IdCardFront.image = image;
@@ -261,7 +313,6 @@
     else if(picker.navigationBar.tag == _bankPic.tag){
         _bankPic.image = image;
     }
-    
     [picker dismissViewControllerAnimated:YES completion:NULL];
 }
 

@@ -324,6 +324,33 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+/**
+ *	@brief	获取指定日期的字符串表达式 需要当前日期时传入：[NSDate date] 即可 注意时区转换
+ *
+ *	@param 	someDate 	指定的日期 NSDate类型
+ *	@param 	typeStr 	分割线类型 @"/" 或者@“-”  传nil时默认没有分隔符
+ *  @param  hasTime     是否需要返回时间
+ *	@return	返回的日期字符串  格式为 2012-13-23 或者 2013/13/23 或2012-12-12 12:11:11 或2102/12/12 12:12:12
+ */
+- (NSString *)getDateStrWithDate:(NSDate*)someDate withCutStr:(NSString*)cutStr hasTime:(BOOL)hasTime
+{
+    if (cutStr == nil) {
+        cutStr = @"";
+    }
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    NSString *str = nil;
+    if (hasTime) {
+        str = [NSString stringWithFormat:@"yyyy%@MM%@dd HH:mm:ss",cutStr,cutStr];
+    }
+    else
+    {
+        str = [NSString stringWithFormat:@"yyyy%@MM%@dd",cutStr,cutStr];
+    }
+	[formatter setDateFormat:str];
+	NSString *date = [formatter stringFromDate:someDate];
+	return date;
+}
+
 @end
 
 // UINavigationController

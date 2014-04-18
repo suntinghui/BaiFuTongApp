@@ -10,12 +10,15 @@
 #import "InputTextField.h"
 #import "LeftTextField.h"
 
-@interface RealnameLegalizeViewController : AbstractViewController<UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate, UIToolbarDelegate, UIActionSheetDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+@interface RealnameLegalizeViewController : AbstractViewController<UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate, UIToolbarDelegate, UIActionSheetDelegate,UINavigationControllerDelegate,UIActionSheetDelegate,UIImagePickerControllerDelegate>
 {
     NSInteger           areaFlag;
     NSInteger           bankFlag;
     NSInteger           cityFlag;
-        
+    UIActionSheet       *myActionSheet;
+    //图片2进制路径
+    NSString* filePath;
+    
     NSDictionary        *_receiveDic;
 }
 

@@ -1,28 +1,21 @@
 //
 //  TradeDetailTableViewController.h
-//  BaiFuTongApp
+//  YLTiPhone
 //
-//  Created by xushuang on 13-9-27.
+//  Created by xushuang on 13-12-11.
 //  Copyright (c) 2013年 xushuang. All rights reserved.
 //
 
-#import "AboutSystemViewController.h"
-#import "PageView.h"
+#import "AbstractViewController.h"
+#import "TransferDetailModel.h"
 
-@interface TradeDetailTableViewController : AbstractViewController<UITableViewDataSource, UITableViewDelegate, PageDelegate>
+@interface TradeDetailTableViewController : AbstractViewController
 
-@property(nonatomic, strong)UITableView *myTableView;
-@property(nonatomic, strong)PageView *pageView;
-@property(nonatomic, strong)NSArray *array;
-@property(nonatomic, strong)NSString *beginString;
-@property(nonatomic, strong)NSString *endString;
-@property(nonatomic, strong)NSString *pageNo;
-@property(nonatomic, strong)NSString *pageSize;
-@property(nonatomic, strong)NSString *tranCode;
-@property(nonatomic, strong)NSString *totalCount;
+@property (strong, nonatomic) TransferDetailModel *detailModel;
+@property (nonatomic, strong) UIScrollView      *scrollView;
 
--(void)requestAction;
--(void)refreshTabelView;
+@property (nonatomic, strong) UIButton          *confirmButton;
+@property (nonatomic, strong) UIImageView       *imageView;
+@property (nonatomic, strong) UIImageView       *bgImageView;
 
 @end
-
