@@ -89,20 +89,22 @@
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     CGRect frame = textField.superview.frame;
-
     int offset = frame.origin.y + 50 - (self.view.frame.size.height - 216.0);//键盘高度216
+    
     NSTimeInterval animationDuration = 0.30f;
     [UIView beginAnimations:@"ResizeForKeyBoard" context:nil];
     [UIView setAnimationDuration:animationDuration];
     float width = self.view.frame.size.width;
-    float height = self.view.frame.size.height;
+//    float height = self.view.frame.size.height;
+    float height = [UIScreen mainScreen].bounds.size.height;
     if(offset > 0)
     {
         CGRect rect = CGRectMake(0.0f, -offset,width,height);
         
         if ([[self.view.subviews objectAtIndex:0] isKindOfClass:[UIScrollView class]]) {
-            ((UIScrollView*)[self.view.subviews objectAtIndex:0]).frame = rect
+            //((UIScrollView*)[self.view.subviews objectAtIndex:0]).frame = rect
             ;
+            ((UIScrollView*)[self.view.subviews objectAtIndex:0]).contentOffset = CGPointMake(0, offset);
         }else{
             self.view.frame = rect;
         }
@@ -116,7 +118,8 @@
     NSTimeInterval animationDuration = 0.30f;
     [UIView beginAnimations:@"ResizeForKeyBoard" context:nil];
     [UIView setAnimationDuration:animationDuration];
-    CGRect rect = CGRectMake(0.0f, 0.0f,320,416);
+    //    CGRect rect = CGRectMake(0.0f, 0.0f,320,416);
+    CGRect rect = CGRectMake(0.0f, 0.0f,320,VIEWHEIGHT + 41);
     self.view.frame = rect;
     [UIView commitAnimations];
 

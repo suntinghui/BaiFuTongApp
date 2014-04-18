@@ -52,8 +52,8 @@
     }
 
     
-    self.scrollView =[[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 548)];
-    [_scrollView setContentSize:CGSizeMake(320, 1028+ios7_h)];
+    self.scrollView =[[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 480+iPhone5_height)];
+    [_scrollView setContentSize:CGSizeMake(320, 1000+ios7_h)];
     _scrollView.showsVerticalScrollIndicator = false;
     [self.view addSubview:_scrollView];
     
@@ -140,6 +140,7 @@
     [_scrollView addSubview:_banksBranchButton];
     
     self.bkCardNoTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 550, 298, 44) left:@"银行卡号" prompt:@"请输入您的银行卡号" keyBoardType:UIKeyboardTypePhonePad];
+    self.bkCardNoTF.contentTF.delegate = self;
     [self.bkCardNoTF.contentTF hideKeyBoard:self.view:3 hasNavBar:YES];
     [_scrollView addSubview:self.bkCardNoTF];
     
@@ -163,6 +164,7 @@
 
     
     self.merchantTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 745, 298, 44) left:@"商户名" prompt:@"请输入您的商户名" keyBoardType:UIKeyboardTypeDefault];
+    self.merchantTF.contentTF.delegate = self;
     [self.merchantTF.contentTF hideKeyBoard:self.view:3 hasNavBar:YES];
     [_scrollView addSubview:self.merchantTF];
     

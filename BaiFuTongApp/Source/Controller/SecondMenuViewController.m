@@ -66,7 +66,7 @@
     }
     else
     {
-        _panelTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 480+iPhone5_height) style:UITableViewStyleGrouped];
+        _panelTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 420+iPhone5_height) style:UITableViewStyleGrouped];
     }
     _panelTableView.showsVerticalScrollIndicator = false;
     self.panelTableView.backgroundColor = [UIColor clearColor];

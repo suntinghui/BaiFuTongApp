@@ -14,7 +14,6 @@
 #import "UITextField+HideKeyBoard.h"
 #import "AreaModel.h"
 #import "CityModel.h"
-#import "SetPasswordViewController.h"
 
 @interface ModifyBankViewController ()
 
@@ -54,16 +53,18 @@
     }
     
     
-    self.scrollView =[[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 548)];
-    [_scrollView setContentSize:CGSizeMake(320, 1028+ios7_h)];
+    self.scrollView =[[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 480+iPhone5_height)];
+    [_scrollView setContentSize:CGSizeMake(320, 750+ios7_h)];
     _scrollView.showsVerticalScrollIndicator = false;
     [self.view addSubview:_scrollView];
     
     self.nameTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 35, 298, 44) left:@"姓名" prompt:@"请输入您的姓名" keyBoardType:UIKeyboardTypeDefault];
+    self.nameTF.contentTF.delegate = self;
     [self.nameTF.contentTF hideKeyBoard:self.view:3 hasNavBar:YES];
     [_scrollView addSubview:self.nameTF];
     
     self.pIdNoTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 90, 298, 44) left:@"身份证号" prompt:@"请输入您的身份证号" keyBoardType:UIKeyboardTypeDefault];
+    self.pIdNoTF.contentTF.delegate = self;
     [self.pIdNoTF.contentTF hideKeyBoard:self.view:3 hasNavBar:YES];
     [_scrollView addSubview:self.pIdNoTF];
     
@@ -71,12 +72,18 @@
     dividingLine.backgroundColor = [UIColor grayColor];
     [_scrollView addSubview:dividingLine];
     
-    self.oldBkCardNoTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 165, 298, 44) left:@"原银行卡号" prompt:@"请输入您原来的银行卡号" keyBoardType:UIKeyboardTypeDefault];
+    self.oldBkCardNoTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 165, 298, 44) left:@"原银行卡" prompt:@"请输入您原来的银行卡号" keyBoardType:UIKeyboardTypeDefault];
+    self.oldBkCardNoTF.contentTF.delegate = self;
     [self.oldBkCardNoTF.contentTF hideKeyBoard:self.view:3 hasNavBar:YES];
     [_scrollView addSubview:self.oldBkCardNoTF];
     
+    self.bkCardNoTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 220, 298, 44) left:@"银行卡号" prompt:@"请输入您的银行卡号" keyBoardType:UIKeyboardTypePhonePad];
+    self.bkCardNoTF.contentTF.delegate = self;
+    [self.bkCardNoTF.contentTF hideKeyBoard:self.view:3 hasNavBar:YES];
+    [_scrollView addSubview:self.bkCardNoTF];
+    
     //银行信息
-    UILabel *bankInfoLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 220, 300, 35)];
+    UILabel *bankInfoLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 275, 300, 35)];
     bankInfoLabel.backgroundColor = [UIColor clearColor];
     bankInfoLabel.text = @"银行卡开户行";
     bankInfoLabel.font = [UIFont systemFontOfSize:17.0f];
@@ -84,7 +91,7 @@
     
     //选择银行下拉框
     _selectBankButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_selectBankButton setFrame:CGRectMake(10, 255, 300, 45)];
+    [_selectBankButton setFrame:CGRectMake(10, 310, 300, 45)];
     [_selectBankButton setBackgroundImage:[UIImage imageNamed:@"selectField_normal.png"] forState:UIControlStateNormal];
     [_selectBankButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     _selectBankButton.tag = 90001;
@@ -94,7 +101,7 @@
     
     //省份下拉框
     _selectAreaButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_selectAreaButton setFrame:CGRectMake(10, 310, 300, 45)];
+    [_selectAreaButton setFrame:CGRectMake(10, 365, 300, 45)];
     [_selectAreaButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [_selectAreaButton setBackgroundImage:[UIImage imageNamed:@"selectField_normal.png"] forState:UIControlStateNormal];
     _selectAreaButton.tag = 90002;
@@ -104,7 +111,7 @@
     
     //城市下拉框
     _selectCityButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_selectCityButton setFrame:CGRectMake(10, 365, 300, 45)];
+    [_selectCityButton setFrame:CGRectMake(10, 420, 300, 45)];
     [_selectCityButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [_selectCityButton setBackgroundImage:[UIImage imageNamed:@"selectField_normal.png"] forState:UIControlStateNormal];
     _selectCityButton.tag = 90003;
@@ -114,7 +121,7 @@
     
     
     _banksBranchButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_banksBranchButton setFrame:CGRectMake(10, 420, 297, 42)];
+    [_banksBranchButton setFrame:CGRectMake(10, 475, 297, 42)];
     [_banksBranchButton setTitle:@"请选择支行" forState:UIControlStateNormal];
     [_banksBranchButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     _banksBranchButton.titleLabel.font = [UIFont systemFontOfSize:18];
@@ -123,10 +130,6 @@
     [_banksBranchButton setBackgroundImage:[UIImage imageNamed:@"selectBank_highlight.png"] forState:UIControlStateSelected];
     [_banksBranchButton setBackgroundImage:[UIImage imageNamed:@"selectBank_highlight.png"] forState:UIControlStateHighlighted];
     [_scrollView addSubview:_banksBranchButton];
-    
-    self.bkCardNoTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 475, 298, 44) left:@"银行卡号" prompt:@"请输入您的银行卡号" keyBoardType:UIKeyboardTypePhonePad];
-    [self.bkCardNoTF.contentTF hideKeyBoard:self.view:3 hasNavBar:YES];
-    [_scrollView addSubview:self.bkCardNoTF];
     
     UILabel * dividingLine1 = [[UILabel alloc] initWithFrame:CGRectMake(10, 529, 300, 1)];
     dividingLine1.backgroundColor = [UIColor grayColor];
@@ -261,7 +264,7 @@
     return YES;
 }
 
-//设置支付密码
+//设置成功，返回上级界面
 - (void)confirmButtonAction
 {
     //    if ([self checkValue]) {
@@ -279,8 +282,7 @@
     //        //修改提款银行账号
     //        //[[Transfer sharedTransfer] startTransfer:@"089009" fskCmd:nil paramDic:dic];
     //    }
-    SetPasswordViewController *setPasswordViewController = [[SetPasswordViewController alloc] initWithNibName:@"SetPasswordViewController" bundle:nil];
-    [self.navigationController pushViewController:setPasswordViewController animated:YES];
+    [self popToCatalogViewController];
 }
 
 #pragma mark -

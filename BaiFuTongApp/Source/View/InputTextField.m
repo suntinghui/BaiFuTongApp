@@ -29,14 +29,19 @@
         [self.leftLabel setBackgroundColor:[UIColor clearColor]];
         [self.leftLabel setFont:[UIFont boldSystemFontOfSize:14]];
         [self addSubview:self.leftLabel];
-        
-        self.contentTF = [[UITextField alloc] initWithFrame:CGRectMake(80, 5, frame.size.width*2/3, frame.size.height*4/5)];
+        //区分一下系统版本
+        if (DeviceVersion >= 7) {
+            self.contentTF = [[UITextField alloc] initWithFrame:CGRectMake(80, 5, frame.size.width*2/3, frame.size.height*4/5)];
+        }else{
+            self.contentTF = [[UITextField alloc] initWithFrame:CGRectMake(80, 11, frame.size.width*2/3, frame.size.height*4/5)];
+        }
+
         [self.contentTF setTextColor:[UIColor blackColor]];
         [self.contentTF setBackgroundColor:[UIColor clearColor]];
         [self.contentTF setKeyboardType:keyBoardType];
         [self.contentTF setFont:[UIFont boldSystemFontOfSize:14]];
         [self.contentTF setPlaceholder:prompStr];
-        self.contentTF.delegate = self;
+        //self.contentTF.delegate = self;
         [self addSubview:self.contentTF];
     }
     return self;
@@ -77,18 +82,18 @@
     return returnImage;
 }
 
-- (void)keyboardWillShow:(NSNotification *)noti
-{
-    //键盘输入的界面调整
-    //键盘的高度
-    NSLog(@"keyboardWillShow");
-    float height = 216.0;
-    CGRect frame = self.frame;
-    frame.size = CGSizeMake(frame.size.width, frame.size.height - height);
-    [UIView beginAnimations:@"Curl"context:nil];//动画开始
-    [UIView setAnimationDuration:0.30];
-    [UIView setAnimationDelegate:self];
-    [self setFrame:frame];
-    [UIView commitAnimations];
-}
+//- (void)keyboardWillShow:(NSNotification *)noti
+//{
+//    //键盘输入的界面调整
+//    //键盘的高度
+//    NSLog(@"keyboardWillShow");
+//    float height = 216.0;
+//    CGRect frame = self.frame;
+//    frame.size = CGSizeMake(frame.size.width, frame.size.height - height);
+//    [UIView beginAnimations:@"Curl"context:nil];//动画开始
+//    [UIView setAnimationDuration:0.30];
+//    [UIView setAnimationDelegate:self];
+//    [self setFrame:frame];
+//    [UIView commitAnimations];
+//}
 @end

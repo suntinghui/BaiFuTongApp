@@ -26,20 +26,27 @@
         [bgIV setImage:[UIImage imageNamed:@"loginInputbg_long.png"]];
         [self addSubview:bgIV];
         
-        self.contentTF = [[UITextField alloc] initWithFrame:CGRectMake(10, 5, frame.size.width, frame.size.height)];
+        //区分一下系统版本
+        if (DeviceVersion >= 7) {
+            self.contentTF = [[UITextField alloc] initWithFrame:CGRectMake(10, 1, frame.size.width, frame.size.height)];
+        }else{
+            self.contentTF = [[UITextField alloc] initWithFrame:CGRectMake(10, 8, frame.size.width, frame.size.height)];
+        }
+        
         [self.contentTF setBackgroundColor:[UIColor clearColor]];
+        [self.contentTF setFont:[UIFont systemFontOfSize:16]];
         [self addSubview:self.contentTF];
     }
     return self;
 }
 
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ - (void)drawRect:(CGRect)rect
+ {
+ // Drawing code
+ }
+ */
 
 @end

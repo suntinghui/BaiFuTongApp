@@ -54,8 +54,8 @@ NSString const *kSidebarCellImageKey = @"CellImage";
 #pragma mark UIView
 - (void)layoutSubviews {
 	[super layoutSubviews];
-	self.textLabel.frame = CGRectMake(58.0f, 4.0f, 200.0f, 43.0f);
-	self.imageView.frame = CGRectMake(28.0f, 11.0f, 21.0f, 21.0f);
+	self.textLabel.frame = CGRectMake(40.0f, 4.0f, 120.0f, 43.0f);
+	self.imageView.frame = CGRectMake(10.0f, 11.0f, 21.0f, 21.0f);
 }
 
 @end

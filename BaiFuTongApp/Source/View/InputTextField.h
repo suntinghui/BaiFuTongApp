@@ -7,11 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AbstractViewController.h"
 
-@interface InputTextField : UIView<UITextFieldDelegate>
-{
-    
-}
+@interface InputTextField : UIView
 
 @property(nonatomic, strong)UILabel *leftLabel;
 @property(nonatomic, strong)UITextField *contentTF;

@@ -85,7 +85,7 @@
     
     if (indexPath.row != 0)
     {
-        UIImageView *image = [[UIImageView alloc] initWithFrame:CGRectMake(28, 14, 21, 21)];
+        UIImageView *image = [[UIImageView alloc] initWithFrame:CGRectMake(10, 14, 21, 21)];
         [image setImage:[UIImage imageNamed:[NSString stringWithFormat:@"BFTLeftMenuIcon_normal_0%d",indexPath.row]]];
         [image setHighlightedImage:[UIImage imageNamed:[NSString stringWithFormat:@"BFTLeftMenuIcon_highlight_0%d",indexPath.row]]];
         [cell.contentView addSubview:image];
