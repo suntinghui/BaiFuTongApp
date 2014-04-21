@@ -26,6 +26,7 @@
 #import "DateUtil.h"
 #import "EncryptionUtil.h"
 #import "Transfer.h"
+#import "MyNavigation.h"
 
 @implementation SalesSlipDetailViewController
 
@@ -50,8 +51,8 @@
     
     self.navigationItem.title = @"签购单";
     
-    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, VIEWHEIGHT)];
-    [self.scrollView setContentSize:CGSizeMake(320, 560)];
+    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 480+iPhone5_height)];
+    [self.scrollView setContentSize:CGSizeMake(320, 650)];
     self.scrollView.showsVerticalScrollIndicator = false;
     [self.view addSubview:self.scrollView];
     
@@ -257,8 +258,8 @@
     
     SignViewController *signVC = [[SignViewController alloc] initWithNibName:@"SignViewController" bundle:nil];
     signVC.delegate = self;
-    UINavigationController *navigationControl = [[UINavigationController alloc] initWithRootViewController:signVC];
-    [self presentModalViewController:navigationControl animated:YES];
+    UINavigationController *navigationControl = [[MyNavigation alloc] initWithRootViewController:signVC];
+    [self presentViewController:navigationControl animated:YES completion:nil];
 }
 
 -(IBAction)close:(id)sender
@@ -284,7 +285,7 @@
     
     [self.gotoSignButton removeFromSuperview];
     
-    [self.scrollView setContentSize:CGSizeMake(320, 650)];
+    [self.scrollView setContentSize:CGSizeMake(320, 700)];
     [self.bgImageView setFrame:CGRectMake(5, 0, 310, 640)];
     self.bgImageView = [[UIImageView alloc] initWithImage:[self stretchImage:[UIImage imageNamed:@"salesslip.png"]]];
     [self.imageView setImage:obj];

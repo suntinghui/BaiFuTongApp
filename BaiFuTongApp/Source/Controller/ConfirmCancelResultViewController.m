@@ -34,8 +34,8 @@
     
     [self.navigationItem setHidesBackButton:YES]; //隐藏返回按纽
     
-    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, VIEWHEIGHT)];
-    [scrollView setContentSize:CGSizeMake(320, 470)];
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 480+iPhone5_height)];
+    [scrollView setContentSize:CGSizeMake(320, 520)];
     scrollView.showsVerticalScrollIndicator = false;
     [self.view addSubview:scrollView];
     

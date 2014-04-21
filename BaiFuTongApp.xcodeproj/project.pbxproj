@@ -432,6 +432,7 @@
 		FC0AE2AA18FE5FE500C1FD50 /* PasswordResetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC0AE2A818FE5FE500C1FD50 /* PasswordResetViewController.xib */; };
 		FC0AE2AE18FE702700C1FD50 /* RealnameLegalizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0AE2AC18FE702700C1FD50 /* RealnameLegalizeViewController.m */; };
 		FC0AE2AF18FE702700C1FD50 /* RealnameLegalizeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC0AE2AD18FE702700C1FD50 /* RealnameLegalizeViewController.xib */; };
+		FC277D0C1904BB4F00516C84 /* MyNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = FC277D0B1904BB4F00516C84 /* MyNavigation.m */; };
 		FC5A40271900FE190000B0FB /* TradeDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5A40201900FE190000B0FB /* TradeDetailTableViewController.m */; };
 		FC5A40281900FE190000B0FB /* TransferHistoryQueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5A40221900FE190000B0FB /* TransferHistoryQueryViewController.m */; };
 		FC5A40291900FE190000B0FB /* TransListDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5A40241900FE190000B0FB /* TransListDetailViewController.m */; };
@@ -1037,6 +1038,8 @@
 		FC0AE2AB18FE702700C1FD50 /* RealnameLegalizeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealnameLegalizeViewController.h; sourceTree = "<group>"; };
 		FC0AE2AC18FE702700C1FD50 /* RealnameLegalizeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealnameLegalizeViewController.m; sourceTree = "<group>"; };
 		FC0AE2AD18FE702700C1FD50 /* RealnameLegalizeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RealnameLegalizeViewController.xib; sourceTree = "<group>"; };
+		FC277D0A1904BB4F00516C84 /* MyNavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyNavigation.h; sourceTree = "<group>"; };
+		FC277D0B1904BB4F00516C84 /* MyNavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyNavigation.m; sourceTree = "<group>"; };
 		FC5A401F1900FE190000B0FB /* TradeDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TradeDetailTableViewController.h; sourceTree = "<group>"; };
 		FC5A40201900FE190000B0FB /* TradeDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradeDetailTableViewController.m; sourceTree = "<group>"; };
 		FC5A40211900FE190000B0FB /* TransferHistoryQueryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferHistoryQueryViewController.h; sourceTree = "<group>"; };
@@ -1176,6 +1179,8 @@
 				053B65FB17F7EA3B00EA9F11 /* SalesSlipDetailViewController.h */,
 				053B65FC17F7EA3B00EA9F11 /* SalesSlipDetailViewController.m */,
 				053B65FD17F7EA3B00EA9F11 /* SalesSlipDetailViewController.xib */,
+				FC277D0A1904BB4F00516C84 /* MyNavigation.h */,
+				FC277D0B1904BB4F00516C84 /* MyNavigation.m */,
 				053B660817F7EB3700EA9F11 /* SignViewController.h */,
 				053B660917F7EB3700EA9F11 /* SignViewController.m */,
 				053B660A17F7EB3800EA9F11 /* SignViewController.xib */,
@@ -2492,6 +2497,7 @@
 				0507263917F5802A003F2F57 /* DemoClient.m in Sources */,
 				0507263C17F58284003F2F57 /* GatherCancelCell.m in Sources */,
 				0507264017F582BF003F2F57 /* ConfirmCancelViewController.m in Sources */,
+				FC277D0C1904BB4F00516C84 /* MyNavigation.m in Sources */,
 				0507264517F58304003F2F57 /* ConfirmCancelResultViewController.m in Sources */,
 				053B65FE17F7EA3B00EA9F11 /* SalesSlipDetailViewController.m in Sources */,
 				053B660717F7EAFE00EA9F11 /* HandSignPanel.m in Sources */,

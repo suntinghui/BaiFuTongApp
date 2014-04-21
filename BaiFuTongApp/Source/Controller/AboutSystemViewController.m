@@ -26,6 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationItem.title = @"关于系统";
     // Do any additional setup after loading the view from its nib.
     UIImageView *aboutSystemBg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"aboutSystemBg.png"]];
     [aboutSystemBg setFrame:CGRectMake(60, 80, 250*0.8, 74*0.8)];

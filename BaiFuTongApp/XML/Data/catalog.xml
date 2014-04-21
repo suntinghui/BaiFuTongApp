@@ -140,7 +140,16 @@
 		<iconId>23</iconId>
 	</catalog>
     <catalog>
-		<catalogId>24</catalogId>
+		<catalogId>23</catalogId>
+		<title>卡交易查询</title>
+		<parentId>2</parentId>
+		<actionId>TransListViewController</actionId>
+        <action>TransListViewController</action>
+        <actionType>viewcontroller</actionType>
+		<iconId>23</iconId>
+	</catalog>
+    <catalog>
+		<catalogId>25</catalogId>
 		<title>签购单查询</title>
 		<parentId>2</parentId>
 		<actionId>SalesSlipViewController</actionId>
@@ -149,7 +158,7 @@
 		<iconId>24</iconId>
 	</catalog>
 	<catalog>
-		<catalogId>25</catalogId>
+		<catalogId>26</catalogId>
 		<title>公告查询</title>
 		<parentId>2</parentId>
 		<actionId>AnnouncementListViewController</actionId>
@@ -158,7 +167,7 @@
 		<iconId>25</iconId>
 	</catalog>
     <catalog>
-		<catalogId>26</catalogId>
+		<catalogId>27</catalogId>
 		<title>流量统计</title>
 		<parentId>2</parentId>
 		<actionId>FlowCountViewController</actionId>

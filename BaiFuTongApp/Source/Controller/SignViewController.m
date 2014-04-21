@@ -71,7 +71,7 @@
     self.navigationItem.leftBarButtonItem = backButton;
     
     // 签名面板
-    self.signPanel = [[HandSignPanel alloc] initWithFrame:CGRectMake(0, 42, 480 + (iPhone5?88:0), 200) withText:[[Transfer sharedTransfer].receDic objectForKey:@"MD5"]];
+    self.signPanel = [[HandSignPanel alloc] initWithFrame:CGRectMake(0, 42+ios7_y, 480 + (iPhone5?88:0), 200) withText:[[Transfer sharedTransfer].receDic objectForKey:@"MD5"]];
     self.signPanel.backgroundColor = [UIColor clearColor];
     [self.view addSubview:self.signPanel];
 }
@@ -84,6 +84,12 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    if ([self respondsToSelector:@selector(setNeedsStatusBarAppearanceUpdate)]) {
+        // iOS 7
+        [self prefersStatusBarHidden];
+        [self performSelector:@selector(setNeedsStatusBarAppearanceUpdate)];
+    }
+    
     [[UIApplication sharedApplication]setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
 }
 
@@ -92,7 +98,10 @@
     [[UIApplication sharedApplication]setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
 }
 
-
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;//隐藏为YES，显示为NO
+}
 #pragma mark-  IBAciton Methods
 //确定
 -(IBAction)finish:(id)sender

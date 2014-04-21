@@ -30,8 +30,8 @@
     // Do any additional setup after loading the view from its nib.
     self.navigationItem.title = @"支付密码重置";
     
-    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, VIEWHEIGHT)];
-    [scrollView setContentSize:CGSizeMake(320, VIEWHEIGHT)];
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 480+iPhone5_height)];
+    [scrollView setContentSize:CGSizeMake(320, 480)];
     scrollView.showsVerticalScrollIndicator = false;
     [self.view addSubview:scrollView];
     

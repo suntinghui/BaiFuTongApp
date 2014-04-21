@@ -12,6 +12,7 @@
 
 @interface TransListViewController : AbstractViewController<UITableViewDataSource, UITableViewDelegate, PageDelegate>
 
+@property (nonatomic,assign) BOOL isAccountTrade;
 @property(nonatomic, strong)UITableView *myTableView;
 @property(nonatomic, strong)PageView *pageView;
 @property(nonatomic, strong)NSArray *array;

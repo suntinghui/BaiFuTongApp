@@ -10,6 +10,8 @@
 #import "CatalogModel.h"
 #import "ParseXMLUtil.h"
 #import "LoginViewController.h"
+#import "TransListViewController.h"
+
 
 @interface SecondMenuViewController ()
 
@@ -182,6 +184,13 @@
         }
         
         UIViewController *theViewController = [[theClass alloc] init];
+        //因为账户交易查询和卡交易查询界面基本相同，只是相关的值有区别，所以用同一个界面，只不过设定一个类别的分辨值，来区分两个界面
+        if ([catalog.title isEqualToString:@"账户交易查询"]) {
+            ((TransListViewController *)theViewController).isAccountTrade = YES;
+        }
+        else if([catalog.title isEqualToString:@"卡交易查询"]){
+            ((TransListViewController *)theViewController).isAccountTrade = NO;
+        }
         [self.navigationController pushViewController:theViewController animated:YES];
         
     }

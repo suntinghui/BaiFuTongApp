@@ -35,8 +35,8 @@
     // Do any additional setup after loading the view from its nib.
     self.navigationItem.title = @"签到";
     
-    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 416)];
-    [scrollView setContentSize:CGSizeMake(320, 416)];
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 480+iPhone5_height)];
+    [scrollView setContentSize:CGSizeMake(320, 500)];
     scrollView.showsVerticalScrollIndicator = false;
     [self.view addSubview:scrollView];
     

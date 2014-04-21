@@ -32,7 +32,7 @@
     [super viewDidLoad];
     
     self.title = @"公告";
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, VIEWHEIGHT)];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 480+iPhone5_height)];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.tableView.backgroundColor = [UIColor clearColor];

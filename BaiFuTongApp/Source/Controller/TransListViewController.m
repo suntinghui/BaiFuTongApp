@@ -51,8 +51,13 @@
     
     if (self.pageType==0)
     {
-        self.navigationItem.title = @"交易明细列表";
-        
+        //因为账户交易查询和卡交易查询界面基本相同，只是相关的值有区别，所以用同一个界面，只不过设定一个类别的分辨值，来区分两个界面
+        if (self.isAccountTrade == YES) {
+            self.navigationItem.title = @"账户交易明细";
+        }
+        else{
+            self.navigationItem.title = @"卡交易明细";
+        }
         UIButton *confirmButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [confirmButton setFrame:CGRectMake(10, 45, 80, 30)];
         [confirmButton setTitle:@"历史查询" forState:UIControlStateNormal];
