@@ -196,7 +196,7 @@
     [instructionLabel setTextColor:[UIColor grayColor]];
     [instructionLabel setBackgroundColor:[UIColor clearColor]];
     [instructionLabel setFont:[UIFont boldSystemFontOfSize:14]];
-    instructionLabel.lineBreakMode = UILineBreakModeWordWrap;
+    instructionLabel.lineBreakMode = NSLineBreakByWordWrapping;
     instructionLabel.numberOfLines = 0;
     [instructionLabel setText:@"以上交易信息仅供参考，如有疑问请致电完美支付客服:400-7001717"];
     [bgIV addSubview:instructionLabel];
@@ -207,9 +207,9 @@
     [confirmButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     confirmButton.titleLabel.font = [UIFont boldSystemFontOfSize:18];
     [confirmButton addTarget:self action:@selector(close:) forControlEvents:UIControlEventTouchUpInside];
-    [confirmButton setBackgroundImage:[UIImage imageNamed:@"confirmButtonNomal.png"] forState:UIControlStateNormal];
-    [confirmButton setBackgroundImage:[UIImage imageNamed:@"confirmButtonPress.png"] forState:UIControlStateSelected];
-    [confirmButton setBackgroundImage:[UIImage imageNamed:@"confirmButtonPress.png"] forState:UIControlStateHighlighted];
+    [confirmButton setBackgroundImage:[UIImage imageNamed:@"BFTConfirmButton_nomal"] forState:UIControlStateNormal];
+    [confirmButton setBackgroundImage:[UIImage imageNamed:@"BFTConfirmButton_highlight.png"] forState:UIControlStateSelected];
+    [confirmButton setBackgroundImage:[UIImage imageNamed:@"BFTConfirmButton_highlight.png"] forState:UIControlStateHighlighted];
     [scrollView addSubview:confirmButton];
 }
 

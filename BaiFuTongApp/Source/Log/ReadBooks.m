@@ -167,7 +167,7 @@
 
 //点击我的书架时回到主页
 - (void)onClick{
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
     return;
 }
 

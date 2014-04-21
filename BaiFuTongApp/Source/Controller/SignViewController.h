@@ -25,5 +25,5 @@
 
 -(IBAction)myPalttealllineclear;
 -(IBAction)close:(id)sender;
--(IBAction)backBUttonAction:(id)sender;
+//-(IBAction)backBUttonAction:(id)sender;
 @end

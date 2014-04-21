@@ -140,7 +140,7 @@
 		<iconId>23</iconId>
 	</catalog>
     <catalog>
-		<catalogId>23</catalogId>
+		<catalogId>24</catalogId>
 		<title>卡交易查询</title>
 		<parentId>2</parentId>
 		<actionId>TransListViewController</actionId>

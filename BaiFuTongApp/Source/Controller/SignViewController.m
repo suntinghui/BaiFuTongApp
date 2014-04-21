@@ -143,7 +143,7 @@
     
     // 签购单界面执行delegate方法，并关闭本界面
     [self.delegate abstractViewControllerDone:tempImage];
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 //清除
@@ -154,7 +154,7 @@
 
 -(IBAction)close:(id)sender
 {
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark -

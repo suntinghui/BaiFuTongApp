@@ -152,9 +152,9 @@
     [confirmButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     confirmButton.titleLabel.font = [UIFont boldSystemFontOfSize:18];
     [confirmButton addTarget:self action:@selector(confirmButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    [confirmButton setBackgroundImage:[UIImage imageNamed:@"confirmButtonNomal.png"] forState:UIControlStateNormal];
-    [confirmButton setBackgroundImage:[UIImage imageNamed:@"confirmButtonPress.png"] forState:UIControlStateSelected];
-    [confirmButton setBackgroundImage:[UIImage imageNamed:@"confirmButtonPress.png"] forState:UIControlStateHighlighted];
+    [confirmButton setBackgroundImage:[UIImage imageNamed:@"BFTConfirmButton_nomal"] forState:UIControlStateNormal];
+    [confirmButton setBackgroundImage:[UIImage imageNamed:@"BFTConfirmButton_highlight.png"] forState:UIControlStateSelected];
+    [confirmButton setBackgroundImage:[UIImage imageNamed:@"BFTConfirmButton_highlight.png"] forState:UIControlStateHighlighted];
     [scrollView addSubview:confirmButton];
     
     UIImage *image = [UIImage imageNamed:@"explain.png"];
@@ -166,7 +166,7 @@
     explainLabel.backgroundColor = [UIColor clearColor];
     explainLabel.textColor = [UIColor blackColor];
     explainLabel.font = [UIFont systemFontOfSize:14];
-    explainLabel.lineBreakMode = UILineBreakModeWordWrap;
+    explainLabel.lineBreakMode = NSLineBreakByWordWrapping;
     explainLabel.numberOfLines = 0;
     
     explainLabel.text = @"使用说明\n1、您可以对撤销列表中所有的交易进行撤销\n2、消费者只可以对当日 未结算的交易 进行撤销\n3、撤销成功后，交易资金将不会转到您的银行账户中\n4、持卡人需要在签购单上正确签名，作为撤销凭证\n5、商户可以使用“签购单查询”来调阅签购单 ，也可以在完美支付门户网站 上调阅\n6、可以将该交易的签购单以短信方式发送给消费者查阅";

@@ -32,10 +32,11 @@
     [super viewDidLoad];
     
     self.title = @"公告";
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 480+iPhone5_height)];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 480+iPhone5_height) style:UITableViewStylePlain];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.tableView.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:self.tableView];
 }
 
 -(void) viewDidAppear:(BOOL)animated
@@ -51,7 +52,7 @@
     } else {
         NSMutableDictionary *dic = [NSMutableDictionary dictionary];
         [dic setObject:[UserDefaults stringForKey:SYSTEM_ANNOUNCEMENT_LASTEST_NUM]?[UserDefaults stringForKey:SYSTEM_ANNOUNCEMENT_LASTEST_NUM]:@"0" forKey:@"noticeVersion"];
-        
+    
 //        [[Transfer sharedTransfer] startTransfer:@"999000001" fskCmd:@"Request_GetExtKsn#Request_VT" paramDic:dic];
     }
 }
@@ -76,6 +77,10 @@
     
     
 }
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
 
 -(float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return CELL_HEIGHT;
@@ -83,6 +88,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [_array count];
+    //return 1;
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -96,14 +102,17 @@
     cell.titleLabel.text = ((AnnouncementModel*)[_array objectAtIndex:indexPath.row]).title;
     cell.dateLabel.text = ((AnnouncementModel*)[_array objectAtIndex:indexPath.row]).date;
     cell.contentLabel.text = ((AnnouncementModel*)[_array objectAtIndex:indexPath.row]).content;
-    
+//    cell.titleLabel.text = @"123";
+//    cell.dateLabel.text =  @"2013-01-05";
+//    cell.contentLabel.text = @"jfiejfioejfiejifjeifjepijfipejfijseoifjeoijfeifiejwsifjiejfiepowjpfojepoiwjfpoejwpofjkejpfojeopsfjkesjf";
+//    NSString *contentStr = @"jfiejfioejfiejifjeifjepijfipejfijseoifjeoijfeifiejwsifjiejfiepowjpfojepoiwjfpoejwpofjkejpfojeopsfjkesjf";
     NSString *contentStr = ((AnnouncementModel*)[_array objectAtIndex:indexPath.row]).content;
     CGFloat constrainedSize = 290.0f;
     UIFont * myFont = [UIFont fontWithName:@"Arial" size:14];
     cell.contentLabel.font=myFont;
     CGSize textSize = [contentStr sizeWithFont: myFont constrainedToSize:CGSizeMake(constrainedSize, CGFLOAT_MAX)
                        
-                                 lineBreakMode:UILineBreakModeWordWrap];
+                                 lineBreakMode:NSLineBreakByWordWrapping];
     cell.contentLabel.textColor=[UIColor blackColor];
     cell.contentLabel.numberOfLines=2;
     cell.contentLabel.text=contentStr;

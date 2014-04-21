@@ -50,7 +50,7 @@
     
     // 标题
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, 30, 240, 55)];
-    titleLabel.textAlignment = UITextAlignmentCenter;
+    titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.text = self.model.title;
     titleLabel.numberOfLines = 2;
     titleLabel.backgroundColor = [UIColor clearColor];
@@ -72,7 +72,7 @@
     CGSize maximumLabelSizeOne = CGSizeMake(290,MAXFLOAT); //290为我需要的UILabel的长度
     CGSize expectedLabelSizeOne = [self.model.content sizeWithFont:fontOne
                                                  constrainedToSize:maximumLabelSizeOne
-                                                     lineBreakMode:UILineBreakModeWordWrap]; //expectedLabelSizeOne.height 就是内容的高度
+                                                     lineBreakMode:NSLineBreakByWordWrapping]; //expectedLabelSizeOne.height 就是内容的高度
     
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(10, 100, 300, 235)];
     [scrollView setShowsHorizontalScrollIndicator:NO];
@@ -80,7 +80,7 @@
     [scrollView setAlwaysBounceVertical:YES];
     scrollView.contentSize = expectedLabelSizeOne;
     UILabel *contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, 280, expectedLabelSizeOne.height)];
-    contentLabel.lineBreakMode = UILineBreakModeWordWrap;
+    contentLabel.lineBreakMode = NSLineBreakByWordWrapping;
     contentLabel.numberOfLines = 0;//上面两行设置多行显示
     contentLabel.backgroundColor = [UIColor clearColor];
     contentLabel.text = self.model.content;
@@ -94,9 +94,9 @@
     [confirmButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     confirmButton.titleLabel.font = [UIFont boldSystemFontOfSize:18];
     [confirmButton addTarget:self action:@selector(confirmButtonAction:) forControlEvents:UIControlEventTouchUpInside];
-    [confirmButton setBackgroundImage:[UIImage imageNamed:@"confirmButtonNomal.png"] forState:UIControlStateNormal];
-    [confirmButton setBackgroundImage:[UIImage imageNamed:@"confirmButtonPress.png"] forState:UIControlStateSelected];
-    [confirmButton setBackgroundImage:[UIImage imageNamed:@"confirmButtonPress.png"] forState:UIControlStateHighlighted];
+    [confirmButton setBackgroundImage:[UIImage imageNamed:@"BFTConfirmButton_nomal"] forState:UIControlStateNormal];
+    [confirmButton setBackgroundImage:[UIImage imageNamed:@"BFTConfirmButton_highlight.png"] forState:UIControlStateSelected];
+    [confirmButton setBackgroundImage:[UIImage imageNamed:@"BFTConfirmButton_highlight.png"] forState:UIControlStateHighlighted];
     [self.view addSubview:confirmButton];
 }
 
@@ -104,7 +104,6 @@
 {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"确认删除" message:@"您确定要删除该条公告吗？" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
     [alert show];
-    
     
 }
 
