@@ -265,20 +265,6 @@
     
 }
 
-////打开本地相册
-//-(void)LocalPhoto:(NSInteger)tag
-//{
-//    UIImagePickerController *picker = [[MyPickController alloc] init];
-//    
-//    
-//    picker.navigationBar.tag = tag;
-//    picker.delegate = self;
-//    //设置选择后的图片可被编辑
-//    picker.allowsEditing = YES;
-//    [self presentViewController:picker animated:YES completion:nil];
-//}
-
-
 - (BOOL)shouldAutorotate
 {
     return NO;
@@ -304,6 +290,7 @@
     // UIImagePickerControllerOriginalImage 原始图片
     //UIImagePickerControllerEditedImage 编辑后图片
     UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
+    
     if (picker.navigationBar.tag == _IdCardFront.tag) {
         _IdCardFront.image = image;
     }
