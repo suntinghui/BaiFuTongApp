@@ -82,12 +82,13 @@
     }
 	NSDictionary *info = _cellInfos[indexPath.section][indexPath.row];
 	cell.textLabel.text = info[kSidebarCellTextKey];
+    cell.backgroundColor = [UIColor clearColor];
     
     if (indexPath.row != 0)
     {
         UIImageView *image = [[UIImageView alloc] initWithFrame:CGRectMake(10, 14, 21, 21)];
-        [image setImage:[UIImage imageNamed:[NSString stringWithFormat:@"BFTLeftMenuIcon_normal_0%d",indexPath.row]]];
-        [image setHighlightedImage:[UIImage imageNamed:[NSString stringWithFormat:@"BFTLeftMenuIcon_highlight_0%d",indexPath.row]]];
+        [image setImage:[UIImage imageNamed:[NSString stringWithFormat:@"BFTLeftMenuIcon_normal_0%ld",(long)indexPath.row]]];
+        [image setHighlightedImage:[UIImage imageNamed:[NSString stringWithFormat:@"BFTLeftMenuIcon_highlight_0%ld",(long)indexPath.row]]];
         [cell.contentView addSubview:image];
     }
     return cell;

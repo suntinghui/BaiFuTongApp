@@ -33,7 +33,7 @@ NSString const *kSidebarCellImageKey = @"CellImage";
 		self.textLabel.shadowOffset = CGSizeMake(0.0f, 1.0f);
 		self.textLabel.shadowColor = [UIColor colorWithWhite:0.0f alpha:0.25f];
 		self.textLabel.textColor = [UIColor colorWithRed:(196.0f/255.0f) green:(204.0f/255.0f) blue:(218.0f/255.0f) alpha:1.0f];
-		
+        
 		UIView *topLine = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, [UIScreen mainScreen].bounds.size.height, 1.0f)];
 		topLine.backgroundColor = [UIColor colorWithRed:(54.0f/255.0f) green:(61.0f/255.0f) blue:(76.0f/255.0f) alpha:1.0f];
 		[self.textLabel.superview addSubview:topLine];
