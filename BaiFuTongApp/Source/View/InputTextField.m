@@ -31,9 +31,9 @@
         [self addSubview:self.leftLabel];
         //区分一下系统版本
         if (DeviceVersion >= 7) {
-            self.contentTF = [[UITextField alloc] initWithFrame:CGRectMake(80, 5, frame.size.width*2/3, frame.size.height*4/5)];
+            self.contentTF = [[UITextField alloc] initWithFrame:CGRectMake(80, 4, frame.size.width*2/3, frame.size.height*4/5)];
         }else{
-            self.contentTF = [[UITextField alloc] initWithFrame:CGRectMake(80, 11, frame.size.width*2/3, frame.size.height*4/5)];
+            self.contentTF = [[UITextField alloc] initWithFrame:CGRectMake(80, 13, frame.size.width*2/3, frame.size.height*4/5)];
         }
 
         [self.contentTF setTextColor:[UIColor blackColor]];

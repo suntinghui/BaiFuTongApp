@@ -154,6 +154,20 @@
     }
 }
 
+-(void)textViewDidBeginEditing:(UITextView *)textView
+{
+    if ([self.inputTF.text isEqualToString:PLACEHOLDER]) {
+        self.inputTF.text = nil;
+    }
+}
+
+-(void)textViewDidEndEditing:(UITextView *)textView
+{
+    if (self.inputTF.text == nil || [self.inputTF.text isEqualToString:@""]) {
+        self.inputTF.text = PLACEHOLDER;
+    }
+}
+
 -(IBAction)dismissKeyBoard
 {
     [self.inputTF resignFirstResponder];

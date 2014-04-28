@@ -46,7 +46,7 @@
         
         //区分一下系统版本
         if (DeviceVersion >= 7) {
-            self.pwdTF = [[UITextField alloc] initWithFrame:CGRectMake(80, 5, frame.size.width-40, frame.size.height)];
+            self.pwdTF = [[UITextField alloc] initWithFrame:CGRectMake(80, -1, frame.size.width-40, frame.size.height)];
         }else{
             self.pwdTF = [[UITextField alloc] initWithFrame:CGRectMake(80, 11, frame.size.width-40, frame.size.height)];
         }
@@ -108,9 +108,9 @@
     NSTimeInterval animationDuration = 0.30f;
     [UIView beginAnimations:@"ResizeForKeyBoard" context:nil];
     [UIView setAnimationDuration:animationDuration];
-    CGRect rect = CGRectMake(0.0f, 40.0f,320,416);
-//    CGRect rect = CGRectMake(0.0f, 40.0f,320,VIEWHEIGHT);
-    self.superview.frame = rect;
+//    CGRect rect = CGRectMake(0.0f, 40.0f,320,416);
+////    CGRect rect = CGRectMake(0.0f, 40.0f,320,VIEWHEIGHT);
+//    self.superview.frame = rect;
     [UIView commitAnimations];
 }
 

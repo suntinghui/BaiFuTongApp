@@ -58,6 +58,22 @@
     
 //    [self.amountLabel setText:[StringUtil string2SymbolAmount:[[Transfer sharedTransfer].receDic objectForKey:@"field4"]]];
     
+    if (DeviceVersion>=7) {
+        for (int i = 0; i<self.view.subviews.count; i++) {
+            UIView *view = self.view.subviews[i];
+            view.frame = CGRectMake(view.frame.origin.x, view.frame.origin.y+40, view.frame.size.width, view.frame.size.height);
+            if (iPhone5) {
+                if ([self.view.subviews[i] isKindOfClass:[UIButton class]]) {
+                    view.frame = CGRectMake(view.frame.origin.x+74, view.frame.origin.y, view.frame.size.width, view.frame.size.height);
+                }
+                else{
+                    view.frame = CGRectMake(view.frame.origin.x, view.frame.origin.y, view.frame.size.width+88, view.frame.size.height);
+                }
+            }
+        }
+        
+    }
+    
     self.phoneNumTF.delegate = self;
     
     UIImage *buttonNormalImage = [UIImage imageNamed:@"backbutton_normal.png"];
@@ -71,7 +87,7 @@
     self.navigationItem.leftBarButtonItem = backButton;
     
     // 签名面板
-    self.signPanel = [[HandSignPanel alloc] initWithFrame:CGRectMake(0, 42+ios7_y, 480 + (iPhone5?88:0), 200) withText:[[Transfer sharedTransfer].receDic objectForKey:@"MD5"]];
+    self.signPanel = [[HandSignPanel alloc] initWithFrame:CGRectMake(0, 37+ios7_y, 480 + (iPhone5?88:0), 190) withText:[[Transfer sharedTransfer].receDic objectForKey:@"MD5"]];
     self.signPanel.backgroundColor = [UIColor clearColor];
     [self.view addSubview:self.signPanel];
 }
@@ -163,7 +179,11 @@
 {
 	UITouch* touch=[touches anyObject];
 	myBeganpoint=[touch locationInView:self.view ];
-	
+	if (DeviceVersion>=7) {
+        myBeganpoint = CGPointMake(myBeganpoint.x+5, myBeganpoint.y-88);
+    }else{
+        myBeganpoint = CGPointMake(myBeganpoint.x-10, myBeganpoint.y-40);
+    }
 	[self.signPanel Introductionpoint1];
 	[self.signPanel Introductionpoint3:myBeganpoint];
 	

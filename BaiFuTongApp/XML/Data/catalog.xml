@@ -30,7 +30,7 @@
 	</catalog>
 	<catalog>
 		<catalogId>4</catalogId>
-		<title>我的存款</title>
+		<title>我要提现</title>
 		<parentId>0</parentId>
 		<actionId>0</actionId>
         <action></action>
@@ -216,10 +216,10 @@
 
 	<catalog>
 		<catalogId>41</catalogId>
-		<title>商户存款查询</title>
+		<title>提现</title>
 		<parentId>4</parentId>
-		<actionId>MerchantDepositsQueryViewController</actionId>
-        <action>MerchantDepositsQueryViewController</action>
+		<actionId>WithdrawalViewController</actionId>
+        <action>WithdrawalViewController</action>
         <actionType>viewcontroller</actionType>
 		<iconId>41</iconId>
 	</catalog>

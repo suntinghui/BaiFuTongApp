@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1552" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -17,50 +17,46 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" image="BFTSignBg.png" translatesAutoresizingMaskIntoConstraints="NO" id="74">
-                    <rect key="frame" x="10" y="34" width="461" height="251"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="BFTSignBg.png" id="74">
+                    <rect key="frame" x="10" y="0.0" width="461" height="275"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" image="textInput.png" translatesAutoresizingMaskIntoConstraints="NO" id="13">
-                    <rect key="frame" x="180" y="41" width="246" height="31"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="textInput.png" id="13">
+                    <rect key="frame" x="180" y="7" width="246" height="31"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="31" id="hdP-Zd-AiA"/>
-                        <constraint firstAttribute="width" constant="246" id="vcD-Zj-vN3"/>
-                    </constraints>
                 </imageView>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入您的手机号" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4">
-                    <rect key="frame" x="248" y="41" width="164" height="30"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入您的手机号" minimumFontSize="17" id="4">
+                    <rect key="frame" x="248" y="7" width="164" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
                 </textField>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="手机号：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5">
-                    <rect key="frame" x="189" y="45" width="64" height="21"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="手机号：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5">
+                    <rect key="frame" x="189" y="11" width="64" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="￥69.60" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6">
-                    <rect key="frame" x="83" y="46" width="134" height="21"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="￥69.60" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" id="6">
+                    <rect key="frame" x="89" y="12" width="134" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                     <color key="textColor" red="0.023529411760000001" green="0.49019607840000001" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="交易金额：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8">
-                    <rect key="frame" x="12" y="46" width="75" height="20"/>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="交易金额：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8">
+                    <rect key="frame" x="18" y="12" width="75" height="20"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7">
-                    <rect key="frame" x="248" y="285" width="223" height="28"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7">
+                    <rect key="frame" x="410" y="238" width="55" height="28"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                    <state key="normal" title="确认签名" backgroundImage="BFTSign_ok_btn.png">
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="确认" backgroundImage="BFTSign_ok_btn.png">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -71,11 +67,11 @@
                         <action selector="finish:" destination="-1" eventType="touchUpInside" id="143"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9">
-                    <rect key="frame" x="10" y="285" width="223" height="28"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9">
+                    <rect key="frame" x="353" y="238" width="55" height="28"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="17"/>
-                    <state key="normal" title="取消签名" backgroundImage="BFTSign_clear_btn.png">
+                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
+                    <state key="normal" title="取消" backgroundImage="BFTSign_clear_btn.png">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -85,16 +81,6 @@
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <constraints>
-                <constraint firstAttribute="bottom" secondItem="74" secondAttribute="bottom" constant="35" id="4FM-KY-KST"/>
-                <constraint firstAttribute="bottom" secondItem="5" secondAttribute="bottom" constant="254" id="4pa-qY-v7o"/>
-                <constraint firstAttribute="bottom" secondItem="6" secondAttribute="bottom" constant="253" id="9PT-dh-VVI"/>
-                <constraint firstAttribute="bottom" secondItem="7" secondAttribute="bottom" constant="7" id="JTq-83-8io"/>
-                <constraint firstAttribute="bottom" secondItem="8" secondAttribute="bottom" constant="254" id="fKW-5y-Op6"/>
-                <constraint firstAttribute="bottom" secondItem="13" secondAttribute="bottom" constant="248" id="hZI-PI-qdM"/>
-                <constraint firstAttribute="bottom" secondItem="4" secondAttribute="bottom" constant="249" id="rO2-QW-ZFx"/>
-                <constraint firstAttribute="bottom" secondItem="9" secondAttribute="bottom" constant="7" id="wVR-UK-LFP"/>
-            </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>

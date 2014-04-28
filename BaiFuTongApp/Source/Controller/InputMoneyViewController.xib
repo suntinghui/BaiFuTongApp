@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1552" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -16,11 +16,11 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" image="inputmoney_show_bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="7">
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="inputmoney_show_bg.png" id="7">
                     <rect key="frame" x="2" y="63" width="316" height="80"/>
                     <autoresizingMask key="autoresizingMask"/>
                 </imageView>
-                <button opaque="NO" tag="1011" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="147">
+                <button opaque="NO" tag="1011" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="147">
                     <rect key="frame" x="2" y="409" width="316" height="60"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="21"/>
@@ -33,7 +33,7 @@
                         <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="348"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="1001" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="196">
+                <button opaque="NO" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="196">
                     <rect key="frame" x="2" y="145" width="105" height="63"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -48,7 +48,7 @@
                         <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="336"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="1004" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="250">
+                <button opaque="NO" tag="1004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="250">
                     <rect key="frame" x="2" y="209" width="105" height="63"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -63,7 +63,7 @@
                         <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="339"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="1002" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="211">
+                <button opaque="NO" tag="1002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="211">
                     <rect key="frame" x="108" y="145" width="105" height="63"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -78,7 +78,7 @@
                         <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="337"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="1003" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="224">
+                <button opaque="NO" tag="1003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="224">
                     <rect key="frame" x="214" y="145" width="105" height="63"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -93,7 +93,7 @@
                         <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="338"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="1005" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="257">
+                <button opaque="NO" tag="1005" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="257">
                     <rect key="frame" x="108" y="209" width="105" height="63"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -108,7 +108,7 @@
                         <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="340"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="1006" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="268">
+                <button opaque="NO" tag="1006" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="268">
                     <rect key="frame" x="214" y="209" width="105" height="63"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -123,7 +123,7 @@
                         <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="341"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="1007" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="281">
+                <button opaque="NO" tag="1007" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="281">
                     <rect key="frame" x="2" y="274" width="105" height="63"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -138,7 +138,7 @@
                         <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="342"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="1008" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="291">
+                <button opaque="NO" tag="1008" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="291">
                     <rect key="frame" x="108" y="274" width="105" height="63"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -153,7 +153,7 @@
                         <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="343"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="1009" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="294">
+                <button opaque="NO" tag="1009" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="294">
                     <rect key="frame" x="214" y="274" width="105" height="63"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -168,7 +168,7 @@
                         <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="344"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="1000" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="305">
+                <button opaque="NO" tag="1000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="305">
                     <rect key="frame" x="2" y="338" width="105" height="63"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -183,7 +183,7 @@
                         <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="345"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="314">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="314">
                     <rect key="frame" x="108" y="338" width="105" height="63"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -198,7 +198,7 @@
                         <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="346"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="1010" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="330">
+                <button opaque="NO" tag="1010" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="330">
                     <rect key="frame" x="214" y="338" width="105" height="63"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -213,7 +213,7 @@
                         <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="347"/>
                     </connections>
                 </button>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="￥0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="349">
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="￥0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="349">
                     <rect key="frame" x="20" y="74" width="280" height="56"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="26"/>
@@ -222,23 +222,6 @@
                 </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <constraints>
-                <constraint firstAttribute="bottom" secondItem="314" secondAttribute="bottom" constant="79" id="B1a-bq-jYa"/>
-                <constraint firstAttribute="bottom" secondItem="294" secondAttribute="bottom" constant="143" id="Dco-g0-gu6"/>
-                <constraint firstAttribute="bottom" secondItem="268" secondAttribute="bottom" constant="208" id="K0U-x5-UiV"/>
-                <constraint firstAttribute="bottom" secondItem="250" secondAttribute="bottom" constant="208" id="LZy-DS-bFW"/>
-                <constraint firstAttribute="bottom" secondItem="224" secondAttribute="bottom" constant="272" id="NpK-xX-ffm"/>
-                <constraint firstAttribute="bottom" secondItem="7" secondAttribute="bottom" constant="337" id="OSE-2R-u5o"/>
-                <constraint firstAttribute="bottom" secondItem="196" secondAttribute="bottom" constant="272" id="P18-fH-Epc"/>
-                <constraint firstAttribute="bottom" secondItem="330" secondAttribute="bottom" constant="79" id="SdI-JH-spm"/>
-                <constraint firstAttribute="bottom" secondItem="349" secondAttribute="bottom" constant="350" id="TLk-Gk-8FH"/>
-                <constraint firstAttribute="bottom" secondItem="257" secondAttribute="bottom" constant="208" id="a6d-je-asg"/>
-                <constraint firstAttribute="bottom" secondItem="211" secondAttribute="bottom" constant="272" id="ejN-6e-Yuj"/>
-                <constraint firstAttribute="bottom" secondItem="305" secondAttribute="bottom" constant="79" id="knt-ED-IFA"/>
-                <constraint firstAttribute="bottom" secondItem="281" secondAttribute="bottom" constant="143" id="r3b-h0-Vdz"/>
-                <constraint firstAttribute="bottom" secondItem="147" secondAttribute="bottom" constant="11" id="uVc-r1-dNa"/>
-                <constraint firstAttribute="bottom" secondItem="291" secondAttribute="bottom" constant="143" id="ueW-EM-BIf"/>
-            </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>

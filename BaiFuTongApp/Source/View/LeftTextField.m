@@ -28,9 +28,9 @@
         
         //区分一下系统版本
         if (DeviceVersion >= 7) {
-            self.contentTF = [[UITextField alloc] initWithFrame:CGRectMake(10, 1, frame.size.width, frame.size.height)];
+            self.contentTF = [[UITextField alloc] initWithFrame:CGRectMake(10, 0, frame.size.width, frame.size.height)];
         }else{
-            self.contentTF = [[UITextField alloc] initWithFrame:CGRectMake(10, 8, frame.size.width, frame.size.height)];
+            self.contentTF = [[UITextField alloc] initWithFrame:CGRectMake(10, 12, frame.size.width, frame.size.height)];
         }
         
         [self.contentTF setBackgroundColor:[UIColor clearColor]];

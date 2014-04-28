@@ -45,8 +45,13 @@
 
     self.displayLabel.text = self.moneyStr;
     
+    if (iPhone5) {
+        for (int i = 0; i<self.view.subviews.count; i++) {
+            UIView *view = self.view.subviews[i];
+            view.frame = CGRectMake(view.frame.origin.x, view.frame.origin.y+44, view.frame.size.width, view.frame.size.height);
+        }
+    }
 }
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

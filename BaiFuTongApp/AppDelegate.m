@@ -57,7 +57,7 @@
                                  [[UINavigationController alloc] initWithRootViewController:[[SecondMenuViewController alloc] initWithTitle:@"我的管理" withRevealBlock:revealBlock catalogId:1]],
                                  [[UINavigationController alloc] initWithRootViewController:[[SecondMenuViewController alloc] initWithTitle:@"我要查询" withRevealBlock:revealBlock catalogId:2]],
                                  [[UINavigationController alloc] initWithRootViewController:[[SecondMenuViewController alloc] initWithTitle:@"我要收款" withRevealBlock:revealBlock catalogId:3]],
-                                 [[UINavigationController alloc] initWithRootViewController:[[SecondMenuViewController alloc] initWithTitle:@"我的存款" withRevealBlock:revealBlock catalogId:4]],
+                                 [[UINavigationController alloc] initWithRootViewController:[[SecondMenuViewController alloc] initWithTitle:@"我要提现" withRevealBlock:revealBlock catalogId:4]],
                                  [[UINavigationController alloc] initWithRootViewController:[[SecondMenuViewController alloc] initWithTitle:@"系统相关" withRevealBlock:revealBlock catalogId:5]]
                                  ]
                              ];
@@ -68,7 +68,7 @@
                             @{kSidebarCellImageKey: [UIImage imageNamed:@"BFTLeftMenuIcon_normal_01.png"], kSidebarCellTextKey: NSLocalizedString(@"我的管理", @"")},
                             @{kSidebarCellImageKey: [UIImage imageNamed:@"BFTLeftMenuIcon_normal_02.png"], kSidebarCellTextKey: NSLocalizedString(@"我要查询", @"")},
                             @{kSidebarCellImageKey: [UIImage imageNamed:@"BFTLeftMenuIcon_normal_03.png"], kSidebarCellTextKey: NSLocalizedString(@"我要收款", @"")},
-                            @{kSidebarCellImageKey: [UIImage imageNamed:@"BFTLeftMenuIcon_normal_04.png"], kSidebarCellTextKey: NSLocalizedString(@"我的存款", @"")},
+                            @{kSidebarCellImageKey: [UIImage imageNamed:@"BFTLeftMenuIcon_normal_04.png"], kSidebarCellTextKey: NSLocalizedString(@"我要提现", @"")},
                             @{kSidebarCellImageKey: [UIImage imageNamed:@"BFTLeftMenuIcon_normal_05.png"], kSidebarCellTextKey: NSLocalizedString(@"系统相关", @"")},
                             ]
                         ];

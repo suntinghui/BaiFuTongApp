@@ -433,6 +433,8 @@
 		FC0AE2AE18FE702700C1FD50 /* RealnameLegalizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0AE2AC18FE702700C1FD50 /* RealnameLegalizeViewController.m */; };
 		FC0AE2AF18FE702700C1FD50 /* RealnameLegalizeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC0AE2AD18FE702700C1FD50 /* RealnameLegalizeViewController.xib */; };
 		FC277D0C1904BB4F00516C84 /* MyNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = FC277D0B1904BB4F00516C84 /* MyNavigation.m */; };
+		FC449F89190E46E200320D73 /* WithdrawalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC449F87190E46E200320D73 /* WithdrawalViewController.m */; };
+		FC449F8A190E46E200320D73 /* WithdrawalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC449F88190E46E200320D73 /* WithdrawalViewController.xib */; };
 		FC5A40271900FE190000B0FB /* TradeDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5A40201900FE190000B0FB /* TradeDetailTableViewController.m */; };
 		FC5A40281900FE190000B0FB /* TransferHistoryQueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5A40221900FE190000B0FB /* TransferHistoryQueryViewController.m */; };
 		FC5A40291900FE190000B0FB /* TransListDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5A40241900FE190000B0FB /* TransListDetailViewController.m */; };
@@ -1040,6 +1042,9 @@
 		FC0AE2AD18FE702700C1FD50 /* RealnameLegalizeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RealnameLegalizeViewController.xib; sourceTree = "<group>"; };
 		FC277D0A1904BB4F00516C84 /* MyNavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyNavigation.h; sourceTree = "<group>"; };
 		FC277D0B1904BB4F00516C84 /* MyNavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyNavigation.m; sourceTree = "<group>"; };
+		FC449F86190E46E200320D73 /* WithdrawalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WithdrawalViewController.h; sourceTree = "<group>"; };
+		FC449F87190E46E200320D73 /* WithdrawalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WithdrawalViewController.m; sourceTree = "<group>"; };
+		FC449F88190E46E200320D73 /* WithdrawalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WithdrawalViewController.xib; sourceTree = "<group>"; };
 		FC5A401F1900FE190000B0FB /* TradeDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TradeDetailTableViewController.h; sourceTree = "<group>"; };
 		FC5A40201900FE190000B0FB /* TradeDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradeDetailTableViewController.m; sourceTree = "<group>"; };
 		FC5A40211900FE190000B0FB /* TransferHistoryQueryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferHistoryQueryViewController.h; sourceTree = "<group>"; };
@@ -1237,6 +1242,9 @@
 				050724EC17F531E6003F2F57 /* MerchantDepositsQueryViewController.h */,
 				050724ED17F531E6003F2F57 /* MerchantDepositsQueryViewController.m */,
 				050724EE17F531E6003F2F57 /* MerchantDepositsQueryViewController.xib */,
+				FC449F86190E46E200320D73 /* WithdrawalViewController.h */,
+				FC449F87190E46E200320D73 /* WithdrawalViewController.m */,
+				FC449F88190E46E200320D73 /* WithdrawalViewController.xib */,
 			);
 			name = Deposit;
 			sourceTree = "<group>";
@@ -2316,6 +2324,7 @@
 				053B65EA17F7CB1000EA9F11 /* inputmoney_button_7@2x.png in Resources */,
 				053B65EB17F7CB1000EA9F11 /* inputmoney_button_8.png in Resources */,
 				053B65EC17F7CB1000EA9F11 /* inputmoney_button_8@2x.png in Resources */,
+				FC449F8A190E46E200320D73 /* WithdrawalViewController.xib in Resources */,
 				FC884CF518FF77460009F617 /* selectField_normal@2x.png in Resources */,
 				053B65ED17F7CB1000EA9F11 /* inputmoney_button_9.png in Resources */,
 				053B65EE17F7CB1000EA9F11 /* inputmoney_button_9@2x.png in Resources */,
@@ -2426,6 +2435,7 @@
 				050724E517F53148003F2F57 /* SuggestionBackViewController.m in Sources */,
 				050724EA17F53156003F2F57 /* AboutSystemViewController.m in Sources */,
 				050724EF17F531E6003F2F57 /* MerchantDepositsQueryViewController.m in Sources */,
+				FC449F89190E46E200320D73 /* WithdrawalViewController.m in Sources */,
 				050724F417F5327E003F2F57 /* MembershipExpenseViewController.m in Sources */,
 				050724F917F532A9003F2F57 /* OrderPaymentViewController.m in Sources */,
 				0507250B17F55335003F2F57 /* PwdLeftTextField.m in Sources */,

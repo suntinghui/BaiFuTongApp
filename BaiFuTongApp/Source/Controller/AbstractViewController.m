@@ -161,7 +161,7 @@
     if (systemVersion == 5.0) {
        returnImage = [image resizableImageWithCapInsets:UIEdgeInsetsMake(15, STRETCH, STRETCH, STRETCH)];
     }else if(systemVersion >= 6.0){
-       returnImage = [image resizableImageWithCapInsets:UIEdgeInsetsMake(25, STRETCH, STRETCH, STRETCH)resizingMode:UIImageResizingModeTile];
+       returnImage = [image resizableImageWithCapInsets:UIEdgeInsetsMake(25, STRETCH, 25, 25)resizingMode:UIImageResizingModeTile];
     }
     return returnImage;
 }
