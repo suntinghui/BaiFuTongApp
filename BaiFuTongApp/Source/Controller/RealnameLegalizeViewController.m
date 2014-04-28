@@ -139,7 +139,7 @@
     [_banksBranchButton setBackgroundImage:[UIImage imageNamed:@"selectBank_highlight.png"] forState:UIControlStateHighlighted];
     [_scrollView addSubview:_banksBranchButton];
     
-    self.bkCardNoTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 550, 298, 44) left:@"银行卡号" prompt:@"请输入您的银行卡号" keyBoardType:UIKeyboardTypePhonePad];
+    self.bkCardNoTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 550, 298, 44) left:@"银行卡号" prompt:@"请输入您的银行卡号" keyBoardType:UIKeyboardTypeNumberPad];
     self.bkCardNoTF.contentTF.delegate = self;
     [self.bkCardNoTF.contentTF hideKeyBoard:self.view:3 hasNavBar:YES];
     [_scrollView addSubview:self.bkCardNoTF];
@@ -163,7 +163,7 @@
     [_scrollView addSubview:dividingLine1];
 
     
-    self.merchantTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 745, 298, 44) left:@"商户名" prompt:@"请输入您的商户名" keyBoardType:UIKeyboardTypeDefault];
+    self.merchantTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 745, 298, 44) left:@"商户名" prompt:@"请输入您的商户名" keyBoardType:UIKeyboardTypeNamePhonePad];
     self.merchantTF.contentTF.delegate = self;
     [self.merchantTF.contentTF hideKeyBoard:self.view:3 hasNavBar:YES];
     [_scrollView addSubview:self.merchantTF];
@@ -471,6 +471,22 @@
             [self.selectCityButton setTitle:[((CityModel *)[self.selectCityArray objectAtIndex:row]) name] forState:UIControlStateNormal];
             cityFlag = row;
 		}
+    }
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    if (textField == self.bkCardNoTF.contentTF && range.location >= 22)
+    {
+        return NO;
+    }
+    else if (self.securityCodeTF.contentTF == textField && range.location >=6)
+    {
+        return NO;
+    }
+    else
+    {
+        return YES;
     }
 }
 

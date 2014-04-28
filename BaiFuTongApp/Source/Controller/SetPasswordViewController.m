@@ -34,7 +34,8 @@
     self.PwdTF = [[PwdLeftTextField alloc] initWithFrame:CGRectMake(10, 30+ios7_y, 298, 44) left:@"支付密码" prompt:@"请输入6位支付密码"];
     [self.view addSubview:self.PwdTF];
     
-    self.pIdNoTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 85+ios7_y, 298, 44) left:@"身份证号" prompt:@"请输入您的身份证号" keyBoardType:UIKeyboardTypeDefault];
+    self.pIdNoTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 85+ios7_y, 298, 44) left:@"身份证号" prompt:@"请输入您的身份证号" keyBoardType:UIKeyboardTypeNumbersAndPunctuation];
+    self.pIdNoTF.contentTF.delegate = self;
     [self.pIdNoTF.contentTF hideKeyBoard:self.view:3 hasNavBar:YES];
     [self.view addSubview:self.pIdNoTF];
     
@@ -101,4 +102,22 @@
 {
     //短信验证码按键处理
 }
+
+//限制textfield的输入字数
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    if (textField == self.pIdNoTF.contentTF && range.location >= 18)
+    {
+        return  NO;
+    }
+    else if(self.securityCodeTF.contentTF == textField && range.location >=6)
+    {
+        return NO;
+    }
+    else
+    {
+        return YES;
+    }
+}
+
 @end

@@ -38,11 +38,13 @@
     self.freshPwdTF = [[PwdLeftTextField alloc] initWithFrame:CGRectMake(10, 30, 298, 44) left:@"新  密  码" prompt:@"请输入6位商户密码"];
     [scrollView addSubview:self.freshPwdTF];
     
-    self.pIdNoTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 84, 298, 44) left:@"身份证号" prompt:@"请输入您的身份证号" keyBoardType:UIKeyboardTypeDefault];
+    self.pIdNoTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 84, 298, 44) left:@"身份证号" prompt:@"请输入您的身份证号" keyBoardType:UIKeyboardTypeNumbersAndPunctuation];
+    self.pIdNoTF.contentTF.delegate = self;
     [self.pIdNoTF.contentTF hideKeyBoard:self.view:3 hasNavBar:YES];
     [scrollView addSubview:self.pIdNoTF];
     
-    self.bkCardNoTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 138, 298, 44) left:@"银行卡号" prompt:@"请输入您的银行卡号" keyBoardType:UIKeyboardTypePhonePad];
+    self.bkCardNoTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 138, 298, 44) left:@"银行卡号" prompt:@"请输入您的银行卡号" keyBoardType:UIKeyboardTypeNumberPad];
+    self.bkCardNoTF.contentTF.delegate = self;
     [self.bkCardNoTF.contentTF hideKeyBoard:self.view:3 hasNavBar:YES];
     [scrollView addSubview:self.bkCardNoTF];
     
@@ -95,5 +97,26 @@
 -(IBAction)confirmButtonAction:(id)sender
 {
     //确认按钮的按键处理函数
+}
+
+//限制textfield的输入字数
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    if (textField == self.pIdNoTF.contentTF && range.location >= 18)
+    {
+        return  NO;
+    }
+    else if (textField == self.bkCardNoTF.contentTF && range.location >= 22)
+    {
+        return NO;
+    }
+    else if(self.securityCodeTF.contentTF == textField && range.location >=6)
+    {
+        return NO;
+    }
+    else
+    {
+        return YES;
+    }
 }
 @end

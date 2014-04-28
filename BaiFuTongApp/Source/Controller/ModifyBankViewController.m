@@ -58,32 +58,32 @@
     _scrollView.showsVerticalScrollIndicator = false;
     [self.view addSubview:_scrollView];
     
-    self.nameTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 35, 298, 44) left:@"姓名" prompt:@"请输入您的姓名" keyBoardType:UIKeyboardTypeDefault];
+    self.nameTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 35, 298, 44) left:@"姓名" prompt:@"请输入您的姓名" keyBoardType:UIKeyboardTypeNamePhonePad];
     self.nameTF.contentTF.delegate = self;
     [self.nameTF.contentTF hideKeyBoard:self.view:3 hasNavBar:YES];
     [_scrollView addSubview:self.nameTF];
     
-    self.pIdNoTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 90, 298, 44) left:@"身份证号" prompt:@"请输入您的身份证号" keyBoardType:UIKeyboardTypeDefault];
+    self.pIdNoTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 90, 298, 44) left:@"身份证号" prompt:@"请输入您的身份证号" keyBoardType:UIKeyboardTypeNumbersAndPunctuation];
     self.pIdNoTF.contentTF.delegate = self;
     [self.pIdNoTF.contentTF hideKeyBoard:self.view:3 hasNavBar:YES];
     [_scrollView addSubview:self.pIdNoTF];
     
-    UILabel * dividingLine = [[UILabel alloc] initWithFrame:CGRectMake(10, 144, 300, 1)];
+    UILabel * dividingLine = [[UILabel alloc] initWithFrame:CGRectMake(10, 147, 300, 1)];
     dividingLine.backgroundColor = [UIColor grayColor];
     [_scrollView addSubview:dividingLine];
     
-    self.oldBkCardNoTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 165, 298, 44) left:@"原银行卡" prompt:@"请输入您原来的银行卡号" keyBoardType:UIKeyboardTypeDefault];
+    self.oldBkCardNoTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 165, 298, 44) left:@"原银行卡" prompt:@"请输入您原来的银行卡号" keyBoardType:UIKeyboardTypeNumberPad];
     self.oldBkCardNoTF.contentTF.delegate = self;
     [self.oldBkCardNoTF.contentTF hideKeyBoard:self.view:3 hasNavBar:YES];
     [_scrollView addSubview:self.oldBkCardNoTF];
     
-    self.bkCardNoTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 220, 298, 44) left:@"银行卡号" prompt:@"请输入您的银行卡号" keyBoardType:UIKeyboardTypePhonePad];
+    self.bkCardNoTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 220, 298, 44) left:@"银行卡号" prompt:@"请输入您的银行卡号" keyBoardType:UIKeyboardTypeNumberPad];
     self.bkCardNoTF.contentTF.delegate = self;
     [self.bkCardNoTF.contentTF hideKeyBoard:self.view:3 hasNavBar:YES];
     [_scrollView addSubview:self.bkCardNoTF];
     
     //银行信息
-    UILabel *bankInfoLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 275, 300, 35)];
+    UILabel *bankInfoLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 276, 300, 35)];
     bankInfoLabel.backgroundColor = [UIColor clearColor];
     bankInfoLabel.text = @"银行卡开户行";
     bankInfoLabel.font = [UIFont systemFontOfSize:17.0f];
@@ -131,7 +131,7 @@
     [_banksBranchButton setBackgroundImage:[UIImage imageNamed:@"selectBank_highlight.png"] forState:UIControlStateHighlighted];
     [_scrollView addSubview:_banksBranchButton];
     
-    UILabel * dividingLine1 = [[UILabel alloc] initWithFrame:CGRectMake(10, 529, 300, 1)];
+    UILabel * dividingLine1 = [[UILabel alloc] initWithFrame:CGRectMake(10, 533, 300, 1)];
     dividingLine1.backgroundColor = [UIColor grayColor];
     [_scrollView addSubview:dividingLine1];
     
@@ -349,5 +349,31 @@
 		}
     }
 }
+
+//限制textfield的输入字数
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    if (textField == self.pIdNoTF.contentTF && range.location >= 18)
+    {
+        return  NO;
+    }
+    else if (textField == self.bkCardNoTF.contentTF && range.location >= 22)
+    {
+        return NO;
+    }
+    else if (textField == self.oldBkCardNoTF.contentTF && range.location >= 22)
+    {
+        return NO;
+    }
+    else if (self.securityCodeTF.contentTF == textField && range.location >=6)
+    {
+        return NO;
+    }
+    else
+    {
+        return YES;
+    }
+}
+
 
 @end
