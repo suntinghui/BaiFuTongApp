@@ -7,7 +7,13 @@
 //
 
 #import "AbstractViewController.h"
+#import "InputTextField.h"
+#import "LeftTextField.h"
 
 @interface WithdrawalViewController : AbstractViewController
+
+@property (nonatomic, strong) InputTextField      *moneyTF;
+@property (nonatomic, strong) LeftTextField      *securityCodeTF;
+@property (nonatomic, strong) UIButton           *securityCodeButton;
 
 @end

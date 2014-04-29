@@ -37,7 +37,7 @@
         [imageView setImage:[UIImage imageNamed:@"BFTPwdinput.png"]];
         [self addSubview:imageView];
         
-        UILabel *leftlabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, 60, 40)];
+        UILabel *leftlabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 3, 60, 40)];
         [leftlabel setTextColor:[UIColor blackColor]];
         [leftlabel setFont:[UIFont boldSystemFontOfSize:14]];
         [leftlabel setBackgroundColor:[UIColor clearColor]];
@@ -46,9 +46,9 @@
         
         //区分一下系统版本
         if (DeviceVersion >= 7) {
-            self.pwdTF = [[UITextField alloc] initWithFrame:CGRectMake(80, -1, frame.size.width-40, frame.size.height)];
+            self.pwdTF = [[UITextField alloc] initWithFrame:CGRectMake(80, 2, frame.size.width-40, frame.size.height)];
         }else{
-            self.pwdTF = [[UITextField alloc] initWithFrame:CGRectMake(80, 11, frame.size.width-40, frame.size.height)];
+            self.pwdTF = [[UITextField alloc] initWithFrame:CGRectMake(80, 14, frame.size.width-40, frame.size.height)];
         }
         
         self.backgroundColor = [UIColor clearColor];

@@ -63,7 +63,7 @@
     [self.nameTF.contentTF hideKeyBoard:self.view:3 hasNavBar:YES];
     [_scrollView addSubview:self.nameTF];
     
-    self.pIdNoTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 90, 298, 44) left:@"身份证号" prompt:@"请输入您的身份证号" keyBoardType:UIKeyboardTypeNumbersAndPunctuation];
+    self.pIdNoTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 90, 298, 44) left:@"身份证号" prompt:@"请输入您的身份证号" keyBoardType:UIKeyboardTypeASCIICapable];
     self.pIdNoTF.contentTF.delegate = self;
     [self.pIdNoTF.contentTF hideKeyBoard:self.view:3 hasNavBar:YES];
     [_scrollView addSubview:self.pIdNoTF];
@@ -350,12 +350,24 @@
     }
 }
 
-//限制textfield的输入字数
+//限制textfield的输入字数和输入类型
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
-    if (textField == self.pIdNoTF.contentTF && range.location >= 18)
+    NSCharacterSet *cs;
+    cs = [[NSCharacterSet characterSetWithCharactersInString:PID]invertedSet];
+    
+    NSString *filtered = [[string componentsSeparatedByCharactersInSet:cs]componentsJoinedByString:@""]; //按cs分离出数组,数组按@""分离出字符串
+    
+    BOOL canChange = [string isEqualToString:filtered];
+    if (textField == self.pIdNoTF.contentTF)
     {
-        return  NO;
+        if (range.location >= 18) {
+            return  NO;
+        }
+        else {
+            return canChange;
+        }
+        
     }
     else if (textField == self.bkCardNoTF.contentTF && range.location >= 22)
     {

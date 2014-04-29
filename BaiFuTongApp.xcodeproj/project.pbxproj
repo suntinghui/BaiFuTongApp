@@ -435,6 +435,8 @@
 		FC277D0C1904BB4F00516C84 /* MyNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = FC277D0B1904BB4F00516C84 /* MyNavigation.m */; };
 		FC449F89190E46E200320D73 /* WithdrawalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC449F87190E46E200320D73 /* WithdrawalViewController.m */; };
 		FC449F8A190E46E200320D73 /* WithdrawalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC449F88190E46E200320D73 /* WithdrawalViewController.xib */; };
+		FC5763A5190F49AE0078F3A2 /* ConfirmMoneyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5763A3190F49AE0078F3A2 /* ConfirmMoneyViewController.m */; };
+		FC5763A6190F49AE0078F3A2 /* ConfirmMoneyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC5763A4190F49AE0078F3A2 /* ConfirmMoneyViewController.xib */; };
 		FC5A40271900FE190000B0FB /* TradeDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5A40201900FE190000B0FB /* TradeDetailTableViewController.m */; };
 		FC5A40281900FE190000B0FB /* TransferHistoryQueryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5A40221900FE190000B0FB /* TransferHistoryQueryViewController.m */; };
 		FC5A40291900FE190000B0FB /* TransListDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5A40241900FE190000B0FB /* TransListDetailViewController.m */; };
@@ -1045,6 +1047,9 @@
 		FC449F86190E46E200320D73 /* WithdrawalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WithdrawalViewController.h; sourceTree = "<group>"; };
 		FC449F87190E46E200320D73 /* WithdrawalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WithdrawalViewController.m; sourceTree = "<group>"; };
 		FC449F88190E46E200320D73 /* WithdrawalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WithdrawalViewController.xib; sourceTree = "<group>"; };
+		FC5763A2190F49AE0078F3A2 /* ConfirmMoneyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmMoneyViewController.h; sourceTree = "<group>"; };
+		FC5763A3190F49AE0078F3A2 /* ConfirmMoneyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmMoneyViewController.m; sourceTree = "<group>"; };
+		FC5763A4190F49AE0078F3A2 /* ConfirmMoneyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfirmMoneyViewController.xib; sourceTree = "<group>"; };
 		FC5A401F1900FE190000B0FB /* TradeDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TradeDetailTableViewController.h; sourceTree = "<group>"; };
 		FC5A40201900FE190000B0FB /* TradeDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradeDetailTableViewController.m; sourceTree = "<group>"; };
 		FC5A40211900FE190000B0FB /* TransferHistoryQueryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferHistoryQueryViewController.h; sourceTree = "<group>"; };
@@ -1245,6 +1250,9 @@
 				FC449F86190E46E200320D73 /* WithdrawalViewController.h */,
 				FC449F87190E46E200320D73 /* WithdrawalViewController.m */,
 				FC449F88190E46E200320D73 /* WithdrawalViewController.xib */,
+				FC5763A2190F49AE0078F3A2 /* ConfirmMoneyViewController.h */,
+				FC5763A3190F49AE0078F3A2 /* ConfirmMoneyViewController.m */,
+				FC5763A4190F49AE0078F3A2 /* ConfirmMoneyViewController.xib */,
 			);
 			name = Deposit;
 			sourceTree = "<group>";
@@ -2374,6 +2382,7 @@
 				051F2C28180E37EA00AB174E /* con_req_200200023.xml in Resources */,
 				051F2C29180E37EA00AB174E /* con_req_200310001.xml in Resources */,
 				051F2C2A180E37EA00AB174E /* con_req_400000022.xml in Resources */,
+				FC5763A6190F49AE0078F3A2 /* ConfirmMoneyViewController.xib in Resources */,
 				051F2C2B180E37EA00AB174E /* con_req_400200023.xml in Resources */,
 				051F2C2C180E37EA00AB174E /* con_req_500000001.xml in Resources */,
 				051F2C2D180E37EA00AB174E /* con_req_500201.xml in Resources */,
@@ -2423,6 +2432,7 @@
 				050724A417F52EC5003F2F57 /* SignInViewController.m in Sources */,
 				050724A917F52F0E003F2F57 /* SettleAccountsViewController.m in Sources */,
 				050724AE17F52F21003F2F57 /* SignOutViewController.m in Sources */,
+				FC5763A5190F49AE0078F3A2 /* ConfirmMoneyViewController.m in Sources */,
 				050724B317F52F34003F2F57 /* ModifMerchantViewController.m in Sources */,
 				050724B817F52F5E003F2F57 /* QueryBalanceViewController.m in Sources */,
 				050724BD17F53082003F2F57 /* PointsQueryViewController.m in Sources */,

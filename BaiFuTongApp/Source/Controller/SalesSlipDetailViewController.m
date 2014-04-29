@@ -52,7 +52,7 @@
     self.navigationItem.title = @"签购单";
     
     self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 480+iPhone5_height)];
-    [self.scrollView setContentSize:CGSizeMake(320, 650)];
+    [self.scrollView setContentSize:CGSizeMake(320, 630+ios7_h)];
     self.scrollView.showsVerticalScrollIndicator = false;
     [self.view addSubview:self.scrollView];
     
@@ -285,7 +285,7 @@
     
     [self.gotoSignButton removeFromSuperview];
     
-    [self.scrollView setContentSize:CGSizeMake(320, 700)];
+    [self.scrollView setContentSize:CGSizeMake(320, 705+ios7_h)];
     [self.bgImageView setFrame:CGRectMake(5, 0, 310, 640)];
     self.bgImageView = [[UIImageView alloc] initWithImage:[self stretchImage:[UIImage imageNamed:@"salesslip.png"]]];
     [self.imageView setImage:obj];

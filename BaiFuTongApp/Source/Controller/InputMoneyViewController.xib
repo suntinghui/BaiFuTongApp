@@ -17,11 +17,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="inputmoney_show_bg.png" id="7">
-                    <rect key="frame" x="2" y="63" width="316" height="80"/>
+                    <rect key="frame" x="2" y="0.0" width="316" height="80"/>
                     <autoresizingMask key="autoresizingMask"/>
                 </imageView>
                 <button opaque="NO" tag="1011" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="147">
-                    <rect key="frame" x="2" y="409" width="316" height="60"/>
+                    <rect key="frame" x="2" y="346" width="316" height="60"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="21"/>
                     <state key="normal" title="点击支付" backgroundImage="BFTConfirmButton_nomal.png">
@@ -34,7 +34,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="196">
-                    <rect key="frame" x="2" y="145" width="105" height="63"/>
+                    <rect key="frame" x="2" y="82" width="105" height="63"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <state key="normal" backgroundImage="inputmoney_button_1.png">
@@ -49,7 +49,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="1004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="250">
-                    <rect key="frame" x="2" y="209" width="105" height="63"/>
+                    <rect key="frame" x="2" y="146" width="105" height="63"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <state key="normal" backgroundImage="inputmoney_button_4.png">
@@ -64,7 +64,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="1002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="211">
-                    <rect key="frame" x="108" y="145" width="105" height="63"/>
+                    <rect key="frame" x="108" y="82" width="105" height="63"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <state key="normal" backgroundImage="inputmoney_button_2.png">
@@ -79,7 +79,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="1003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="224">
-                    <rect key="frame" x="214" y="145" width="105" height="63"/>
+                    <rect key="frame" x="214" y="82" width="105" height="63"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <state key="normal" backgroundImage="inputmoney_button_3.png">
@@ -94,7 +94,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="1005" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="257">
-                    <rect key="frame" x="108" y="209" width="105" height="63"/>
+                    <rect key="frame" x="108" y="146" width="105" height="63"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <state key="normal" backgroundImage="inputmoney_button_5.png">
@@ -109,7 +109,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="1006" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="268">
-                    <rect key="frame" x="214" y="209" width="105" height="63"/>
+                    <rect key="frame" x="214" y="146" width="105" height="63"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <state key="normal" backgroundImage="inputmoney_button_6.png">
@@ -124,7 +124,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="1007" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="281">
-                    <rect key="frame" x="2" y="274" width="105" height="63"/>
+                    <rect key="frame" x="2" y="211" width="105" height="63"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <state key="normal" backgroundImage="inputmoney_button_7.png">
@@ -139,7 +139,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="1008" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="291">
-                    <rect key="frame" x="108" y="274" width="105" height="63"/>
+                    <rect key="frame" x="108" y="211" width="105" height="63"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <state key="normal" backgroundImage="inputmoney_button_8.png">
@@ -154,7 +154,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="1009" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="294">
-                    <rect key="frame" x="214" y="274" width="105" height="63"/>
+                    <rect key="frame" x="214" y="211" width="105" height="63"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <state key="normal" backgroundImage="inputmoney_button_9.png">
@@ -169,7 +169,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="1000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="305">
-                    <rect key="frame" x="2" y="338" width="105" height="63"/>
+                    <rect key="frame" x="2" y="275" width="105" height="63"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <state key="normal" backgroundImage="inputmoney_button_0.png">
@@ -184,7 +184,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="314">
-                    <rect key="frame" x="108" y="338" width="105" height="63"/>
+                    <rect key="frame" x="108" y="275" width="105" height="63"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <state key="normal" backgroundImage="inputmoney_button_dot.png">
@@ -199,7 +199,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" tag="1010" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="330">
-                    <rect key="frame" x="214" y="338" width="105" height="63"/>
+                    <rect key="frame" x="214" y="275" width="105" height="63"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <state key="normal" backgroundImage="inputmoney_button_clear.png">
@@ -214,7 +214,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="￥0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="349">
-                    <rect key="frame" x="20" y="74" width="280" height="56"/>
+                    <rect key="frame" x="20" y="11" width="280" height="56"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="26"/>
                     <color key="textColor" red="0.15625478270000001" green="0.35951782059999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>

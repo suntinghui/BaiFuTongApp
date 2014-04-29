@@ -91,5 +91,6 @@
 #define INIT_PUBLICKEY_VERSION				@"000000000000"
 
 #define DEVICEID                            @"deviceId"
-
+//身份证号输入限制
+#define PID @"0123456789xX\n"
 

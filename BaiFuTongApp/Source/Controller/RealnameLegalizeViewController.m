@@ -163,7 +163,7 @@
     [_scrollView addSubview:dividingLine1];
 
     
-    self.merchantTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 745, 298, 44) left:@"商户名" prompt:@"请输入您的商户名" keyBoardType:UIKeyboardTypeNamePhonePad];
+    self.merchantTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 745, 298, 44) left:@"商户名" prompt:@"请输入您的商户名" keyBoardType:UIKeyboardTypeNumberPad];
     self.merchantTF.contentTF.delegate = self;
     [self.merchantTF.contentTF hideKeyBoard:self.view:3 hasNavBar:YES];
     [_scrollView addSubview:self.merchantTF];

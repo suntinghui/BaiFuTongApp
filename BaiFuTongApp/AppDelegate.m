@@ -61,7 +61,7 @@
                                  [[UINavigationController alloc] initWithRootViewController:[[SecondMenuViewController alloc] initWithTitle:@"系统相关" withRevealBlock:revealBlock catalogId:5]]
                                  ]
                              ];
-
+    
 	NSArray *cellInfos = @[
                         @[
                             @{kSidebarCellImageKey: [UIImage imageNamed:@"user.png"], kSidebarCellTextKey: NSLocalizedString(@"主菜单", @"")},

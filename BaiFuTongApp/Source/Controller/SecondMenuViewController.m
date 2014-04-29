@@ -11,6 +11,7 @@
 #import "ParseXMLUtil.h"
 #import "LoginViewController.h"
 #import "TransListViewController.h"
+#import "BFTRootViewController.h"
 
 
 @interface SecondMenuViewController ()
@@ -83,8 +84,6 @@
 -(IBAction)backButtonAction:(id)sender
 {
     [self.navigationController popViewControllerAnimated:YES];
-    [self.navigationController presentedViewController];
-    [self.navigationController presentingViewController];
 }
 
 - (void)didReceiveMemoryWarning
