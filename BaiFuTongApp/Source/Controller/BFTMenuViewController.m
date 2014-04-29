@@ -10,7 +10,7 @@
 #import "BFTMenuCell.h"
 #import "BFTRevealViewController.h"
 #import <QuartzCore/QuartzCore.h>
-
+#import "BFTRootViewController.h"
 
 @interface BFTMenuViewController ()
 
@@ -29,8 +29,9 @@
 		_controllers = controllers;
 		_cellInfos = cellInfos;
 		
+        self.nav = [[UINavigationController alloc] initWithRootViewController:_controllers[0][0]];
 		_sidebarVC.sidebarViewController = self;
-		_sidebarVC.contentViewController = _controllers[0][0];
+		_sidebarVC.contentViewController = self.nav;
 	}
 	return self;
 }
@@ -95,8 +96,16 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-	_sidebarVC.contentViewController = _controllers[indexPath.section][indexPath.row];
-	[_sidebarVC toggleSidebar:NO duration:kGHRevealSidebarDefaultAnimationDuration];
+	if (indexPath.section == 0 && indexPath.row == 0) {
+        [self.nav popToRootViewControllerAnimated:YES];
+        [_sidebarVC toggleSidebar:NO duration:kGHRevealSidebarDefaultAnimationDuration];
+    }
+    else{
+        [self.nav popToRootViewControllerAnimated:NO];
+        [self.nav pushViewController:_controllers[indexPath.section][indexPath.row] animated:YES];
+        //_sidebarVC.contentViewController = _controllers[indexPath.section][indexPath.row];
+        [_sidebarVC toggleSidebar:NO duration:kGHRevealSidebarDefaultAnimationDuration];
+    }
 }
 
 #pragma mark Public Methods
@@ -105,7 +114,14 @@
 	if (scrollPosition == UITableViewScrollPositionNone) {
 		[_menuTableView scrollToRowAtIndexPath:indexPath atScrollPosition:scrollPosition animated:animated];
 	}
-	_sidebarVC.contentViewController = _controllers[indexPath.section][indexPath.row];
+    if (indexPath.section == 0 && indexPath.row == 0) {
+        [self.nav popToRootViewControllerAnimated:YES];
+    }
+    else{
+        [self.nav popToRootViewControllerAnimated:NO];
+        [self.nav pushViewController:_controllers[indexPath.section][indexPath.row] animated:YES];
+        //_sidebarVC.contentViewController = _controllers[indexPath.section][indexPath.row];
+    }
 }
 
 @end

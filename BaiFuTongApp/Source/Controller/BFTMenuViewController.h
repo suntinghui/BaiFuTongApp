@@ -18,6 +18,8 @@
 	NSArray *_cellInfos;
 }
 
+@property (nonatomic,strong) UINavigationController     *nav;
+
 - (id)initWithSidebarViewController:(BFTRevealViewController *)sidebarVC
 					withControllers:(NSArray *)controllers
 					  withCellInfos:(NSArray *)cellInfos;

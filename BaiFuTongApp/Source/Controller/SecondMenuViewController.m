@@ -11,8 +11,6 @@
 #import "ParseXMLUtil.h"
 #import "LoginViewController.h"
 #import "TransListViewController.h"
-#import "BFTRootViewController.h"
-
 
 @interface SecondMenuViewController ()
 

@@ -102,11 +102,17 @@ const CGFloat kGHRevealSidebarFlickVelocity = 1000.0f;
 		self.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
 		
 		_sidebarView = [[UIView alloc] initWithFrame:self.view.bounds];
+        if (DeviceVersion >= 7.0) {
+            _sidebarView.frame = CGRectMake(_sidebarView.frame.origin.x, _sidebarView.frame.origin.y+20, _sidebarView.frame.size.width, _sidebarView.frame.size.height);
+        }
 		_sidebarView.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
 		_sidebarView.backgroundColor = [UIColor clearColor];
 		[self.view addSubview:_sidebarView];
 		
 		_contentView = [[UIView alloc] initWithFrame:self.view.bounds];
+//        if (DeviceVersion >= 7.0) {
+//            _contentView.frame = CGRectMake(_contentView.frame.origin.x, _contentView.frame.origin.y+20, _contentView.frame.size.width, _contentView.frame.size.height);
+//        }
 		_contentView.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
 		_contentView.backgroundColor = [UIColor clearColor];
 		_contentView.layer.masksToBounds = NO;
@@ -163,6 +169,7 @@ const CGFloat kGHRevealSidebarFlickVelocity = 1000.0f;
 				_contentView.frame = CGRectOffset(_contentView.bounds, translation, 0.0f);
 			}
 		}
+
 	} else if (panGesture.state == UIGestureRecognizerStateEnded) {
 		CGFloat velocity = [panGesture velocityInView:self.view].x;
 		BOOL show = (fabs(velocity) > kGHRevealSidebarFlickVelocity)

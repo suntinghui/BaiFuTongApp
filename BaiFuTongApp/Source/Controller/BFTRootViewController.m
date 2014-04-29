@@ -39,10 +39,13 @@
                                 NSForegroundColorAttributeName,[UIFont boldSystemFontOfSize:20],NSFontAttributeName, [UIColor colorWithWhite:0.0 alpha:0.0], NSBackgroundColorAttributeName, nil];
     [self.navigationController.navigationBar setTitleTextAttributes:attributes];
 	self.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
+    
     self.navigationItem.title = @"主菜单";
     self.navigationItem.hidesBackButton = YES;
 	self.parentCatalogArray = [ParseXMLUtil parseCatalogXML];
     [self initWithButton];
+    UIPanGestureRecognizer *_panGestureReconginzer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(noUse:)];
+    [self.view addGestureRecognizer:_panGestureReconginzer];
 }
 
 #pragma mark - * initWithButton
@@ -87,5 +90,9 @@
     SecondMenuViewController *vc = [[SecondMenuViewController alloc] initWithTitle:catalog.title withRevealBlock:nil catalogId:button.tag];
 	[self.navigationController pushViewController:vc animated:YES];
 }
-
+//覆盖滑动手势，消除界面滑动出现侧边栏的效果
+- (void)noUse:(UIPanGestureRecognizer *)panGesture
+{
+    
+}
 @end
