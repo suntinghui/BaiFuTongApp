@@ -121,17 +121,8 @@
         <actionType>viewcontroller</actionType>
 		<iconId>21</iconId>
 	</catalog>
-    <catalog>
-		<catalogId>22</catalogId>
-		<title>积点查询</title>
-		<parentId>2</parentId>
-		<actionId>PointsQueryViewController</actionId>
-        <action>PointsQueryViewController</action>
-        <actionType>viewcontroller</actionType>
-		<iconId>22</iconId>
-	</catalog>
 	<catalog>
-		<catalogId>23</catalogId>
+		<catalogId>22</catalogId>
 		<title>账户交易查询</title>
 		<parentId>2</parentId>
 		<actionId>TransListViewController</actionId>
@@ -140,7 +131,7 @@
 		<iconId>23</iconId>
 	</catalog>
     <catalog>
-		<catalogId>24</catalogId>
+		<catalogId>23</catalogId>
 		<title>卡交易查询</title>
 		<parentId>2</parentId>
 		<actionId>TransListViewController</actionId>
@@ -149,7 +140,7 @@
 		<iconId>23</iconId>
 	</catalog>
     <catalog>
-		<catalogId>25</catalogId>
+		<catalogId>24</catalogId>
 		<title>签购单查询</title>
 		<parentId>2</parentId>
 		<actionId>SalesSlipViewController</actionId>
@@ -158,7 +149,7 @@
 		<iconId>24</iconId>
 	</catalog>
 	<catalog>
-		<catalogId>26</catalogId>
+		<catalogId>25</catalogId>
 		<title>公告查询</title>
 		<parentId>2</parentId>
 		<actionId>AnnouncementListViewController</actionId>
@@ -166,17 +157,7 @@
         <actionType>viewcontroller</actionType>
 		<iconId>25</iconId>
 	</catalog>
-    <catalog>
-		<catalogId>27</catalogId>
-		<title>流量统计</title>
-		<parentId>2</parentId>
-		<actionId>FlowCountViewController</actionId>
-        <action>FlowCountViewController</action>
-        <actionType>viewcontroller</actionType>
-		<iconId>26</iconId>
-	</catalog>
 	
-
 	<catalog>
 		<catalogId>31</catalogId>
 		<title>收款</title>
@@ -194,24 +175,6 @@
         <action>GatherCancelTableViewController</action>
         <actionType>viewcontroller</actionType>
 		<iconId>32</iconId>
-	</catalog>
-    <catalog>
-		<catalogId>33</catalogId>
-		<title>积点消费</title>
-		<parentId>3</parentId>
-		<actionId>MembershipExpenseViewController</actionId>
-        <action>MembershipExpenseViewController</action>
-        <actionType>viewcontroller</actionType>
-		<iconId>33</iconId>
-	</catalog>
-    <catalog>
-		<catalogId>34</catalogId>
-		<title>订单支付</title>
-		<parentId>3</parentId>
-		<actionId>OrderPaymentViewController</actionId>
-        <action>OrderPaymentViewController</action>
-        <actionType>viewcontroller</actionType>
-		<iconId>34</iconId>
 	</catalog>
 
 	<catalog>
