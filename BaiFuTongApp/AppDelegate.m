@@ -46,10 +46,14 @@
 	self.revealController = [[BFTRevealViewController alloc] initWithNibName:nil bundle:nil];
 	self.revealController.view.backgroundColor = bgColor;
 	
-	RevealBlock revealBlock = ^(){
-		[self.revealController toggleSidebar:!self.revealController.sidebarShowing
+    RevealBlock revealBlock = ^(){
+		[self.revealController toggleSidebar:NO
 									duration:kGHRevealSidebarDefaultAnimationDuration];
 	};
+//	RevealBlock revealBlock = ^(){
+//		[self.revealController toggleSidebar:!self.revealController.sidebarShowing
+//									duration:kGHRevealSidebarDefaultAnimationDuration];
+//	};
     
 //    NSArray *controllers = @[
 //                             @[

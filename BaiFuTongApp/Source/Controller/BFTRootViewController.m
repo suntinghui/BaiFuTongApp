@@ -87,7 +87,7 @@
 - (void)doAction:(UIButton *) button
 {
     CatalogModel *catalog = (CatalogModel *)[self.parentCatalogArray objectAtIndex:(button.tag -1)];
-    SecondMenuViewController *vc = [[SecondMenuViewController alloc] initWithTitle:catalog.title withRevealBlock:nil catalogId:button.tag];
+    SecondMenuViewController *vc = [[SecondMenuViewController alloc] initWithTitle:catalog.title withRevealBlock:_revealBlock catalogId:button.tag];
 	[self.navigationController pushViewController:vc animated:YES];
 }
 //覆盖滑动手势，消除界面滑动出现侧边栏的效果

@@ -12,6 +12,7 @@
 #import "LoginViewController.h"
 #import "TransListViewController.h"
 
+
 @interface SecondMenuViewController ()
 
 - (void)revealSidebar;
@@ -81,6 +82,7 @@
 
 -(IBAction)backButtonAction:(id)sender
 {
+    [self revealSidebar];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

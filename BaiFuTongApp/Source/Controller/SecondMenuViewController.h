@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "AbstractViewController.h"
+#import "BFTRevealViewController.h"
 
 typedef void (^RevealBlock)();
 
