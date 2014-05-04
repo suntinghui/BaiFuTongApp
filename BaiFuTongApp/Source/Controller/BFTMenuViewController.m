@@ -29,9 +29,9 @@
 		_controllers = controllers;
 		_cellInfos = cellInfos;
 		
-        self.nav = [[UINavigationController alloc] initWithRootViewController:_controllers[0][0]];
+        //self.nav = [[UINavigationController alloc] initWithRootViewController:_controllers[0][0]];
 		_sidebarVC.sidebarViewController = self;
-		_sidebarVC.contentViewController = self.nav;
+		_sidebarVC.contentViewController = _controllers[0][0];
 	}
 	return self;
 }
@@ -97,13 +97,14 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	if (indexPath.section == 0 && indexPath.row == 0) {
-        [self.nav popToRootViewControllerAnimated:YES];
+        _sidebarVC.contentViewController = _controllers[0][0];
+        [(UINavigationController *)_sidebarVC.contentViewController popToRootViewControllerAnimated:NO];
         [_sidebarVC toggleSidebar:NO duration:kGHRevealSidebarDefaultAnimationDuration];
     }
     else{
-        [self.nav popToRootViewControllerAnimated:NO];
-        [self.nav pushViewController:_controllers[indexPath.section][indexPath.row] animated:YES];
-        //_sidebarVC.contentViewController = _controllers[indexPath.section][indexPath.row];
+        [(UINavigationController *)_sidebarVC.contentViewController popToRootViewControllerAnimated:NO];
+        [(UINavigationController *)_sidebarVC.contentViewController pushViewController:_controllers[indexPath.section][indexPath.row] animated:YES];
+//        _sidebarVC.contentViewController = _controllers[indexPath.section][indexPath.row];
         [_sidebarVC toggleSidebar:NO duration:kGHRevealSidebarDefaultAnimationDuration];
     }
 }
@@ -115,12 +116,13 @@
 		[_menuTableView scrollToRowAtIndexPath:indexPath atScrollPosition:scrollPosition animated:animated];
 	}
     if (indexPath.section == 0 && indexPath.row == 0) {
-        [self.nav popToRootViewControllerAnimated:YES];
+        _sidebarVC.contentViewController = _controllers[0][0];
+        [(UINavigationController *)_sidebarVC.contentViewController popToRootViewControllerAnimated:NO];
     }
     else{
-        [self.nav popToRootViewControllerAnimated:NO];
-        [self.nav pushViewController:_controllers[indexPath.section][indexPath.row] animated:YES];
-        //_sidebarVC.contentViewController = _controllers[indexPath.section][indexPath.row];
+        [(UINavigationController *)_sidebarVC.contentViewController popToRootViewControllerAnimated:NO];
+        [(UINavigationController *)_sidebarVC.contentViewController pushViewController:_controllers[indexPath.section][indexPath.row] animated:YES];
+//        _sidebarVC.contentViewController = _controllers[indexPath.section][indexPath.row];
     }
 }
 

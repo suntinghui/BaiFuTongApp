@@ -146,7 +146,7 @@
     
     UILabel *bankPicLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 605, 140, 35)];
     bankPicLabel.backgroundColor = [UIColor clearColor];
-    bankPicLabel.text = @"银行卡图片";
+    bankPicLabel.text = @"银行卡图片：";
     bankPicLabel.font = [UIFont systemFontOfSize:17.0f];
     [_scrollView addSubview:bankPicLabel];
     
@@ -300,7 +300,7 @@
     else if(picker.navigationBar.tag == _bankPic.tag){
         _bankPic.image = image;
     }
-    [picker dismissViewControllerAnimated:YES completion:NULL];
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)selectButton:(id)sender

@@ -68,7 +68,7 @@
     
     NSArray *controllers = @[
                              @[
-                                 [[BFTRootViewController alloc] initWithTitle:@"主菜单" withRevealBlock:revealBlock],
+                                 [[UINavigationController alloc] initWithRootViewController:[[BFTRootViewController alloc] initWithTitle:@"主菜单" withRevealBlock:revealBlock]],
                                  [[SecondMenuViewController alloc] initWithTitle:@"我的管理" withRevealBlock:revealBlock catalogId:1],
                                  [[SecondMenuViewController alloc] initWithTitle:@"我要查询" withRevealBlock:revealBlock catalogId:2],
                                  [[SecondMenuViewController alloc] initWithTitle:@"我要收款" withRevealBlock:revealBlock catalogId:3],

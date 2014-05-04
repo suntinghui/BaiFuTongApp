@@ -35,11 +35,11 @@
     scrollView.showsVerticalScrollIndicator = false;
     [self.view addSubview:scrollView];
     
-    self.MerchantPwdTF = [[PwdLeftTextField alloc] initWithFrame:CGRectMake(10, 10, 300, 44) left:@"商户密码" prompt:@"请输入6位商户密码"];
+    self.MerchantPwdTF = [[PwdLeftTextField alloc] initWithFrame:CGRectMake(10, 50, 300, 44) left:@"商户密码" prompt:@"请输入6位商户密码"];
     [scrollView addSubview:self.MerchantPwdTF];
     
     UIButton *confirmButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [confirmButton setFrame:CGRectMake(10, 120, 297, 42)];
+    [confirmButton setFrame:CGRectMake(10, 160, 297, 42)];
     [confirmButton setTitle:@"签  退" forState:UIControlStateNormal];
     [confirmButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     confirmButton.titleLabel.font = [UIFont boldSystemFontOfSize:18];
@@ -51,7 +51,7 @@
     
     UIImage *image = [UIImage imageNamed:@"BFTExplain.png"];
     UIImageView *explainIV = [[UIImageView alloc] initWithImage:[self stretchImage:image]];
-    [explainIV setFrame:CGRectMake(10, 170, 294, 150)];
+    [explainIV setFrame:CGRectMake(10, 210, 294, 150)];
     [scrollView addSubview:explainIV];
     
     UILabel *explainLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 45, 280, 70)];
