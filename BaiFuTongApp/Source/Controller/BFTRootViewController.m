@@ -44,7 +44,8 @@
     self.navigationItem.hidesBackButton = YES;
 	self.parentCatalogArray = [ParseXMLUtil parseCatalogXML];
     [self initWithButton];
-    UIPanGestureRecognizer *_panGestureReconginzer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(noUse:)];
+    //覆盖滑动手势，消除界面滑动出现侧边栏的效果
+    UIPanGestureRecognizer *_panGestureReconginzer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:nil];
     [self.view addGestureRecognizer:_panGestureReconginzer];
 }
 
@@ -90,9 +91,5 @@
     SecondMenuViewController *vc = [[SecondMenuViewController alloc] initWithTitle:catalog.title withRevealBlock:_revealBlock catalogId:button.tag];
 	[self.navigationController pushViewController:vc animated:YES];
 }
-//覆盖滑动手势，消除界面滑动出现侧边栏的效果
-- (void)noUse:(UIPanGestureRecognizer *)panGesture
-{
-    
-}
+
 @end
