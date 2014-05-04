@@ -10,7 +10,6 @@
 #import "BFTMenuCell.h"
 #import "BFTRevealViewController.h"
 #import <QuartzCore/QuartzCore.h>
-#import "BFTRootViewController.h"
 
 @interface BFTMenuViewController ()
 
@@ -98,7 +97,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	if (indexPath.section == 0 && indexPath.row == 0) {
         _sidebarVC.contentViewController = _controllers[0][0];
-        [(UINavigationController *)_sidebarVC.contentViewController popToRootViewControllerAnimated:NO];
+        [(UINavigationController *)_sidebarVC.contentViewController popToRootViewControllerAnimated:YES];
         [_sidebarVC toggleSidebar:NO duration:kGHRevealSidebarDefaultAnimationDuration];
     }
     else{
@@ -117,7 +116,7 @@
 	}
     if (indexPath.section == 0 && indexPath.row == 0) {
         _sidebarVC.contentViewController = _controllers[0][0];
-        [(UINavigationController *)_sidebarVC.contentViewController popToRootViewControllerAnimated:NO];
+        [(UINavigationController *)_sidebarVC.contentViewController popToRootViewControllerAnimated:YES];
     }
     else{
         [(UINavigationController *)_sidebarVC.contentViewController popToRootViewControllerAnimated:NO];

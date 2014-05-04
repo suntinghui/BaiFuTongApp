@@ -157,7 +157,6 @@
     
     [ApplicationDelegate hideProcess];
     
-    NSLog(@"123%@",[self presentedViewController]);
     // 签购单界面执行delegate方法，并关闭本界面
     [self.delegate abstractViewControllerDone:tempImage];
     [self dismissViewControllerAnimated:YES completion:nil];
