@@ -8,6 +8,7 @@
 
 #import "AbstractViewController.h"
 #import "PwdLeftTextField.h"
+#import "InputTextField.h"
 
 @interface ModifMerchantViewController : AbstractViewController
 

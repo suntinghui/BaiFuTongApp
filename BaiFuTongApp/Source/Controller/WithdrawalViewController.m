@@ -230,4 +230,9 @@
     ConfirmMoneyViewController *confirmMoneyViewController = [[ConfirmMoneyViewController alloc]initWithNibName:nil bundle:nil];
     [self.navigationController pushViewController:confirmMoneyViewController animated:YES];
 }
+
+- (void)securityCodeButtonAction
+{
+    //短信验证码按键处理
+}
 @end

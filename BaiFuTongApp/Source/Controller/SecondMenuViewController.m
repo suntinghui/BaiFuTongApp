@@ -12,7 +12,6 @@
 #import "LoginViewController.h"
 #import "TransListViewController.h"
 
-
 @interface SecondMenuViewController ()
 
 - (void)revealSidebar;
