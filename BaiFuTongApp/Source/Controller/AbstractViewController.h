@@ -17,6 +17,8 @@
 
 @interface AbstractViewController : UIViewController <UITextFieldDelegate>
 
+@property (nonatomic)BOOL hasTopView;
+
 -(IBAction)textFiledReturnEditing:(id)sender;
 -(UIImage *)stretchImage:(UIImage *) image;
 -(void)popToCatalogViewController;

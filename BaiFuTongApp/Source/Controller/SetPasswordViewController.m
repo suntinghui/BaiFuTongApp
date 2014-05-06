@@ -31,20 +31,20 @@
     // Do any additional setup after loading the view from its nib.
     self.navigationItem.title = @"设置支付密码";
     
-    self.PwdTF = [[PwdLeftTextField alloc] initWithFrame:CGRectMake(10, 30+ios7_y, 298, 44) left:@"支付密码" prompt:@"请输入6位支付密码"];
+    self.PwdTF = [[PwdLeftTextField alloc] initWithFrame:CGRectMake(10, 50+ios7_y, 298, 44) left:@"支付密码" prompt:@"请输入6位支付密码"];
     [self.view addSubview:self.PwdTF];
     
-    self.pIdNoTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 85+ios7_y, 298, 44) left:@"身份证号" prompt:@"请输入您的身份证号" keyBoardType:UIKeyboardTypeASCIICapable];
+    self.pIdNoTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 105+ios7_y, 298, 44) left:@"身份证号" prompt:@"请输入您的身份证号" keyBoardType:UIKeyboardTypeASCIICapable];
     self.pIdNoTF.contentTF.delegate = self;
     [self.pIdNoTF.contentTF hideKeyBoard:self.view:3 hasNavBar:YES];
     [self.view addSubview:self.pIdNoTF];
     
     //短信校验码输入框背景
-    UIImageView *textFieldImage1 = [[UIImageView alloc] initWithFrame:CGRectMake(10, 140+ios7_y, 150, 44)];
+    UIImageView *textFieldImage1 = [[UIImageView alloc] initWithFrame:CGRectMake(10, 160+ios7_y, 150, 44)];
     [textFieldImage1 setImage:[UIImage imageNamed:@"textInput.png"]];
     [self.view addSubview:textFieldImage1];
     
-    self.securityCodeTF = [[LeftTextField alloc] initWithFrame:CGRectMake(10, 140+ios7_y, 150, 44) isLong:FALSE];
+    self.securityCodeTF = [[LeftTextField alloc] initWithFrame:CGRectMake(10, 160+ios7_y, 150, 44) isLong:FALSE];
     [self.securityCodeTF.contentTF setKeyboardType:UIKeyboardTypeNumberPad];
     [self.securityCodeTF.contentTF setPlaceholder:@"短信校验码"];
     [self.securityCodeTF.contentTF setFont:[UIFont systemFontOfSize:15]];
@@ -53,7 +53,7 @@
     [self.view addSubview:self.securityCodeTF];
     
     _securityCodeButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_securityCodeButton setFrame:CGRectMake(175, 140+ios7_y, 130, 44)];
+    [_securityCodeButton setFrame:CGRectMake(175, 160+ios7_y, 130, 44)];
     [_securityCodeButton setTitle:@"获取短信校验码" forState:UIControlStateNormal];
     [_securityCodeButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     _securityCodeButton.titleLabel.font = [UIFont systemFontOfSize:15];

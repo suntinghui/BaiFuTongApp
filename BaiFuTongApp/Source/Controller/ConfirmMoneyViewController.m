@@ -34,7 +34,7 @@
     // Do any additional setup after loading the view from its nib.
     self.navigationItem.title = @"交易确认";
     
-    UIImageView *gbIV = [[UIImageView alloc] initWithFrame:CGRectMake(10, 30+ios7_y, 300, 95)];
+    UIImageView *gbIV = [[UIImageView alloc] initWithFrame:CGRectMake(10, 65+ios7_y, 300, 95)];
     UIImage *tmpImage = [UIImage imageNamed:@"flowbg.png"];
     [gbIV setImage:[self stretchImage:tmpImage]];
     [self.view addSubview:gbIV];
@@ -84,11 +84,11 @@
     [moneyLabel setBackgroundColor:[UIColor clearColor]];
     [gbIV addSubview:moneyLabel];
     
-    self.PwdTF = [[PwdLeftTextField alloc] initWithFrame:CGRectMake(10, 135+ios7_y, 298, 44) left:@"支付密码" prompt:@"请输入6位支付密码"];
+    self.PwdTF = [[PwdLeftTextField alloc] initWithFrame:CGRectMake(10, 170+ios7_y, 298, 44) left:@"支付密码" prompt:@"请输入6位支付密码"];
     [self.view addSubview:self.PwdTF];
     
     UIButton *confirmButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [confirmButton setFrame:CGRectMake(10, 200+ios7_y, 297, 42)];
+    [confirmButton setFrame:CGRectMake(10, 235+ios7_y, 297, 42)];
     [confirmButton setTitle:@"确认" forState:UIControlStateNormal];
     [confirmButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     confirmButton.titleLabel.font = [UIFont boldSystemFontOfSize:18];

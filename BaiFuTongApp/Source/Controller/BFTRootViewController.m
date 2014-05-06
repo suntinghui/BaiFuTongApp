@@ -34,6 +34,7 @@
 #pragma mark UIViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.hasTopView = NO;
     NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
                                 [UIColor whiteColor],
                                 NSForegroundColorAttributeName,[UIFont boldSystemFontOfSize:20],NSFontAttributeName, [UIColor colorWithWhite:0.0 alpha:0.0], NSBackgroundColorAttributeName, nil];

@@ -87,7 +87,7 @@
     self.navigationItem.leftBarButtonItem = backButton;
     
     // 签名面板
-    self.signPanel = [[HandSignPanel alloc] initWithFrame:CGRectMake(0, 37+ios7_y, 480 + (iPhone5?88:0), 190) withText:[[Transfer sharedTransfer].receDic objectForKey:@"MD5"]];
+    self.signPanel = [[HandSignPanel alloc] initWithFrame:CGRectMake(0, 40+ios7_y, 480 + (iPhone5?88:0), 190) withText:[[Transfer sharedTransfer].receDic objectForKey:@"MD5"]];
     self.signPanel.backgroundColor = [UIColor clearColor];
     [self.view addSubview:self.signPanel];
 }

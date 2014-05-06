@@ -51,7 +51,7 @@
     
     self.navigationItem.title = @"签购单";
     
-    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 480+iPhone5_height)];
+    self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 35, 320, 445+iPhone5_height)];
     [self.scrollView setContentSize:CGSizeMake(320, 630+ios7_h)];
     self.scrollView.showsVerticalScrollIndicator = false;
     [self.view addSubview:self.scrollView];

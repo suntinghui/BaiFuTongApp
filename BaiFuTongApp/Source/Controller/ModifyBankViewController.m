@@ -53,7 +53,7 @@
     }
     
     
-    self.scrollView =[[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 480+iPhone5_height)];
+    self.scrollView =[[UIScrollView alloc] initWithFrame:CGRectMake(0, 20, 320, 460+iPhone5_height)];
     [_scrollView setContentSize:CGSizeMake(320, 750+ios7_h)];
     _scrollView.showsVerticalScrollIndicator = false;
     [self.view addSubview:_scrollView];

@@ -442,6 +442,11 @@
 		FC5A40291900FE190000B0FB /* TransListDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5A40241900FE190000B0FB /* TransListDetailViewController.m */; };
 		FC5A402A1900FE190000B0FB /* TransListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5A40261900FE190000B0FB /* TransListViewController.m */; };
 		FC5A402D1900FEBA0000B0FB /* TransferDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5A402C1900FEBA0000B0FB /* TransferDetailModel.m */; };
+		FC6EFFB31918A3D2008515BE /* TopView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6EFFB21918A3D2008515BE /* TopView.m */; };
+		FC6EFFB51918A423008515BE /* torn.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6EFFB41918A423008515BE /* torn.png */; };
+		FC6EFFB71918A999008515BE /* input_login.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6EFFB61918A999008515BE /* input_login.png */; };
+		FC6EFFBB1918DA84008515BE /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6EFFB91918DA84008515BE /* ForgotPasswordViewController.m */; };
+		FC6EFFBC1918DA84008515BE /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC6EFFBA1918DA84008515BE /* ForgotPasswordViewController.xib */; };
 		FC884CD518FF68120009F617 /* MyPickController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC884CD418FF68120009F617 /* MyPickController.m */; };
 		FC884CDA18FF6E960009F617 /* AreaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC884CD718FF6E960009F617 /* AreaModel.m */; };
 		FC884CDB18FF6E960009F617 /* CityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC884CD918FF6E960009F617 /* CityModel.m */; };
@@ -1060,6 +1065,13 @@
 		FC5A40261900FE190000B0FB /* TransListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransListViewController.m; sourceTree = "<group>"; };
 		FC5A402B1900FEBA0000B0FB /* TransferDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferDetailModel.h; sourceTree = "<group>"; };
 		FC5A402C1900FEBA0000B0FB /* TransferDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferDetailModel.m; sourceTree = "<group>"; };
+		FC6EFFB11918A3D2008515BE /* TopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopView.h; sourceTree = "<group>"; };
+		FC6EFFB21918A3D2008515BE /* TopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopView.m; sourceTree = "<group>"; };
+		FC6EFFB41918A423008515BE /* torn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = torn.png; sourceTree = "<group>"; };
+		FC6EFFB61918A999008515BE /* input_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = input_login.png; sourceTree = "<group>"; };
+		FC6EFFB81918DA84008515BE /* ForgotPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPasswordViewController.h; sourceTree = "<group>"; };
+		FC6EFFB91918DA84008515BE /* ForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPasswordViewController.m; sourceTree = "<group>"; };
+		FC6EFFBA1918DA84008515BE /* ForgotPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgotPasswordViewController.xib; sourceTree = "<group>"; };
 		FC884CD318FF68120009F617 /* MyPickController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPickController.h; sourceTree = "<group>"; };
 		FC884CD418FF68120009F617 /* MyPickController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPickController.m; sourceTree = "<group>"; };
 		FC884CD618FF6E960009F617 /* AreaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AreaModel.h; sourceTree = "<group>"; };
@@ -1689,6 +1701,9 @@
 				05EE2F7017F429B400C2A8E2 /* RegisterViewController.h */,
 				05EE2F7117F429B500C2A8E2 /* RegisterViewController.m */,
 				0507248C17F523DF003F2F57 /* RegisterViewController.xib */,
+				FC6EFFB81918DA84008515BE /* ForgotPasswordViewController.h */,
+				FC6EFFB91918DA84008515BE /* ForgotPasswordViewController.m */,
+				FC6EFFBA1918DA84008515BE /* ForgotPasswordViewController.xib */,
 				0507252517F557B7003F2F57 /* ResultViewController.h */,
 				0507252617F557BC003F2F57 /* ResultViewController.m */,
 				0507252717F557C3003F2F57 /* ResultViewController.xib */,
@@ -1771,6 +1786,8 @@
 				0507263B17F58282003F2F57 /* GatherCancelCell.m */,
 				0507261A17F57BF5003F2F57 /* AnnouncementCell.h */,
 				0507261B17F57BF6003F2F57 /* AnnouncementCell.m */,
+				FC6EFFB11918A3D2008515BE /* TopView.h */,
+				FC6EFFB21918A3D2008515BE /* TopView.m */,
 				05F21CF4180D3932002A48EC /* LeftTextField.h */,
 				05F21CF5180D3932002A48EC /* LeftTextField.m */,
 				05F21CF7180D39C6002A48EC /* PasswordTextField.h */,
@@ -1800,6 +1817,8 @@
 		05EE2EA817F427A100C2A8E2 /* Image320*480 */ = {
 			isa = PBXGroup;
 			children = (
+				FC6EFFB41918A423008515BE /* torn.png */,
+				FC6EFFB61918A999008515BE /* input_login.png */,
 				053B661F17F7EF2000EA9F11 /* salesslip.png */,
 				FC884D0518FFBFAE0009F617 /* img_card_head_portrait.png */,
 				050725A117F55F71003F2F57 /* bg.png */,
@@ -2124,6 +2143,7 @@
 			files = (
 				05EE2E5617F41EB600C2A8E2 /* InfoPlist.strings in Resources */,
 				05EE2E5E17F41EB600C2A8E2 /* Default.png in Resources */,
+				FC6EFFB71918A999008515BE /* input_login.png in Resources */,
 				05EE2E6017F41EB600C2A8E2 /* Default@2x.png in Resources */,
 				05EE2E6217F41EB600C2A8E2 /* Default-568h@2x.png in Resources */,
 				05EE2E9717F4263A00C2A8E2 /* searchBarBG.png in Resources */,
@@ -2290,10 +2310,12 @@
 				0507262517F57EA3003F2F57 /* flowbg.png in Resources */,
 				0507262717F57EAE003F2F57 /* gicon.png in Resources */,
 				0507262917F57EBB003F2F57 /* wifiicon.png in Resources */,
+				FC6EFFBC1918DA84008515BE /* ForgotPasswordViewController.xib in Resources */,
 				0507262B17F57EC5003F2F57 /* wifiicon@2x.png in Resources */,
 				0507262F17F57EF4003F2F57 /* flowbg@2x.png in Resources */,
 				0507263017F57EF4003F2F57 /* gicon@2x.png in Resources */,
 				0507263117F57EF4003F2F57 /* littlegou@2x.png in Resources */,
+				FC6EFFB51918A423008515BE /* torn.png in Resources */,
 				0507263617F57F92003F2F57 /* InputMoneyViewController.xib in Resources */,
 				0507264117F582BF003F2F57 /* ConfirmCancelViewController.xib in Resources */,
 				0507264617F58304003F2F57 /* ConfirmCancelResultViewController.xib in Resources */,
@@ -2448,11 +2470,13 @@
 				FC449F89190E46E200320D73 /* WithdrawalViewController.m in Sources */,
 				050724F417F5327E003F2F57 /* MembershipExpenseViewController.m in Sources */,
 				050724F917F532A9003F2F57 /* OrderPaymentViewController.m in Sources */,
+				FC6EFFBB1918DA84008515BE /* ForgotPasswordViewController.m in Sources */,
 				0507250B17F55335003F2F57 /* PwdLeftTextField.m in Sources */,
 				0507250C17F55335003F2F57 /* RandomKeyBoardView.m in Sources */,
 				0507251317F553AB003F2F57 /* EncryptionUtil.m in Sources */,
 				0507252417F5574C003F2F57 /* MBProgressHUD.m in Sources */,
 				0507252817F557CD003F2F57 /* ResultViewController.m in Sources */,
+				FC6EFFB31918A3D2008515BE /* TopView.m in Sources */,
 				FC5A40271900FE190000B0FB /* TradeDetailTableViewController.m in Sources */,
 				0507256017F558B9003F2F57 /* FMDatabase.m in Sources */,
 				FC5A402D1900FEBA0000B0FB /* TransferDetailModel.m in Sources */,

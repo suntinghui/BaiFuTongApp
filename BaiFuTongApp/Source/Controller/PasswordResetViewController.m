@@ -35,25 +35,25 @@
     scrollView.showsVerticalScrollIndicator = false;
     [self.view addSubview:scrollView];
     
-    self.freshPwdTF = [[PwdLeftTextField alloc] initWithFrame:CGRectMake(10, 30, 298, 44) left:@"新  密  码" prompt:@"请输入6位商户密码"];
+    self.freshPwdTF = [[PwdLeftTextField alloc] initWithFrame:CGRectMake(10, 65, 298, 44) left:@"新  密  码" prompt:@"请输入6位商户密码"];
     [scrollView addSubview:self.freshPwdTF];
     
-    self.pIdNoTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 84, 298, 44) left:@"身份证号" prompt:@"请输入您的身份证号" keyBoardType:UIKeyboardTypeASCIICapable];
+    self.pIdNoTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 119, 298, 44) left:@"身份证号" prompt:@"请输入您的身份证号" keyBoardType:UIKeyboardTypeASCIICapable];
     self.pIdNoTF.contentTF.delegate = self;
     [self.pIdNoTF.contentTF hideKeyBoard:self.view:3 hasNavBar:YES];
     [scrollView addSubview:self.pIdNoTF];
     
-    self.bkCardNoTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 138, 298, 44) left:@"银行卡号" prompt:@"请输入您的银行卡号" keyBoardType:UIKeyboardTypeNumberPad];
+    self.bkCardNoTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 173, 298, 44) left:@"银行卡号" prompt:@"请输入您的银行卡号" keyBoardType:UIKeyboardTypeNumberPad];
     self.bkCardNoTF.contentTF.delegate = self;
     [self.bkCardNoTF.contentTF hideKeyBoard:self.view:3 hasNavBar:YES];
     [scrollView addSubview:self.bkCardNoTF];
     
     //短信校验码输入框背景
-    UIImageView *textFieldImage1 = [[UIImageView alloc] initWithFrame:CGRectMake(10, 196, 150, 44)];
+    UIImageView *textFieldImage1 = [[UIImageView alloc] initWithFrame:CGRectMake(10, 231, 150, 44)];
     [textFieldImage1 setImage:[UIImage imageNamed:@"textInput.png"]];
     [scrollView addSubview:textFieldImage1];
     
-    self.securityCodeTF = [[LeftTextField alloc] initWithFrame:CGRectMake(10, 196, 150, 44) isLong:FALSE];
+    self.securityCodeTF = [[LeftTextField alloc] initWithFrame:CGRectMake(10, 231, 150, 44) isLong:FALSE];
     [self.securityCodeTF.contentTF setKeyboardType:UIKeyboardTypeNumberPad];
     [self.securityCodeTF.contentTF setPlaceholder:@"短信校验码"];
     [self.securityCodeTF.contentTF setFont:[UIFont systemFontOfSize:15]];
@@ -62,7 +62,7 @@
     [scrollView addSubview:self.securityCodeTF];
     
     _securityCodeButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_securityCodeButton setFrame:CGRectMake(175, 196, 130, 44)];
+    [_securityCodeButton setFrame:CGRectMake(175, 231, 130, 44)];
     [_securityCodeButton setTitle:@"获取短信校验码" forState:UIControlStateNormal];
     [_securityCodeButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     _securityCodeButton.titleLabel.font = [UIFont systemFontOfSize:15];
@@ -71,7 +71,7 @@
     [scrollView addSubview:_securityCodeButton];
     
     UIButton *confirmButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [confirmButton setFrame:CGRectMake(10, 250, 297, 42)];
+    [confirmButton setFrame:CGRectMake(10, 305, 297, 42)];
     [confirmButton setTitle:@"确    定" forState:UIControlStateNormal];
     [confirmButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     confirmButton.titleLabel.font = [UIFont boldSystemFontOfSize:18];

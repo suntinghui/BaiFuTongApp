@@ -11,17 +11,21 @@
 #import "LeftTextField.h"
 #import "PasswordTextField.h"
 
+typedef void (^RevealBlock)();
+
 @interface LoginViewController : AbstractViewController<UITextFieldDelegate>
 {
     BOOL            agreeButtonTouch;
 }
 @property(nonatomic, strong)IBOutlet LeftTextField    *phoneNumTF;
 @property(nonatomic, strong)IBOutlet PasswordTextField    *passwordTF;
+@property (weak, nonatomic) IBOutlet UITextField *captchaTF;
 @property(nonatomic, strong)IBOutlet UIButton   *forgetPwdButton;
 @property(nonatomic, strong)IBOutlet UIButton   *loginButton;
 @property(nonatomic, strong)IBOutlet UIButton   *registerButton;
 
 -(IBAction)loginAction:(id)sender;
 -(IBAction)regesterAction:(id)sender;
+- (IBAction)forgotPasswordAction:(UIButton *)sender;
 
 @end

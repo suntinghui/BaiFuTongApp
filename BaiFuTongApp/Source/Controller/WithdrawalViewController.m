@@ -36,11 +36,11 @@
     self.navigationItem.title = @"提  现";
     
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 480+iPhone5_height)];
-    [scrollView setContentSize:CGSizeMake(320, 510+ios7_h)];
+    [scrollView setContentSize:CGSizeMake(320, 580+ios7_h)];
     scrollView.showsVerticalScrollIndicator = false;
     [self.view addSubview:scrollView];
     
-    UIImageView *gbIV = [[UIImageView alloc] initWithFrame:CGRectMake(10, 15, 300, 250)];
+    UIImageView *gbIV = [[UIImageView alloc] initWithFrame:CGRectMake(10, 50, 300, 250)];
     UIImage *tmpImage = [UIImage imageNamed:@"flowbg.png"];
     [gbIV setImage:[self stretchImage:tmpImage]];
     [scrollView addSubview:gbIV];
@@ -165,7 +165,7 @@
     [unionbkCardNoLabel setBackgroundColor:[UIColor clearColor]];
     [gbIV addSubview:unionbkCardNoLabel];
     
-    self.moneyTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 280, 298, 44) left:@"金额：¥" prompt:@"请输入提款金额" keyBoardType:UIKeyboardTypeDecimalPad];
+    self.moneyTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 315, 298, 44) left:@"金额：¥" prompt:@"请输入提款金额" keyBoardType:UIKeyboardTypeDecimalPad];
     self.moneyTF.contentTF.delegate = self;
     //self.moneyTF.contentTF.textAlignment = NSTextAlignmentRight;
     self.moneyTF.contentTF.textColor = [UIColor blueColor];
@@ -173,11 +173,11 @@
     [scrollView addSubview:self.moneyTF];
     
     //短信校验码输入框背景
-    UIImageView *textFieldImage1 = [[UIImageView alloc] initWithFrame:CGRectMake(10, 335, 150, 44)];
+    UIImageView *textFieldImage1 = [[UIImageView alloc] initWithFrame:CGRectMake(10, 370, 150, 44)];
     [textFieldImage1 setImage:[UIImage imageNamed:@"textInput.png"]];
     [scrollView addSubview:textFieldImage1];
     
-    self.securityCodeTF = [[LeftTextField alloc] initWithFrame:CGRectMake(10, 335, 150, 44) isLong:FALSE];
+    self.securityCodeTF = [[LeftTextField alloc] initWithFrame:CGRectMake(10, 370, 150, 44) isLong:FALSE];
     [self.securityCodeTF.contentTF setKeyboardType:UIKeyboardTypeNumberPad];
     [self.securityCodeTF.contentTF setPlaceholder:@"短信校验码"];
     [self.securityCodeTF.contentTF setFont:[UIFont systemFontOfSize:15]];
@@ -186,7 +186,7 @@
     [scrollView addSubview:self.securityCodeTF];
     
     _securityCodeButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_securityCodeButton setFrame:CGRectMake(175, 335, 130, 44)];
+    [_securityCodeButton setFrame:CGRectMake(175, 370, 130, 44)];
     [_securityCodeButton setTitle:@"获取短信校验码" forState:UIControlStateNormal];
     [_securityCodeButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     _securityCodeButton.titleLabel.font = [UIFont systemFontOfSize:15];
@@ -195,7 +195,7 @@
     [scrollView addSubview:_securityCodeButton];
     
     UIButton *nextButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [nextButton setFrame:CGRectMake(10, 390, 297, 42)];
+    [nextButton setFrame:CGRectMake(10, 425, 297, 42)];
     [nextButton setTitle:@"下一步" forState:UIControlStateNormal];
     [nextButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     nextButton.titleLabel.font = [UIFont boldSystemFontOfSize:18];

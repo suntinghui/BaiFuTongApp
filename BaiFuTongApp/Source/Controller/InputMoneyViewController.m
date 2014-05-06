@@ -36,7 +36,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-
+    self.hasTopView = NO;
     self.navigationItem.title = @"输入金额";
     
     self.des = 0.00;

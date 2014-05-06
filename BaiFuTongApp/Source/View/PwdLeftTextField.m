@@ -61,6 +61,7 @@
         [self addSubview:self.pwdTF];
     }
     return self;
+    
 }
 
 - (void) numberKeyBoardInput:(NSInteger) number
@@ -155,4 +156,63 @@
     return YES;
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    // When the user presses return, take focus away from the text field so that the keyboard is dismissed.
+    NSTimeInterval animationDuration = 0.30f;
+    [UIView beginAnimations:@"ResizeForKeyboard" context:nil];
+    [UIView setAnimationDuration:animationDuration];
+    CGRect rect = CGRectMake(0.0f, 0.0f, self.superview.frame.size.width, self.superview.frame.size.height);
+    self.superview.frame = rect;
+    [UIView commitAnimations];
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    CGRect frame = textField.superview.frame;
+    int offset;
+    if (DeviceVersion>=7.0) {
+        offset = frame.origin.y + 50 - (self.superview.frame.size.height - 216.0)+64;//键盘高度216和状态栏和navigation的高度。
+    }
+    else
+    {
+        offset = frame.origin.y + 50 - (self.superview.frame.size.height - 216.0);//键盘高度216
+    }
+    NSTimeInterval animationDuration = 0.30f;
+    [UIView beginAnimations:@"ResizeForKeyBoard" context:nil];
+    [UIView setAnimationDuration:animationDuration];
+    float width = self.superview.frame.size.width;
+    //    float height = self.view.frame.size.height;
+    float height = [UIScreen mainScreen].bounds.size.height;
+    if(offset > 0)
+    {
+        if (DeviceVersion>=7.0) {
+            offset = offset-64;
+        }
+        CGRect rect = CGRectMake(0.0f, -offset,width,height);
+        
+        if ([[self.superview.subviews objectAtIndex:0] isKindOfClass:[UIScrollView class]]) {
+            //((UIScrollView*)[self.view.subviews objectAtIndex:0]).frame = rect;
+            ((UIScrollView*)[self.superview.subviews objectAtIndex:0]).contentOffset = CGPointMake(0, offset);
+        }else{
+            self.superview.frame = rect;
+        }
+        
+    }
+    [UIView commitAnimations];
+}
+
+-(IBAction)textFiledReturnEditing:(id)sender {
+    [sender resignFirstResponder];
+    NSTimeInterval animationDuration = 0.30f;
+    [UIView beginAnimations:@"ResizeForKeyBoard" context:nil];
+    [UIView setAnimationDuration:animationDuration];
+    //    CGRect rect = CGRectMake(0.0f, 0.0f,320,416);
+    CGRect rect = CGRectMake(0.0f, 0.0f,320,VIEWHEIGHT + 41);
+    self.superview.frame = rect;
+    [UIView commitAnimations];
+    
+}
 @end

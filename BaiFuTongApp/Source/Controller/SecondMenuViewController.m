@@ -57,17 +57,17 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
+    self.hasTopView = YES;
     self.catalogArray = [ParseXMLUtil parseCatalogXML];
     
     //显示具体二级菜单界面
     if (DeviceVersion >= 7)
     {
-        _panelTableView = [[UITableView alloc] initWithFrame:CGRectMake(10, 0, 300, 480+iPhone5_height) style:UITableViewStyleGrouped];
+        _panelTableView = [[UITableView alloc] initWithFrame:CGRectMake(10, 35, 300, 445+iPhone5_height) style:UITableViewStyleGrouped];
     }
     else
     {
-        _panelTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 420+iPhone5_height) style:UITableViewStyleGrouped];
+        _panelTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 35, 320, 385+iPhone5_height) style:UITableViewStyleGrouped];
     }
     _panelTableView.showsVerticalScrollIndicator = false;
     self.panelTableView.backgroundColor = [UIColor clearColor];

@@ -7,7 +7,7 @@
 //
 
 #import "AbstractViewController.h"
-
+#import "TopView.h"
 
 #define STRETCH                 5
 #define kSCNavBarImageTag       10
@@ -25,13 +25,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.hasTopView = YES;
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"MainBG.png"]]];
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
+    
+    //本机号码
+    if (self.hasTopView) {
+        TopView *topView = [[TopView alloc] initWithFrame:CGRectMake(0, 0, 320, 41)];
+        [self.view addSubview:topView];
+    }
     
     //自定义UINavigationBar 和返回按钮
         

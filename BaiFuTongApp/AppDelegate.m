@@ -22,18 +22,19 @@
 #import "LocationHelper.h"
 #import "DateUtil.h"
 #import "TimedoutUtil.h"
+#import "LoginViewController.h"
 
 #pragma mark -
 #pragma mark Private Interface
 @interface AppDelegate ()
 @property (nonatomic, strong) BFTRevealViewController *revealController;
-@property (nonatomic, strong) BFTMenuViewController *menuController;
+//@property (nonatomic, strong) BFTMenuViewController *menuController;
 @end
 
 @implementation AppDelegate
 
 @synthesize window;
-@synthesize revealController, menuController;
+//@synthesize revealController, menuController;
 
 #pragma mark UIApplicationDelegate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -42,14 +43,14 @@
 	
     [[NSUserDefaults standardUserDefaults] setObject:@"NO" forKey:@"LOGIN"];
     
-	UIColor *bgColor = [UIColor colorWithRed:(50.0f/255.0f) green:(57.0f/255.0f) blue:(74.0f/255.0f) alpha:1.0f];
-	self.revealController = [[BFTRevealViewController alloc] initWithNibName:nil bundle:nil];
-	self.revealController.view.backgroundColor = bgColor;
-	
-    RevealBlock revealBlock = ^(){
-		[self.revealController toggleSidebar:NO
-									duration:kGHRevealSidebarDefaultAnimationDuration];
-	};
+//	UIColor *bgColor = [UIColor colorWithRed:(50.0f/255.0f) green:(57.0f/255.0f) blue:(74.0f/255.0f) alpha:1.0f];
+//	self.revealController = [[BFTRevealViewController alloc] initWithNibName:nil bundle:nil];
+//	self.revealController.view.backgroundColor = bgColor;
+//	
+//    RevealBlock revealBlock = ^(){
+//		[self.revealController toggleSidebar:NO
+//									duration:kGHRevealSidebarDefaultAnimationDuration];
+//	};
 //	RevealBlock revealBlock = ^(){
 //		[self.revealController toggleSidebar:!self.revealController.sidebarShowing
 //									duration:kGHRevealSidebarDefaultAnimationDuration];
@@ -66,27 +67,27 @@
 //                                 ]
 //                             ];
     
-    NSArray *controllers = @[
-                             @[
-                                 [[UINavigationController alloc] initWithRootViewController:[[BFTRootViewController alloc] initWithTitle:@"主菜单" withRevealBlock:revealBlock]],
-                                 [[SecondMenuViewController alloc] initWithTitle:@"我的管理" withRevealBlock:revealBlock catalogId:1],
-                                 [[SecondMenuViewController alloc] initWithTitle:@"我要查询" withRevealBlock:revealBlock catalogId:2],
-                                 [[SecondMenuViewController alloc] initWithTitle:@"我要收款" withRevealBlock:revealBlock catalogId:3],
-                                 [[SecondMenuViewController alloc] initWithTitle:@"我要提现" withRevealBlock:revealBlock catalogId:4],
-                                 [[SecondMenuViewController alloc] initWithTitle:@"系统相关" withRevealBlock:revealBlock catalogId:5]
-                                 ]
-                             ];
-    
-	NSArray *cellInfos = @[
-                        @[
-                            @{kSidebarCellImageKey: [UIImage imageNamed:@"user.png"], kSidebarCellTextKey: NSLocalizedString(@"主菜单", @"")},
-                            @{kSidebarCellImageKey: [UIImage imageNamed:@"BFTLeftMenuIcon_normal_01.png"], kSidebarCellTextKey: NSLocalizedString(@"我的管理", @"")},
-                            @{kSidebarCellImageKey: [UIImage imageNamed:@"BFTLeftMenuIcon_normal_02.png"], kSidebarCellTextKey: NSLocalizedString(@"我要查询", @"")},
-                            @{kSidebarCellImageKey: [UIImage imageNamed:@"BFTLeftMenuIcon_normal_03.png"], kSidebarCellTextKey: NSLocalizedString(@"我要收款", @"")},
-                            @{kSidebarCellImageKey: [UIImage imageNamed:@"BFTLeftMenuIcon_normal_04.png"], kSidebarCellTextKey: NSLocalizedString(@"我要提现", @"")},
-                            @{kSidebarCellImageKey: [UIImage imageNamed:@"BFTLeftMenuIcon_normal_05.png"], kSidebarCellTextKey: NSLocalizedString(@"系统相关", @"")},
-                            ]
-                        ];
+//    NSArray *controllers = @[
+//                             @[
+//                                 [[UINavigationController alloc] initWithRootViewController:[[BFTRootViewController alloc] initWithTitle:@"主菜单" withRevealBlock:revealBlock]],
+//                                 [[SecondMenuViewController alloc] initWithTitle:@"我的管理" withRevealBlock:revealBlock catalogId:1],
+//                                 [[SecondMenuViewController alloc] initWithTitle:@"我要查询" withRevealBlock:revealBlock catalogId:2],
+//                                 [[SecondMenuViewController alloc] initWithTitle:@"我要收款" withRevealBlock:revealBlock catalogId:3],
+//                                 [[SecondMenuViewController alloc] initWithTitle:@"我要提现" withRevealBlock:revealBlock catalogId:4],
+//                                 [[SecondMenuViewController alloc] initWithTitle:@"系统相关" withRevealBlock:revealBlock catalogId:5]
+//                                 ]
+//                             ];
+//    
+//	NSArray *cellInfos = @[
+//                        @[
+//                            @{kSidebarCellImageKey: [UIImage imageNamed:@"user.png"], kSidebarCellTextKey: NSLocalizedString(@"主菜单", @"")},
+//                            @{kSidebarCellImageKey: [UIImage imageNamed:@"BFTLeftMenuIcon_normal_01.png"], kSidebarCellTextKey: NSLocalizedString(@"我的管理", @"")},
+//                            @{kSidebarCellImageKey: [UIImage imageNamed:@"BFTLeftMenuIcon_normal_02.png"], kSidebarCellTextKey: NSLocalizedString(@"我要查询", @"")},
+//                            @{kSidebarCellImageKey: [UIImage imageNamed:@"BFTLeftMenuIcon_normal_03.png"], kSidebarCellTextKey: NSLocalizedString(@"我要收款", @"")},
+//                            @{kSidebarCellImageKey: [UIImage imageNamed:@"BFTLeftMenuIcon_normal_04.png"], kSidebarCellTextKey: NSLocalizedString(@"我要提现", @"")},
+//                            @{kSidebarCellImageKey: [UIImage imageNamed:@"BFTLeftMenuIcon_normal_05.png"], kSidebarCellTextKey: NSLocalizedString(@"系统相关", @"")},
+//                            ]
+//                        ];
 	
 	// Add drag feature to each root navigation controller
 //	[controllers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop){
@@ -99,12 +100,32 @@
 //	}];
 	
     [[UIApplication sharedApplication]setStatusBarHidden:NO];
-	self.menuController = [[BFTMenuViewController alloc] initWithSidebarViewController:self.revealController
-                      withControllers:controllers
-                        withCellInfos:cellInfos];
-	
+//	self.menuController = [[BFTMenuViewController alloc] initWithSidebarViewController:self.revealController
+//                      withControllers:controllers
+//                        withCellInfos:cellInfos];
+//
+    LoginViewController *loginViewController = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+    self.rootNavigationController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
+    self.rootNavigationController.navigationBarHidden = YES;
+//    UINavigationBar *navBar = self.rootNavigationController.navigationBar;
+//    
+//    if ([navBar respondsToSelector:@selector(setBackgroundImage:forBarMetrics:)])
+//    {
+//        //if iOS 5.0 and later
+//        [navBar setBackgroundImage:[UIImage imageNamed:@"BFTNavbar.png"] forBarMetrics:UIBarMetricsDefault];
+//    }
+//    else
+//    {
+//        UIImageView *imageView = (UIImageView *)[navBar viewWithTag:kSCNavBarImageTag];
+//        if (imageView == nil)
+//        {
+//            imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"BFTNavbar.png"]];
+//            [imageView setTag:kSCNavBarImageTag];
+//            [navBar insertSubview:imageView atIndex:0];
+//        }
+//    }
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = self.revealController;
+    self.window.rootViewController = self.rootNavigationController;
     [self.window makeKeyAndVisible];
     
     [[Transfer sharedTransfer] initFSK];

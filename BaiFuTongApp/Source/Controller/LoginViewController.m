@@ -8,28 +8,20 @@
 
 #import "LoginViewController.h"
 #import "RegisterViewController.h"
-#import "SignInViewController.h"
-#import "SettleAccountsViewController.h"
-#import "SignOutViewController.h"
-#import "ModifMerchantViewController.h"
-#import "QueryBalanceViewController.h"
-#import "PointsQueryViewController.h"
-//#import "TradeDetailViewController.h"
-#import "SalesSlipViewController.h"
-#import "AnnouncementListViewController.h"
-#import "FlowCountViewController.h"
-#import "GatherViewController.h"
-#import "GatherCancelTableViewController.h"
-#import "MembershipExpenseViewController.h"
-#import "OrderPaymentViewController.h"
-#import "MerchantDepositsQueryViewController.h"
-#import "NoviceGuideViewController.h"
-#import "SuggestionBackViewController.h"
-#import "AboutSystemViewController.h"
+#import "BFTRevealViewController.h"
+#import "BFTMenuViewController.h"
+#import "BFTRootViewController.h"
+#import "SecondMenuViewController.h"
+#import "BFTMenuCell.h"
+#import "ForgotPasswordViewController.h"
 
 #import "UITextField+HideKeyBoard.h"
 
+#define kSCNavBarImageTag       10
 @interface LoginViewController ()
+
+@property (nonatomic, strong) BFTRevealViewController *revealController;
+@property (nonatomic, strong) BFTMenuViewController *menuController;
 
 @end
 
@@ -54,22 +46,51 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view
-    self.navigationItem.title = @"登 录";
     
-    self.phoneNumTF = [[LeftTextField alloc] initWithFrame:CGRectMake(79, 115 + (iPhone5?44:0), 181, 30) isLong:true];
+    //self.navigationItem.title = @"登 录";
+    self.hasTopView = NO;
+    UINavigationBar *navBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
+    
+    if ([navBar respondsToSelector:@selector(setBackgroundImage:forBarMetrics:)])
+    {
+        //if iOS 5.0 and later
+        [navBar setBackgroundImage:[UIImage imageNamed:@"BFTNavbar.png"] forBarMetrics:UIBarMetricsDefault];
+    }
+    else
+    {
+        UIImageView *imageView = (UIImageView *)[navBar viewWithTag:kSCNavBarImageTag];
+        if (imageView == nil)
+        {
+            imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"BFTNavbar.png"]];
+            [imageView setTag:kSCNavBarImageTag];
+            [navBar insertSubview:imageView atIndex:0];
+        }
+    }
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
+    label.backgroundColor = [UIColor clearColor];
+    label.text = @"登 录";
+    label.textColor = [UIColor whiteColor];
+    label.font = [UIFont boldSystemFontOfSize:20];
+    label.shadowColor = [UIColor darkGrayColor];
+    label.textAlignment = NSTextAlignmentCenter;
+    [navBar addSubview:label];
+    
+    [self.view addSubview:navBar];
+    
+    self.phoneNumTF = [[LeftTextField alloc] initWithFrame:CGRectMake(79, 162 + (iPhone5?44:0), 181, 30) isLong:true];
     [self.phoneNumTF.contentTF setPlaceholder:@"请输入注册时的手机号"];
     self.phoneNumTF.contentTF.delegate = self;
     [self.phoneNumTF.contentTF setFont:[UIFont boldSystemFontOfSize:14]];
     [self.phoneNumTF.contentTF setKeyboardType:UIKeyboardTypeNumberPad];
     [self.view addSubview:self.phoneNumTF];
     
-    self.passwordTF = [[PasswordTextField alloc] initWithFrame:CGRectMake(79, 168 + (iPhone5?44:0), 181, 30)];
+    self.passwordTF = [[PasswordTextField alloc] initWithFrame:CGRectMake(79, 215 + (iPhone5?44:0), 181, 30)];
     [self.view addSubview:self.passwordTF];
 
     //记住密码复选框
     agreeButtonTouch = NO;
     UIButton *agreeButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [agreeButton setFrame:CGRectMake(35, 212, 17, 17)];
+    [agreeButton setFrame:CGRectMake(35, 298, 17, 17)];
     [agreeButton setBackgroundImage:[UIImage imageNamed:@"btn_comment_sametime_unselect.png"] forState:UIControlStateNormal];
     [agreeButton addTarget:self action:@selector(agreeButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:agreeButton];
@@ -77,6 +98,40 @@
     [self.phoneNumTF.contentTF hideKeyBoard:self.view :2 hasNavBar:NO];
     // 手机号赋初值
     self.phoneNumTF.contentTF.text = [[AppDataCenter sharedAppDataCenter] getValueWithKey:@"__PHONENUM"];
+    
+    UIColor *bgColor = [UIColor colorWithRed:(50.0f/255.0f) green:(57.0f/255.0f) blue:(74.0f/255.0f) alpha:1.0f];
+	self.revealController = [[BFTRevealViewController alloc] initWithNibName:nil bundle:nil];
+	self.revealController.view.backgroundColor = bgColor;
+	
+    self.captchaTF.backgroundColor = [UIColor colorWithWhite:0.93 alpha:1.0];
+    RevealBlock revealBlock = ^(){
+		[self.revealController toggleSidebar:NO
+									duration:kGHRevealSidebarDefaultAnimationDuration];
+	};
+    NSArray *controllers = @[
+                             @[
+                                 [[UINavigationController alloc] initWithRootViewController:[[BFTRootViewController alloc] initWithTitle:@"主菜单" withRevealBlock:revealBlock]],
+                                 [[SecondMenuViewController alloc] initWithTitle:@"我的管理" withRevealBlock:revealBlock catalogId:1],
+                                 [[SecondMenuViewController alloc] initWithTitle:@"我要查询" withRevealBlock:revealBlock catalogId:2],
+                                 [[SecondMenuViewController alloc] initWithTitle:@"我要收款" withRevealBlock:revealBlock catalogId:3],
+                                 [[SecondMenuViewController alloc] initWithTitle:@"我要提现" withRevealBlock:revealBlock catalogId:4],
+                                 [[SecondMenuViewController alloc] initWithTitle:@"系统相关" withRevealBlock:revealBlock catalogId:5]
+                                 ]
+                             ];
+    
+	NSArray *cellInfos = @[
+                           @[
+                               @{kSidebarCellImageKey: [UIImage imageNamed:@"user.png"], kSidebarCellTextKey: NSLocalizedString(@"主菜单", @"")},
+                               @{kSidebarCellImageKey: [UIImage imageNamed:@"BFTLeftMenuIcon_normal_01.png"], kSidebarCellTextKey: NSLocalizedString(@"我的管理", @"")},
+                               @{kSidebarCellImageKey: [UIImage imageNamed:@"BFTLeftMenuIcon_normal_02.png"], kSidebarCellTextKey: NSLocalizedString(@"我要查询", @"")},
+                               @{kSidebarCellImageKey: [UIImage imageNamed:@"BFTLeftMenuIcon_normal_03.png"], kSidebarCellTextKey: NSLocalizedString(@"我要收款", @"")},
+                               @{kSidebarCellImageKey: [UIImage imageNamed:@"BFTLeftMenuIcon_normal_04.png"], kSidebarCellTextKey: NSLocalizedString(@"我要提现", @"")},
+                               @{kSidebarCellImageKey: [UIImage imageNamed:@"BFTLeftMenuIcon_normal_05.png"], kSidebarCellTextKey: NSLocalizedString(@"系统相关", @"")},
+                               ]
+                           ];
+    self.menuController = [[BFTMenuViewController alloc] initWithSidebarViewController:self.revealController
+                                                                       withControllers:controllers
+                                                                         withCellInfos:cellInfos];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -125,16 +180,16 @@
 
 -(IBAction)loginAction:(id)sender
 {
-    if ([self checkValue]) {
-        [[AppDataCenter sharedAppDataCenter] setPhoneNum:[[self.phoneNumTF contentTF] text]];
-        
-        NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
-        [dic setObject:[self.passwordTF rsaValue] forKey:@"fieldMerchPWD"]; // 密码
-        [dic setObject:[UserDefaults objectForKey:PUBLICKEY_VERSION]?[UserDefaults objectForKey:PUBLICKEY_VERSION]:INIT_PUBLICKEY_VERSION forKey:@"fieldKeyVersion"];
-        
-        [[Transfer sharedTransfer] startTransfer:@"100005" fskCmd:@"Request_GetExtKsn#Request_VT" paramDic:dic];
-    }
-
+//    if ([self checkValue]) {
+//        [[AppDataCenter sharedAppDataCenter] setPhoneNum:[[self.phoneNumTF contentTF] text]];
+//        
+//        NSMutableDictionary *dic = [[NSMutableDictionary alloc] init];
+//        [dic setObject:[self.passwordTF rsaValue] forKey:@"fieldMerchPWD"]; // 密码
+//        [dic setObject:[UserDefaults objectForKey:PUBLICKEY_VERSION]?[UserDefaults objectForKey:PUBLICKEY_VERSION]:INIT_PUBLICKEY_VERSION forKey:@"fieldKeyVersion"];
+//        
+//        [[Transfer sharedTransfer] startTransfer:@"100005" fskCmd:@"Request_GetExtKsn#Request_VT" paramDic:dic];
+//    }
+    [self.navigationController pushViewController:self.revealController animated:YES];
     /**
     [[NSUserDefaults standardUserDefaults] setObject:@"YES" forKey:@"LOGIN"];
     
@@ -263,8 +318,14 @@
 }
 -(IBAction)regesterAction:(id)sender
 {
-    RegisterViewController *registerVC = [[RegisterViewController alloc] initWithNibName:@"RegisterViewController" bundle:nil];
+    RegisterViewController *registerVC = [[RegisterViewController alloc] initWithNibName:nil bundle:nil];
     [self.navigationController pushViewController:registerVC animated:YES];
+}
+
+- (IBAction)forgotPasswordAction:(UIButton *)sender
+{
+    ForgotPasswordViewController *forgotPasswordViewController = [[ForgotPasswordViewController alloc] initWithNibName:nil bundle:nil];
+    [self.navigationController pushViewController:forgotPasswordViewController animated:YES];
 }
 
 /**

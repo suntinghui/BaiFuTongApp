@@ -33,7 +33,7 @@
     
     self.navigationItem.title = @"修改商户密码";
     
-    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 480+iPhone5_height)];
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 35, 320, 445+iPhone5_height)];
     [scrollView setContentSize:CGSizeMake(320, 480)];
     scrollView.showsVerticalScrollIndicator = false;
     [self.view addSubview:scrollView];
