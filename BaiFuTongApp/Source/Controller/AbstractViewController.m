@@ -71,6 +71,11 @@
         UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithCustomView:aButton];
         self.navigationItem.leftBarButtonItem = backButton;
     }
+    
+    if (DeviceVersion>=7.0) {
+        self.view.transform = CGAffineTransformMakeTranslation(0, 20);
+        //        self.view.center = CGPointMake(150, 200);
+    }
 }
 
 - (void)didReceiveMemoryWarning

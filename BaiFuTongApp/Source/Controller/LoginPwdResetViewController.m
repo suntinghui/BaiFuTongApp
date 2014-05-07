@@ -1,21 +1,20 @@
 //
-//  ForgotPasswordViewController.m
+//  LoginPwdResetViewController.m
 //  BaiFuTongApp
 //
-//  Created by 霍庚浩 on 14-5-6.
+//  Created by 霍庚浩 on 14-5-7.
 //  Copyright (c) 2014年 xushuang. All rights reserved.
 //
 
-#import "ForgotPasswordViewController.h"
 #import "LoginPwdResetViewController.h"
 #import "UITextField+HideKeyBoard.h"
 
 #define kSCNavBarImageTag       10
-@interface ForgotPasswordViewController ()
+@interface LoginPwdResetViewController ()
 
 @end
 
-@implementation ForgotPasswordViewController
+@implementation LoginPwdResetViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,24 +36,43 @@
     scrollView.showsVerticalScrollIndicator = false;
     [self.view addSubview:scrollView];
     
-    UILabel *adminLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 55, 300, 44)];
-    adminLabel.text = @"用户信息";
-    adminLabel.backgroundColor = [UIColor clearColor];
-    [scrollView addSubview:adminLabel];
+    UILabel *loginPwdLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 55, 300, 44)];
+    loginPwdLabel.text = @"设置新的登录密码";
+    loginPwdLabel.textAlignment = NSTextAlignmentLeft;
+    loginPwdLabel.backgroundColor = [UIColor clearColor];
+    [scrollView addSubview:loginPwdLabel];
     
-    self.phoneNoTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 110, 298, 44) left:@"手机号码" prompt:@"请输入您的安全手机号码" keyBoardType:UIKeyboardTypePhonePad];
-    self.phoneNoTF.contentTF.delegate = self;
-    [self.phoneNoTF.contentTF hideKeyBoard:self.view:3 hasNavBar:YES];
-    [scrollView addSubview:self.phoneNoTF];
+    self.PwdTF = [[PwdLeftTextField alloc] initWithFrame:CGRectMake(10, 110, 298, 44) left:@"登录密码" prompt:@"请输入6位登录密码"];
+    [scrollView addSubview:self.PwdTF];
     
-    self.pIdNoTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 165, 298, 44) left:@"身份证" prompt:@"请输入您的身份证号" keyBoardType:UIKeyboardTypeASCIICapable];
-    self.pIdNoTF.contentTF.delegate = self;
-    [self.pIdNoTF.contentTF hideKeyBoard:self.view:3 hasNavBar:YES];
-    [scrollView addSubview:self.pIdNoTF];
+    self.confirmPwdTF = [[PwdLeftTextField alloc] initWithFrame:CGRectMake(10, 165, 298, 44) left:@"确认密码" prompt:@"请再次输入6位登录密码"];
+    [scrollView addSubview:self.confirmPwdTF];
+    
+    //短信校验码输入框背景
+    UIImageView *textFieldImage1 = [[UIImageView alloc] initWithFrame:CGRectMake(10, 220, 150, 44)];
+    [textFieldImage1 setImage:[UIImage imageNamed:@"textInput.png"]];
+    [scrollView addSubview:textFieldImage1];
+    
+    self.securityCodeTF = [[LeftTextField alloc] initWithFrame:CGRectMake(10, 220, 150, 44) isLong:FALSE];
+    [self.securityCodeTF.contentTF setKeyboardType:UIKeyboardTypeNumberPad];
+    [self.securityCodeTF.contentTF setPlaceholder:@"短信校验码"];
+    [self.securityCodeTF.contentTF setFont:[UIFont systemFontOfSize:15]];
+    self.securityCodeTF.contentTF.delegate = self;
+    [self.securityCodeTF.contentTF hideKeyBoard:self.view :2 hasNavBar:NO];
+    [scrollView addSubview:self.securityCodeTF];
+    
+    _securityCodeButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [_securityCodeButton setFrame:CGRectMake(175, 220, 130, 44)];
+    [_securityCodeButton setTitle:@"获取短信校验码" forState:UIControlStateNormal];
+    [_securityCodeButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    _securityCodeButton.titleLabel.font = [UIFont systemFontOfSize:15];
+    [_securityCodeButton addTarget:self action:@selector(securityCodeButtonAction) forControlEvents:UIControlEventTouchUpInside];
+    [_securityCodeButton setBackgroundColor:[UIColor grayColor]];
+    [scrollView addSubview:_securityCodeButton];
     
     UIButton *confirmButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [confirmButton setFrame:CGRectMake(10, 400+ios7_y, 297, 42)];
-    [confirmButton setTitle:@"立即验证" forState:UIControlStateNormal];
+    [confirmButton setTitle:@"确定" forState:UIControlStateNormal];
     [confirmButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     confirmButton.titleLabel.font = [UIFont boldSystemFontOfSize:18];
     [confirmButton setBackgroundImage:[UIImage imageNamed:@"BFTConfirmButton_nomal"] forState:UIControlStateNormal];
@@ -81,7 +99,7 @@
     }
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
     label.backgroundColor = [UIColor clearColor];
-    label.text = @"找回密码";
+    label.text = @"登录密码重置";
     label.textColor = [UIColor whiteColor];
     label.font = [UIFont boldSystemFontOfSize:20];
     label.shadowColor = [UIColor darkGrayColor];
@@ -109,13 +127,6 @@
         view.backgroundColor = [UIColor blackColor];
         [self.view addSubview:view];
     }
-    
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void) backButtonAction:(UIButton *)button
@@ -125,30 +136,19 @@
 
 - (void) confirmButtonAction
 {
-    LoginPwdResetViewController *loginPwdResetViewController = [[LoginPwdResetViewController alloc] initWithNibName:nil bundle:nil];
-    [self.navigationController pushViewController:loginPwdResetViewController animated:YES];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 //限制textfield的输入字数
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
-    NSCharacterSet *cs;
-    cs = [[NSCharacterSet characterSetWithCharactersInString:PID]invertedSet];
-    
-    NSString *filtered = [[string componentsSeparatedByCharactersInSet:cs]componentsJoinedByString:@""]; //按cs分离出数组,数组按@""分离出字符串
-    
-    BOOL canChange = [string isEqualToString:filtered];
-    if (textField == self.pIdNoTF.contentTF)
-    {
-        if (range.location >= 18) {
-            return  NO;
-        }
-        else {
-            return canChange;
-        }
-        
-    }
-    else if(self.phoneNoTF.contentTF == textField && range.location >= 11)
+    if(self.securityCodeTF.contentTF == textField && range.location >= 6)
     {
         return NO;
     }

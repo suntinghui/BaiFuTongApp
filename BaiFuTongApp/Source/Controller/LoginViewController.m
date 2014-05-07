@@ -49,6 +49,9 @@
     
     //self.navigationItem.title = @"登 录";
     self.hasTopView = NO;
+    
+
+    
     UINavigationBar *navBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
     
     if ([navBar respondsToSelector:@selector(setBackgroundImage:forBarMetrics:)])
@@ -77,14 +80,14 @@
     
     [self.view addSubview:navBar];
     
-    self.phoneNumTF = [[LeftTextField alloc] initWithFrame:CGRectMake(79, 162 + (iPhone5?44:0), 181, 30) isLong:true];
+    self.phoneNumTF = [[LeftTextField alloc] initWithFrame:CGRectMake(70, 162 + (DeviceVersion>=7?4:0), 181, 30) isLong:true];
     [self.phoneNumTF.contentTF setPlaceholder:@"请输入注册时的手机号"];
     self.phoneNumTF.contentTF.delegate = self;
     [self.phoneNumTF.contentTF setFont:[UIFont boldSystemFontOfSize:14]];
     [self.phoneNumTF.contentTF setKeyboardType:UIKeyboardTypeNumberPad];
     [self.view addSubview:self.phoneNumTF];
     
-    self.passwordTF = [[PasswordTextField alloc] initWithFrame:CGRectMake(79, 215 + (iPhone5?44:0), 181, 30)];
+    self.passwordTF = [[PasswordTextField alloc] initWithFrame:CGRectMake(70, 215 + (DeviceVersion>=7?-4:0), 181, 30)];
     [self.view addSubview:self.passwordTF];
 
     //记住密码复选框
@@ -108,6 +111,18 @@
 		[self.revealController toggleSidebar:NO
 									duration:kGHRevealSidebarDefaultAnimationDuration];
 	};
+    
+    if (DeviceVersion>=7.0) {
+        for (int i = 0; i<self.view.subviews.count; i++) {
+            UIView *view = self.view.subviews[i];
+            view.frame = CGRectMake(view.frame.origin.x, view.frame.origin.y+20, view.frame.size.width, view.frame.size.height);
+            
+        }
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 20)];
+        view.backgroundColor = [UIColor blackColor];
+        [self.view addSubview:view];
+    }
+    
     NSArray *controllers = @[
                              @[
                                  [[UINavigationController alloc] initWithRootViewController:[[BFTRootViewController alloc] initWithTitle:@"主菜单" withRevealBlock:revealBlock]],
@@ -132,7 +147,10 @@
     self.menuController = [[BFTMenuViewController alloc] initWithSidebarViewController:self.revealController
                                                                        withControllers:controllers
                                                                          withCellInfos:cellInfos];
+
 }
+
+
 
 - (void)viewWillAppear:(BOOL)animated
 {

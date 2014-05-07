@@ -113,7 +113,7 @@
     [scrollView addSubview:serverButton];
     
     UIButton *confirmButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [confirmButton setFrame:CGRectMake(10, 525+ios7_y, 297, 42)];
+    [confirmButton setFrame:CGRectMake(10, 525, 297, 42)];
     [confirmButton setTitle:@"立即注册" forState:UIControlStateNormal];
     [confirmButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     confirmButton.titleLabel.font = [UIFont boldSystemFontOfSize:18];
@@ -158,6 +158,17 @@
     [navBar addSubview:aButton];
     
     [self.view addSubview:navBar];
+    
+    if (DeviceVersion>=7.0) {
+        for (int i = 0; i<self.view.subviews.count; i++) {
+            UIView *view = self.view.subviews[i];
+            view.frame = CGRectMake(view.frame.origin.x, view.frame.origin.y+20, view.frame.size.width, view.frame.size.height);
+            
+        }
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 20)];
+        view.backgroundColor = [UIColor blackColor];
+        [self.view addSubview:view];
+    }
 }
 
 - (void)didReceiveMemoryWarning

@@ -168,10 +168,10 @@
     }
 }
 
--(IBAction)dismissKeyBoard
-{
-    [self.inputTF resignFirstResponder];
-}
+//-(IBAction)dismissKeyBoard
+//{
+//    [self.inputTF resignFirstResponder];
+//}
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
