@@ -80,14 +80,14 @@
     
     [self.view addSubview:navBar];
     
-    self.phoneNumTF = [[LeftTextField alloc] initWithFrame:CGRectMake(70, 162 + (DeviceVersion>=7?4:0), 181, 30) isLong:true];
+    self.phoneNumTF = [[LeftTextField alloc] initWithFrame:CGRectMake(65, 162 + (DeviceVersion>=7?4:0), 181, 30) isLong:true];
     [self.phoneNumTF.contentTF setPlaceholder:@"请输入注册时的手机号"];
     self.phoneNumTF.contentTF.delegate = self;
     [self.phoneNumTF.contentTF setFont:[UIFont boldSystemFontOfSize:14]];
     [self.phoneNumTF.contentTF setKeyboardType:UIKeyboardTypeNumberPad];
     [self.view addSubview:self.phoneNumTF];
     
-    self.passwordTF = [[PasswordTextField alloc] initWithFrame:CGRectMake(70, 215 + (DeviceVersion>=7?-4:0), 181, 30)];
+    self.passwordTF = [[PasswordTextField alloc] initWithFrame:CGRectMake(65, 215 + (DeviceVersion>=7?-4:0), 181, 30)];
     [self.view addSubview:self.passwordTF];
 
     //记住密码复选框
@@ -337,7 +337,7 @@
 -(IBAction)regesterAction:(id)sender
 {
     RegisterViewController *registerVC = [[RegisterViewController alloc] initWithNibName:nil bundle:nil];
-    [self.navigationController pushViewController:registerVC animated:YES];
+    [self.navigationController pushViewController:registerVC animated:NO];
 }
 
 - (IBAction)forgotPasswordAction:(UIButton *)sender

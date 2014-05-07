@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0507248D17F523DF003F2F57 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0507248C17F523DF003F2F57 /* RegisterViewController.xib */; };
 		0507249117F52807003F2F57 /* BFTRegisterViewBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0507248E17F52807003F2F57 /* BFTRegisterViewBG@2x.png */; };
 		0507249217F52807003F2F57 /* BFTRegisterNextButton_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0507248F17F52807003F2F57 /* BFTRegisterNextButton_normal@2x.png */; };
 		0507249317F52807003F2F57 /* BFTRegisterNextButton_highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0507249017F52807003F2F57 /* BFTRegisterNextButton_highlight@2x.png */; };
@@ -443,12 +442,10 @@
 		FC5A402A1900FE190000B0FB /* TransListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5A40261900FE190000B0FB /* TransListViewController.m */; };
 		FC5A402D1900FEBA0000B0FB /* TransferDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5A402C1900FEBA0000B0FB /* TransferDetailModel.m */; };
 		FC5DCEBA1919BF420026E60E /* LoginPwdResetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC5DCEB81919BF420026E60E /* LoginPwdResetViewController.m */; };
-		FC5DCEBB1919BF420026E60E /* LoginPwdResetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC5DCEB91919BF420026E60E /* LoginPwdResetViewController.xib */; };
 		FC6EFFB31918A3D2008515BE /* TopView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6EFFB21918A3D2008515BE /* TopView.m */; };
 		FC6EFFB51918A423008515BE /* torn.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6EFFB41918A423008515BE /* torn.png */; };
 		FC6EFFB71918A999008515BE /* input_login.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6EFFB61918A999008515BE /* input_login.png */; };
 		FC6EFFBB1918DA84008515BE /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6EFFB91918DA84008515BE /* ForgotPasswordViewController.m */; };
-		FC6EFFBC1918DA84008515BE /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC6EFFBA1918DA84008515BE /* ForgotPasswordViewController.xib */; };
 		FC884CD518FF68120009F617 /* MyPickController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC884CD418FF68120009F617 /* MyPickController.m */; };
 		FC884CDA18FF6E960009F617 /* AreaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC884CD718FF6E960009F617 /* AreaModel.m */; };
 		FC884CDB18FF6E960009F617 /* CityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FC884CD918FF6E960009F617 /* CityModel.m */; };
@@ -474,7 +471,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0507248C17F523DF003F2F57 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		0507248E17F52807003F2F57 /* BFTRegisterViewBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BFTRegisterViewBG@2x.png"; sourceTree = "<group>"; };
 		0507248F17F52807003F2F57 /* BFTRegisterNextButton_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BFTRegisterNextButton_normal@2x.png"; sourceTree = "<group>"; };
 		0507249017F52807003F2F57 /* BFTRegisterNextButton_highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BFTRegisterNextButton_highlight@2x.png"; sourceTree = "<group>"; };
@@ -1069,14 +1065,12 @@
 		FC5A402C1900FEBA0000B0FB /* TransferDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferDetailModel.m; sourceTree = "<group>"; };
 		FC5DCEB71919BF420026E60E /* LoginPwdResetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginPwdResetViewController.h; sourceTree = "<group>"; };
 		FC5DCEB81919BF420026E60E /* LoginPwdResetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginPwdResetViewController.m; sourceTree = "<group>"; };
-		FC5DCEB91919BF420026E60E /* LoginPwdResetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginPwdResetViewController.xib; sourceTree = "<group>"; };
 		FC6EFFB11918A3D2008515BE /* TopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopView.h; sourceTree = "<group>"; };
 		FC6EFFB21918A3D2008515BE /* TopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopView.m; sourceTree = "<group>"; };
 		FC6EFFB41918A423008515BE /* torn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = torn.png; sourceTree = "<group>"; };
 		FC6EFFB61918A999008515BE /* input_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = input_login.png; sourceTree = "<group>"; };
 		FC6EFFB81918DA84008515BE /* ForgotPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotPasswordViewController.h; sourceTree = "<group>"; };
 		FC6EFFB91918DA84008515BE /* ForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotPasswordViewController.m; sourceTree = "<group>"; };
-		FC6EFFBA1918DA84008515BE /* ForgotPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgotPasswordViewController.xib; sourceTree = "<group>"; };
 		FC884CD318FF68120009F617 /* MyPickController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPickController.h; sourceTree = "<group>"; };
 		FC884CD418FF68120009F617 /* MyPickController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPickController.m; sourceTree = "<group>"; };
 		FC884CD618FF6E960009F617 /* AreaModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AreaModel.h; sourceTree = "<group>"; };
@@ -1705,13 +1699,10 @@
 				05EE2F8C17F4358700C2A8E2 /* LoginViewController.xib */,
 				05EE2F7017F429B400C2A8E2 /* RegisterViewController.h */,
 				05EE2F7117F429B500C2A8E2 /* RegisterViewController.m */,
-				0507248C17F523DF003F2F57 /* RegisterViewController.xib */,
 				FC6EFFB81918DA84008515BE /* ForgotPasswordViewController.h */,
 				FC6EFFB91918DA84008515BE /* ForgotPasswordViewController.m */,
-				FC6EFFBA1918DA84008515BE /* ForgotPasswordViewController.xib */,
 				FC5DCEB71919BF420026E60E /* LoginPwdResetViewController.h */,
 				FC5DCEB81919BF420026E60E /* LoginPwdResetViewController.m */,
-				FC5DCEB91919BF420026E60E /* LoginPwdResetViewController.xib */,
 				0507252517F557B7003F2F57 /* ResultViewController.h */,
 				0507252617F557BC003F2F57 /* ResultViewController.m */,
 				0507252717F557C3003F2F57 /* ResultViewController.xib */,
@@ -2257,7 +2248,6 @@
 				05EE2F6617F427A100C2A8E2 /* BFTSecondMenuIcon_54@2x.png in Resources */,
 				05EE2F6B17F4287200C2A8E2 /* BFTNavBackButton_normal.png in Resources */,
 				05EE2F8D17F4358700C2A8E2 /* LoginViewController.xib in Resources */,
-				0507248D17F523DF003F2F57 /* RegisterViewController.xib in Resources */,
 				0507249117F52807003F2F57 /* BFTRegisterViewBG@2x.png in Resources */,
 				0507249217F52807003F2F57 /* BFTRegisterNextButton_normal@2x.png in Resources */,
 				0507249317F52807003F2F57 /* BFTRegisterNextButton_highlight@2x.png in Resources */,
@@ -2318,7 +2308,6 @@
 				0507262517F57EA3003F2F57 /* flowbg.png in Resources */,
 				0507262717F57EAE003F2F57 /* gicon.png in Resources */,
 				0507262917F57EBB003F2F57 /* wifiicon.png in Resources */,
-				FC6EFFBC1918DA84008515BE /* ForgotPasswordViewController.xib in Resources */,
 				0507262B17F57EC5003F2F57 /* wifiicon@2x.png in Resources */,
 				0507262F17F57EF4003F2F57 /* flowbg@2x.png in Resources */,
 				0507263017F57EF4003F2F57 /* gicon@2x.png in Resources */,
@@ -2335,7 +2324,6 @@
 				0507265417F58494003F2F57 /* guide_2-568h@2x.png in Resources */,
 				0507265517F58494003F2F57 /* guide_3-568h@2x.png in Resources */,
 				0507265617F58494003F2F57 /* guide_4-568h@2x.png in Resources */,
-				FC5DCEBB1919BF420026E60E /* LoginPwdResetViewController.xib in Resources */,
 				0507265F17F584A7003F2F57 /* guide_1.png in Resources */,
 				0507266017F584A7003F2F57 /* guide_2.png in Resources */,
 				0507266117F584A7003F2F57 /* guide_3.png in Resources */,

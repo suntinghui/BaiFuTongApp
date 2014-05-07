@@ -6,7 +6,6 @@
 //  Copyright (c) 2013年 xushuang. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "AbstractViewController.h"
 
 typedef void (^RevealBlock)();
