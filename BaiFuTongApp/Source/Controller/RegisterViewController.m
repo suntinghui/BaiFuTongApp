@@ -36,8 +36,8 @@
     self.hasTopView = NO;
     //self.navigationItem.title = @"注册";
     
-    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 480+iPhone5_height)];
-    [scrollView setContentSize:CGSizeMake(320, 600)];
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 700+iPhone5_height)];
+    [scrollView setContentSize:CGSizeMake(320, 600+220)];
     scrollView.showsVerticalScrollIndicator = false;
     [self.view addSubview:scrollView];
     

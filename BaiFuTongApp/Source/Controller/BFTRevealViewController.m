@@ -102,9 +102,9 @@ const CGFloat kGHRevealSidebarFlickVelocity = 1000.0f;
 		self.view.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
 		
 		_sidebarView = [[UIView alloc] initWithFrame:self.view.bounds];
-        if (DeviceVersion >= 7.0) {
-            _sidebarView.frame = CGRectMake(_sidebarView.frame.origin.x, _sidebarView.frame.origin.y+20, _sidebarView.frame.size.width, _sidebarView.frame.size.height);
-        }
+//        if (DeviceVersion >= 7.0) {
+//            _sidebarView.frame = CGRectMake(_sidebarView.frame.origin.x, _sidebarView.frame.origin.y+20, _sidebarView.frame.size.width, _sidebarView.frame.size.height);
+//        }
 		_sidebarView.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
 		_sidebarView.backgroundColor = [UIColor clearColor];
 		[self.view addSubview:_sidebarView];

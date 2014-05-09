@@ -7,7 +7,6 @@
 //
 
 #import "AbstractViewController.h"
-#import "TopView.h"
 
 #define STRETCH                 5
 #define kSCNavBarImageTag       10
@@ -35,8 +34,13 @@
     
     //本机号码
     if (self.hasTopView) {
-        TopView *topView = [[TopView alloc] initWithFrame:CGRectMake(0, 0, 320, 41)];
-        [self.view addSubview:topView];
+        if (DeviceVersion >= 7.0) {
+            self.topView = [[TopView alloc] initWithFrame:CGRectMake(0, 64, 320, 41)];
+        }
+        else{
+            self.topView = [[TopView alloc] initWithFrame:CGRectMake(0, 0, 320, 41)];
+        }
+        [self.view addSubview:self.topView];
     }
     
     //自定义UINavigationBar 和返回按钮

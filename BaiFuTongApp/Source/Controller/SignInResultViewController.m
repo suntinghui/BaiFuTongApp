@@ -51,7 +51,7 @@
     }
     
     UIButton *confirmButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [confirmButton setFrame:CGRectMake(10, 280, 297, 42)];
+    [confirmButton setFrame:CGRectMake(10, 280+ios7_y, 297, 42)];
     [confirmButton setTitle:@"确认" forState:UIControlStateNormal];
     [confirmButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     confirmButton.titleLabel.font = [UIFont boldSystemFontOfSize:18];

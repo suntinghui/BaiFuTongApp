@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TopView.h"
 
 @protocol AbstractViewControllerDelegate <NSObject>
 
@@ -18,6 +19,7 @@
 @interface AbstractViewController : UIViewController <UITextFieldDelegate>
 
 @property (nonatomic)BOOL hasTopView;
+@property (nonatomic,strong) TopView *topView;
 
 -(IBAction)textFiledReturnEditing:(id)sender;
 -(UIImage *)stretchImage:(UIImage *) image;

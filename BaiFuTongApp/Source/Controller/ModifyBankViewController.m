@@ -53,37 +53,37 @@
     }
     
     
-    self.scrollView =[[UIScrollView alloc] initWithFrame:CGRectMake(0, 20, 320, 460+iPhone5_height)];
+    self.scrollView =[[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 480+iPhone5_height)];
     [_scrollView setContentSize:CGSizeMake(320, 750+ios7_h)];
     _scrollView.showsVerticalScrollIndicator = false;
     [self.view addSubview:_scrollView];
     
-    self.nameTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 35, 298, 44) left:@"姓名" prompt:@"请输入您的姓名" keyBoardType:UIKeyboardTypeNamePhonePad];
+    self.nameTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 45, 298, 44) left:@"姓名" prompt:@"请输入您的姓名" keyBoardType:UIKeyboardTypeNamePhonePad];
     self.nameTF.contentTF.delegate = self;
     [self.nameTF.contentTF hideKeyBoard:self.view:3 hasNavBar:YES];
     [_scrollView addSubview:self.nameTF];
     
-    self.pIdNoTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 90, 298, 44) left:@"身份证号" prompt:@"请输入您的身份证号" keyBoardType:UIKeyboardTypeASCIICapable];
+    self.pIdNoTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 100, 298, 44) left:@"身份证号" prompt:@"请输入您的身份证号" keyBoardType:UIKeyboardTypeASCIICapable];
     self.pIdNoTF.contentTF.delegate = self;
     [self.pIdNoTF.contentTF hideKeyBoard:self.view:3 hasNavBar:YES];
     [_scrollView addSubview:self.pIdNoTF];
     
-    UILabel * dividingLine = [[UILabel alloc] initWithFrame:CGRectMake(10, 147, 300, 1)];
+    UILabel * dividingLine = [[UILabel alloc] initWithFrame:CGRectMake(10, 157, 300, 1)];
     dividingLine.backgroundColor = [UIColor grayColor];
     [_scrollView addSubview:dividingLine];
     
-    self.oldBkCardNoTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 165, 298, 44) left:@"原银行卡" prompt:@"请输入您原来的银行卡号" keyBoardType:UIKeyboardTypeNumberPad];
+    self.oldBkCardNoTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 175, 298, 44) left:@"原银行卡" prompt:@"请输入您原来的银行卡号" keyBoardType:UIKeyboardTypeNumberPad];
     self.oldBkCardNoTF.contentTF.delegate = self;
     [self.oldBkCardNoTF.contentTF hideKeyBoard:self.view:3 hasNavBar:YES];
     [_scrollView addSubview:self.oldBkCardNoTF];
     
-    self.bkCardNoTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 220, 298, 44) left:@"银行卡号" prompt:@"请输入您的银行卡号" keyBoardType:UIKeyboardTypeNumberPad];
+    self.bkCardNoTF = [[InputTextField alloc] initWithFrame:CGRectMake(10, 230, 298, 44) left:@"银行卡号" prompt:@"请输入您的银行卡号" keyBoardType:UIKeyboardTypeNumberPad];
     self.bkCardNoTF.contentTF.delegate = self;
     [self.bkCardNoTF.contentTF hideKeyBoard:self.view:3 hasNavBar:YES];
     [_scrollView addSubview:self.bkCardNoTF];
     
     //银行信息
-    UILabel *bankInfoLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 276, 300, 35)];
+    UILabel *bankInfoLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 286, 300, 35)];
     bankInfoLabel.backgroundColor = [UIColor clearColor];
     bankInfoLabel.text = @"银行卡开户行";
     bankInfoLabel.font = [UIFont systemFontOfSize:17.0f];
@@ -91,7 +91,7 @@
     
     //选择银行下拉框
     _selectBankButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_selectBankButton setFrame:CGRectMake(10, 310, 300, 45)];
+    [_selectBankButton setFrame:CGRectMake(10, 320, 300, 45)];
     [_selectBankButton setBackgroundImage:[UIImage imageNamed:@"selectField_normal.png"] forState:UIControlStateNormal];
     [_selectBankButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     _selectBankButton.tag = 90001;
@@ -101,7 +101,7 @@
     
     //省份下拉框
     _selectAreaButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_selectAreaButton setFrame:CGRectMake(10, 365, 300, 45)];
+    [_selectAreaButton setFrame:CGRectMake(10, 375, 300, 45)];
     [_selectAreaButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [_selectAreaButton setBackgroundImage:[UIImage imageNamed:@"selectField_normal.png"] forState:UIControlStateNormal];
     _selectAreaButton.tag = 90002;
@@ -111,7 +111,7 @@
     
     //城市下拉框
     _selectCityButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_selectCityButton setFrame:CGRectMake(10, 420, 300, 45)];
+    [_selectCityButton setFrame:CGRectMake(10, 430, 300, 45)];
     [_selectCityButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [_selectCityButton setBackgroundImage:[UIImage imageNamed:@"selectField_normal.png"] forState:UIControlStateNormal];
     _selectCityButton.tag = 90003;
@@ -121,7 +121,7 @@
     
     
     _banksBranchButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_banksBranchButton setFrame:CGRectMake(10, 475, 297, 42)];
+    [_banksBranchButton setFrame:CGRectMake(10, 485, 297, 42)];
     [_banksBranchButton setTitle:@"请选择支行" forState:UIControlStateNormal];
     [_banksBranchButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     _banksBranchButton.titleLabel.font = [UIFont systemFontOfSize:18];
@@ -131,16 +131,16 @@
     [_banksBranchButton setBackgroundImage:[UIImage imageNamed:@"selectBank_highlight.png"] forState:UIControlStateHighlighted];
     [_scrollView addSubview:_banksBranchButton];
     
-    UILabel * dividingLine1 = [[UILabel alloc] initWithFrame:CGRectMake(10, 533, 300, 1)];
+    UILabel * dividingLine1 = [[UILabel alloc] initWithFrame:CGRectMake(10, 543, 300, 1)];
     dividingLine1.backgroundColor = [UIColor grayColor];
     [_scrollView addSubview:dividingLine1];
     
     //短信校验码输入框背景
-    UIImageView *textFieldImage1 = [[UIImageView alloc] initWithFrame:CGRectMake(10, 550, 150, 44)];
+    UIImageView *textFieldImage1 = [[UIImageView alloc] initWithFrame:CGRectMake(10, 560, 150, 44)];
     [textFieldImage1 setImage:[UIImage imageNamed:@"textInput.png"]];
     [_scrollView addSubview:textFieldImage1];
     
-    self.securityCodeTF = [[LeftTextField alloc] initWithFrame:CGRectMake(10, 550, 150, 44) isLong:FALSE];
+    self.securityCodeTF = [[LeftTextField alloc] initWithFrame:CGRectMake(10, 560, 150, 44) isLong:FALSE];
     [self.securityCodeTF.contentTF setKeyboardType:UIKeyboardTypeNumberPad];
     [self.securityCodeTF.contentTF setPlaceholder:@"短信校验码"];
     [self.securityCodeTF.contentTF setFont:[UIFont systemFontOfSize:15]];
@@ -149,7 +149,7 @@
     [_scrollView addSubview:self.securityCodeTF];
     
     _securityCodeButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_securityCodeButton setFrame:CGRectMake(175, 550, 130, 44)];
+    [_securityCodeButton setFrame:CGRectMake(175, 560, 130, 44)];
     [_securityCodeButton setTitle:@"获取短信校验码" forState:UIControlStateNormal];
     [_securityCodeButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     _securityCodeButton.titleLabel.font = [UIFont systemFontOfSize:15];
@@ -158,7 +158,7 @@
     [_scrollView addSubview:_securityCodeButton];
     
     UIButton *confirmButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [confirmButton setFrame:CGRectMake(10, 615, 297, 42)];
+    [confirmButton setFrame:CGRectMake(10, 625, 297, 42)];
     [confirmButton setTitle:@"确认" forState:UIControlStateNormal];
     [confirmButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     confirmButton.titleLabel.font = [UIFont boldSystemFontOfSize:18];

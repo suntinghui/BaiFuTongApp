@@ -37,16 +37,16 @@
     self.navigationItem.title = @"签购单查询";
     
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 480+iPhone5_height)];
-    [scrollView setContentSize:CGSizeMake(320, 500)];
+    [scrollView setContentSize:CGSizeMake(320, 500+ios7_y)];
     scrollView.showsVerticalScrollIndicator = false;
     [self.view addSubview:scrollView];
     
-    self.minMoneyLabel = [[InputTextField alloc] initWithFrame:CGRectMake(10, 10, 300, 44) left:@"最小金额" prompt:@"请输入最小金额" keyBoardType:UIKeyboardTypeDecimalPad];
+    self.minMoneyLabel = [[InputTextField alloc] initWithFrame:CGRectMake(10, 10+ios7_y, 300, 44) left:@"最小金额" prompt:@"请输入最小金额" keyBoardType:UIKeyboardTypeDecimalPad];
     self.minMoneyLabel.contentTF.delegate = self;
     [self.minMoneyLabel.contentTF hideKeyBoard:self.view:3 hasNavBar:YES];
     [scrollView addSubview:self.minMoneyLabel];
     
-    self.maxMoneyLabel = [[InputTextField alloc] initWithFrame:CGRectMake(10, 64, 300, 44) left:@"最大金额" prompt:@"请输入最大金额" keyBoardType:UIKeyboardTypeDecimalPad];
+    self.maxMoneyLabel = [[InputTextField alloc] initWithFrame:CGRectMake(10, 64+ios7_y, 300, 44) left:@"最大金额" prompt:@"请输入最大金额" keyBoardType:UIKeyboardTypeDecimalPad];
     self.maxMoneyLabel.contentTF.delegate = self;
     [self.maxMoneyLabel.contentTF hideKeyBoard:self.view:3 hasNavBar:YES];
     [scrollView addSubview:self.maxMoneyLabel];
@@ -61,16 +61,16 @@
     NSString *  beforString=[dateformatter stringFromDate:beforeDay];
     NSString *  endString=[dateformatter stringFromDate:nowDay];
     
-    self.beginDateTF = [[DateTextField alloc] initWithFrame:CGRectMake(10, 118, 297, 44) bgImage:@"textInput.png" leftText:@"开始日期"];
+    self.beginDateTF = [[DateTextField alloc] initWithFrame:CGRectMake(10, 118+ios7_y, 297, 44) bgImage:@"textInput.png" leftText:@"开始日期"];
     [self.beginDateTF.contentLabel setText:beforString];
     [scrollView addSubview:self.beginDateTF];
     
-    self.endDateTF = [[DateTextField alloc] initWithFrame:CGRectMake(10, 172, 297 , 44) bgImage:@"textInput.png" leftText:@"结束日期" ];
+    self.endDateTF = [[DateTextField alloc] initWithFrame:CGRectMake(10, 172+ios7_y, 297 , 44) bgImage:@"textInput.png" leftText:@"结束日期" ];
     [self.endDateTF.contentLabel setText:endString];
     [scrollView addSubview:self.endDateTF];
     
     UIButton *confirmButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [confirmButton setFrame:CGRectMake(10, 236 +(iPhone5?18:0), 297, 42)];
+    [confirmButton setFrame:CGRectMake(10, 236+ios7_y +(iPhone5?18:0), 297, 42)];
     [confirmButton setTitle:@"确   定" forState:UIControlStateNormal];
     [confirmButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     confirmButton.titleLabel.font = [UIFont boldSystemFontOfSize:18];
@@ -82,7 +82,7 @@
     
     UIImage *image = [UIImage imageNamed:@"BFTExplain.png"];
     UIImageView *explainIV = [[UIImageView alloc] initWithImage:[self stretchImage:image]];
-    [explainIV setFrame:CGRectMake(10, 298 +(iPhone5?18:0), 297, 130)];
+    [explainIV setFrame:CGRectMake(10, 298+ios7_y +(iPhone5?18:0), 297, 130)];
     [scrollView addSubview:explainIV];
     
     UILabel *explainLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 282, 110)];

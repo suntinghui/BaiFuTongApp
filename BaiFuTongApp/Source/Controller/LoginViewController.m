@@ -50,8 +50,6 @@
     //self.navigationItem.title = @"登 录";
     self.hasTopView = NO;
     
-
-    
     UINavigationBar *navBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
     
     if ([navBar respondsToSelector:@selector(setBackgroundImage:forBarMetrics:)])
@@ -337,7 +335,7 @@
 -(IBAction)regesterAction:(id)sender
 {
     RegisterViewController *registerVC = [[RegisterViewController alloc] initWithNibName:nil bundle:nil];
-    [self.navigationController pushViewController:registerVC animated:NO];
+    [self.navigationController pushViewController:registerVC animated:YES];
 }
 
 - (IBAction)forgotPasswordAction:(UIButton *)sender
